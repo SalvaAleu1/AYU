@@ -11,15 +11,14 @@ export default function AdvisoryHistoryPage() {
   return (
     <>
       <PageHero
-        eyebrow="Advisory Board & Institutional History"
-        title="Preserving institutional memory while strengthening constitutional guidance."
-        description="AYU-Juba's Advisory Board provides constitutional counsel to the Union, while the leadership archive preserves the record of service and institutional continuity across successive administrations."
+        eyebrow="Advisory Board & History"
+        title="Guidance for today and a record of AYU's journey."
+        description="The Advisory Board gives advice to AYU, while the leadership history keeps a clear record of those who have served the Union."
         aside={
           <dl className="page-fact-list">
-            <div><dt>Board size</dt><dd>{advisoryBoardStructure.size} members</dd></div>
             <div><dt>Headed by</dt><dd>{advisoryBoardStructure.head}</dd></div>
             <div><dt>Appointed by</dt><dd>{advisoryBoardStructure.appointedBy}</dd></div>
-            <div><dt>Tenure</dt><dd>{advisoryBoardStructure.tenure}</dd></div>
+            <div><dt>Role</dt><dd>Advice and guidance</dd></div>
           </dl>
         }
       />
@@ -28,14 +27,14 @@ export default function AdvisoryHistoryPage() {
         <div className="container advisory-intro-grid">
           <div>
             <p className="eyebrow">Advisory Board</p>
-            <h2 className="display-title">A three-member constitutional advisory organ.</h2>
+            <h2 className="display-title">A constitutional body that gives advice and guidance.</h2>
           </div>
           <div className="prose-stack">
             <p>
-              The Advisory Board is appointed and relieved by the General Assembly through a simple majority vote. It is headed by the Patron and serves the same tenure as the Executive Committee.
+              The Advisory Board is appointed and relieved by the General Assembly through a simple majority vote and is headed by the Patron.
             </p>
             <p>
-              Its role is advisory rather than executive: it supports the Union with institutional counsel, conflict-resolution guidance, project advice and stewardship of community heritage and cultural values.
+              Its role is to advise the Union on unity, conflict resolution, projects, social development, community heritage and cultural values.
             </p>
           </div>
         </div>
@@ -43,11 +42,10 @@ export default function AdvisoryHistoryPage() {
 
       <section className="section section-soft">
         <div className="container">
-          <SectionHeading eyebrow="Constitutional Functions" title="What the Advisory Board is entrusted to do." />
+          <SectionHeading eyebrow="Responsibilities" title="What the Advisory Board is asked to do." />
           <div className="advisory-function-grid">
-            {advisoryBoardFunctions.map((item, index) => (
+            {advisoryBoardFunctions.map((item) => (
               <article className="advisory-function-card" key={item}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
                 <p>{item}</p>
               </article>
             ))}
@@ -58,7 +56,7 @@ export default function AdvisoryHistoryPage() {
       {currentAdvisoryBoard.length > 0 ? (
         <section className="section section-white">
           <div className="container">
-            <SectionHeading eyebrow="Current Advisory Board" title="The serving Advisory Board of AYU-Juba." />
+            <SectionHeading eyebrow="Current Advisory Board" title="Serving Advisory Board members." />
             <div className="leader-grid">
               {currentAdvisoryBoard.map((member) => (
                 <article className="leader-card" key={member.slug}>
@@ -76,14 +74,14 @@ export default function AdvisoryHistoryPage() {
       <section className="section section-dark">
         <div className="container history-principle-grid">
           <div>
-            <p className="eyebrow eyebrow-light">Institutional Continuity</p>
-            <h2 className="display-title display-title-light">Leadership changes. Institutional memory should remain.</h2>
+            <p className="eyebrow eyebrow-light">AYU History</p>
+            <h2 className="display-title display-title-light">Leadership changes, but the record of service remains.</h2>
           </div>
           <div className="history-principles">
-            <div><strong>Institutional record</strong><p>AYU's leadership history preserves the service of successive administrations as part of the Union's long-term institutional identity.</p></div>
-            <div><strong>Term-based history</strong><p>Each administration is recorded by its period of service and constitutional offices, allowing future generations to understand the Union's leadership journey.</p></div>
-            <div><strong>Service & responsibility</strong><p>The archive recognizes public service and constitutional responsibility without turning institutional history into political commentary.</p></div>
-            <div><strong>Continuity</strong><p>Preserving earlier administrations strengthens accountability, heritage and continuity as new leaders assume office.</p></div>
+            <div><strong>Leadership record</strong><p>AYU keeps a record of past administrations and the people who served in them.</p></div>
+            <div><strong>Periods of service</strong><p>Past leadership is shown by the period in which it served, based on available records.</p></div>
+            <div><strong>Service</strong><p>The history section recognizes service to AYU without turning the record into political commentary.</p></div>
+            <div><strong>Continuity</strong><p>Keeping past records helps future leaders and members understand AYU's journey.</p></div>
           </div>
         </div>
       </section>
