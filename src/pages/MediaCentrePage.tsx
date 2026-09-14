@@ -17,12 +17,11 @@ export default function MediaCentrePage() {
     <>
       <PageHero
         eyebrow="Media Centre"
-        title="Official AYU resources for the public, media and community."
-        description="Access approved institutional resources, publications, press information and downloadable AYU materials from one public centre."
+        title="Official AYU resources for the public and media."
+        description="Find approved AYU publications, press information, identity materials and public downloads in one place."
         aside={
           <dl className="page-fact-list">
-            <div><dt>Institution</dt><dd>Apuk Youth Union in Juba</dd></div>
-            <div><dt>Communications portfolio</dt><dd>Secretary for Information and Media</dd></div>
+            <div><dt>Organization</dt><dd>Apuk Youth Union in Juba</dd></div>
             <div><dt>Official motto</dt><dd>Together for Peace, Unity and Development</dd></div>
           </dl>
         }
@@ -32,8 +31,8 @@ export default function MediaCentrePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Official Resources"
-            title="Institutional materials in one organized library."
-            description="The Media Centre separates official resources from news reporting so publications, brand materials and press references remain easy to locate."
+            title="AYU materials that are available to the public."
+            description="Use the search box or categories to find publications, press resources and approved AYU identity materials."
           />
 
           <div className="media-toolbar">
@@ -83,7 +82,7 @@ export default function MediaCentrePage() {
           {resources.length === 0 ? (
             <div className="archive-empty-state">
               <strong>No matching resource</strong>
-              <p>Try a different search term or resource category.</p>
+              <p>Try a different search term or category.</p>
             </div>
           ) : null}
         </div>
@@ -92,14 +91,14 @@ export default function MediaCentrePage() {
       <section className="section section-soft">
         <div className="container media-centre-principles">
           <div>
-            <p className="eyebrow">Public Communications</p>
-            <h2 className="display-title">A consistent source for AYU institutional information.</h2>
+            <p className="eyebrow">Public Information</p>
+            <h2 className="display-title">A clear place for official AYU materials.</h2>
           </div>
           <div className="media-principle-grid">
-            <div><strong>Official identity</strong><p>Approved AYU brand resources remain clearly separated from third-party materials.</p></div>
-            <div><strong>Publications</strong><p>Governance and institutional publications are organized for public reference.</p></div>
-            <div><strong>Press resources</strong><p>Journalists and community communicators can quickly locate AYU identity and public-information resources.</p></div>
-            <div><strong>News archive</strong><p>Current affairs and public statements remain in the News & Official Communications section.</p></div>
+            <div><strong>Official identity</strong><p>Approved AYU identity materials are kept separate from third-party content.</p></div>
+            <div><strong>Publications</strong><p>Public AYU documents are organized for easy access.</p></div>
+            <div><strong>Press resources</strong><p>Journalists and community communicators can find approved AYU resources here.</p></div>
+            <div><strong>News</strong><p>Current updates and statements remain in the News & Updates section.</p></div>
           </div>
         </div>
       </section>
