@@ -19,7 +19,7 @@ AYU and Apuk Graduates’ Congress (AGC) are separate organizations. AGC appears
 - Responsive mobile, tablet and desktop layouts
 - Source-controlled news, events, programmes, governance and election information
 - Searchable digital reader for the Amended 2025 AYU Constitution
-- Membership registration through an AYU-approved external Google Form once the official link is configured
+- Membership registration through the official AYU Google Form: `https://forms.gle/4GTEwGTtW1wYq3ry5`
 - Security headers, SEO/social metadata, Privacy Policy, Terms of Use, Accessibility statement and professional 404 page
 
 ## Public sections
