@@ -8,6 +8,8 @@ type State =
   | { status: "signed-out" }
   | { status: "error"; message: string };
 
+type EditableProfileField = "phone" | "email" | "jubaArea" | "shortBio";
+
 export default function MemberProfilePage() {
   const [state, setState] = useState<State>({ status: "loading" });
   const [message, setMessage] = useState("");
@@ -30,7 +32,7 @@ export default function MemberProfilePage() {
   if (state.status === "error") return <div className="portal-loading"><div className="container">{state.message}</div></div>;
 
   const member = state.member;
-  const update = (field: keyof MemberSummary, value: string) => {
+  const update = (field: EditableProfileField, value: string) => {
     setState({ status: "ready", member: { ...member, [field]: value } });
     setMessage("");
   };
