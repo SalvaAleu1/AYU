@@ -1,4 +1,5 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
+import type { FormEvent } from "react";
 import PageHero from "../components/PageHero";
 import { applicationPrivacyPoints } from "../data/membershipData";
 
@@ -76,6 +77,7 @@ export default function MembershipApplicationPage() {
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const formElement = event.currentTarget;
     const validationError = validate(fields, document);
     if (validationError) {
       setSubmitState({ status: "error", message: validationError });
@@ -112,7 +114,7 @@ export default function MembershipApplicationPage() {
       setSubmitState({ status: "success", reference: result.reference });
       setFields(initialFields);
       setDocument(null);
-      event.currentTarget.reset();
+      formElement.reset();
     } catch (error) {
       setSubmitState({
         status: "error",
