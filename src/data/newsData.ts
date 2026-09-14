@@ -1,9 +1,11 @@
 export type NewsCategory = "News" | "Statement" | "Community" | "Education" | "Sports" | "Culture";
+export type PublicationStatus = "published" | "draft" | "scheduled";
 
 export type NewsArticle = {
   slug: string;
   title: string;
   category: NewsCategory;
+  publicationStatus: PublicationStatus;
   publishedAt: string;
   displayDate: string;
   excerpt: string;
@@ -28,6 +30,7 @@ export const newsArticles: NewsArticle[] = [
     slug: "ayu-welcomes-gogrial-reconciliation-2026",
     title: "AYU-Juba welcomes reconciliation among prominent Gogrial leaders",
     category: "Community",
+    publicationStatus: "published",
     publishedAt: "2026-06-12",
     displayDate: "12 June 2026",
     excerpt: "Apuk Youth Union in Juba welcomed the conclusion of a months-long reconciliation process involving prominent Gogrial military and political leaders in Warrap State.",
@@ -44,6 +47,7 @@ export const newsArticles: NewsArticle[] = [
     slug: "peace-reconciliation-committee-established-2026",
     title: "AYU-Juba establishes Peace and Reconciliation Committee",
     category: "News",
+    publicationStatus: "published",
     publishedAt: "2026-05-22",
     displayDate: "22 May 2026",
     excerpt: "Chairperson’s Order No. 04/2026 established a committee mandated to promote peace, unity, reconciliation, forgiveness and harmonious coexistence among youth.",
@@ -59,6 +63,7 @@ export const newsArticles: NewsArticle[] = [
     slug: "ayu-statement-kuajok-community-elections-2024",
     title: "AYU-Juba calls for peaceful and fair Apuk Community elections in Kuajok",
     category: "Statement",
+    publicationStatus: "published",
     publishedAt: "2024-09-26",
     displayDate: "26 September 2024",
     excerpt: "AYU-Juba issued a public statement supporting peaceful, free and fair community elections in Kuajok and encouraging democratic participation across Apuk community branches.",
@@ -72,6 +77,10 @@ export const newsArticles: NewsArticle[] = [
   },
 ];
 
+export const publishedNewsArticles = newsArticles
+  .filter((article) => article.publicationStatus === "published")
+  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+
 export function getNewsArticle(slug: string) {
-  return newsArticles.find((article) => article.slug === slug);
+  return publishedNewsArticles.find((article) => article.slug === slug);
 }
