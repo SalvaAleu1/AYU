@@ -12,8 +12,8 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 
 ## Current checkpoint
 
-**Completed:** Phases 1–9  
-**Next build block:** Phases 10–12  
+**Completed:** Phases 1–12  
+**Next build block:** Phases 13–15  
 **Repository:** `SalvaAleu1/AYU`  
 **Primary branch:** `main`
 
@@ -49,7 +49,7 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 - Membership overview and constitutional eligibility
 - Community partner relationships
 - Constitution overview with the documented 14 September 2025 approval/signing record
-- Conditional architecture for future verified news, events, gallery and featured projects; empty/unverified content is not rendered publicly
+- Conditional architecture for future news, events, gallery and featured projects
 - Responsive CTA and full institutional footer
 
 ### Completed Phase 4 — About AYU
@@ -81,7 +81,6 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 - Dedicated Leadership page connected to global navigation
 - Data-driven leadership profile model supporting photos, biographies, duties and individual profile pages
 - All 13 Executive Committee offices with concise constitutional responsibilities
-- Chairperson, Deputy Chairperson, Secretary General, Finance, Information & Media, External Affairs, Legal Affairs, Education & Trainings, Projects & Logistics, Health, Culture & Sports, Gender/Social Welfare/Peace & Reconciliation and Deputy Finance portfolios represented
 - Verified current Chairperson Agany Geng Ayiei published from the 2025 constitutional record and independent 2026 public reporting
 - Individual profile route implemented for verified officeholder records
 - No unverified names, fake photographs or blank public leader cards
@@ -119,6 +118,41 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 - Peace initiative page records its mandate, consultative-meeting purpose, stakeholder participation, resource mobilization, documentation and final reporting responsibilities
 - No invented project achievements, beneficiary totals, photos or completion claims
 
+### Completed Phase 10 — News & Official Communications
+
+- Dedicated News & Official Communications page connected to primary navigation
+- Search and category filters for News, Statements, Community, Education, Sports and Culture
+- Publication-state architecture for published, draft and scheduled communications; only published records appear publicly
+- Individual article pages with publication date, category and source reference
+- Featured-update presentation
+- Three documented AYU communications launched in the archive: June 2026 Gogrial reconciliation response, May 2026 Peace and Reconciliation Committee announcement, and September 2024 Kuajok community-election statement
+- Secretary for Information and Media responsibilities reflected in the communications section
+- Latest published AYU records now feed the homepage updates area
+- No fabricated headlines, photographs or statements
+
+### Completed Phase 11 — Events System
+
+- Dedicated Events page connected to primary navigation
+- Structured event model supporting category, status, dates, time, location, organizer, description, registration and related AYU pages
+- Upcoming-event and past-event presentation paths
+- Individual event-detail pages
+- Constitutional calendar built from AYU governance rules: quarterly Executive Committee meetings, mandatory mid-year General Assembly, mandatory end-year General Assembly and extraordinary meetings when needed
+- Year-end audit-report responsibility connected to the General Assembly calendar
+- 14 September 2025 approval of the Amended AYU Constitution preserved as a documented institutional event
+- No unconfirmed Peace and Reconciliation consultative-meeting date was invented
+
+### Completed Phase 12 — Impact & Success Stories
+
+- Dedicated Impact page connected to primary navigation
+- Data-driven impact/milestone model with category, period, narrative, optional metrics, related pages and source references
+- Three documented impact/milestone records: 2025 constitutional renewal, 2026 Peace and Reconciliation Committee establishment, and AYU's June 2026 public support for Gogrial reconciliation
+- Only documented constitutional figures used in milestone metrics; no invented beneficiary totals or marketing claims
+- Areas-of-contribution framework tied to AYU's constitutional mandate
+- Individual impact/milestone pages
+- Consent-aware success-story model and individual success-story route
+- Personal success stories remain unpublished until an attributable story with publication consent is available
+- Responsive layouts for news, events, impact and article/detail pages
+
 ## Full 31-phase roadmap
 
 1. Project Foundation & AYU Design System
@@ -153,10 +187,10 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 30. Cloudflare Production Architecture & Data Services
 31. Production Hardening, SEO, Legal, Testing & Launch
 
-## Next build block — Phases 10–12
+## Next build block — Phases 13–15
 
-- **Phase 10:** News & Official Communications
-- **Phase 11:** Events System
-- **Phase 12:** Impact & Success Stories
+- **Phase 13:** Media Centre
+- **Phase 14:** Membership Information
+- **Phase 15:** Membership Application & Registration
 
-Do not begin Phase 13 until Phases 10–12 have been completed and reported.
+Do not begin Phase 16 until Phases 13–15 have been completed and reported.
