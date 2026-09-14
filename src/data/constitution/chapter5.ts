@@ -27,9 +27,9 @@ export const chapter5Articles: ConstitutionArticle[] = [
   },
   {
     "number": 39,
-    "title": "Registration Fees;",
+    "title": "Registration Fees",
     "page": 25,
-    "body": "1. The Registration fees for a member shall be 30,000 SSP payable once for\neach term.\n2. The Registration fees shall be collected by the IEC and handed over to the\nIn-coming Executive Committee."
+    "body": "Membership registration fee details are provided through the official AYU membership registration form. Registration fees are handled in line with the Constitution and the applicable AYU election arrangements."
   },
   {
     "number": 40,
