@@ -14,6 +14,9 @@ export default function MemberProfilePage() {
   const [state, setState] = useState<State>({ status: "loading" });
   const [message, setMessage] = useState("");
   const [saving, setSaving] = useState(false);
+  const [photo, setPhoto] = useState<File | null>(null);
+  const [photoBusy, setPhotoBusy] = useState(false);
+  const [photoVersion, setPhotoVersion] = useState(0);
 
   useEffect(() => {
     apiJson<{ member: MemberSummary }>("/api/member/profile")
@@ -59,6 +62,54 @@ export default function MemberProfilePage() {
     }
   };
 
+  const uploadPhoto = async () => {
+    if (!photo) {
+      setMessage("Choose a profile photo first.");
+      return;
+    }
+    if (!["image/jpeg", "image/png", "image/webp"].includes(photo.type)) {
+      setMessage("Profile photos must be JPG, PNG or WebP files.");
+      return;
+    }
+    if (photo.size > 3 * 1024 * 1024) {
+      setMessage("Profile photos must not exceed 3 MB.");
+      return;
+    }
+
+    setPhotoBusy(true);
+    setMessage("");
+    const body = new FormData();
+    body.append("photo", photo);
+    try {
+      const response = await fetch("/api/member/profile-photo", { method: "POST", body, credentials: "same-origin", headers: { Accept: "application/json" } });
+      const result = await response.json().catch(() => null) as { message?: string } | null;
+      if (!response.ok) throw new Error(result?.message || "Your profile photo could not be uploaded.");
+      setState({ status: "ready", member: { ...member, hasProfilePhoto: true } });
+      setPhoto(null);
+      setPhotoVersion((version) => version + 1);
+      setMessage("Profile photo updated successfully.");
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Your profile photo could not be uploaded.");
+    } finally {
+      setPhotoBusy(false);
+    }
+  };
+
+  const removePhoto = async () => {
+    setPhotoBusy(true);
+    setMessage("");
+    try {
+      await apiJson("/api/member/profile-photo", { method: "DELETE" });
+      setState({ status: "ready", member: { ...member, hasProfilePhoto: false } });
+      setPhoto(null);
+      setMessage("Profile photo removed.");
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Your profile photo could not be removed.");
+    } finally {
+      setPhotoBusy(false);
+    }
+  };
+
   return (
     <div className="portal-page">
       <section className="portal-topbar"><div className="container portal-topbar-inner"><a className="portal-brand" href="/?page=member-portal"><img src="/ayu-logo.webp" alt="" width="44" height="42" /><span>AYU Member Portal</span></a><MemberPortalNav active="profile" /></div></section>
@@ -67,15 +118,32 @@ export default function MemberProfilePage() {
 
       <section className="section section-white portal-section">
         <div className="container profile-settings-grid">
-          <div className="portal-panel">
-            <p className="eyebrow">Membership Record</p>
-            <dl className="portal-detail-list">
-              <div><dt>Member number</dt><dd>{member.memberNumber}</dd></div>
-              <div><dt>Full name</dt><dd>{member.fullName}</dd></div>
-              <div><dt>Membership type</dt><dd>{member.membershipType === "honorary" ? "Honorary" : "Absolute"}</dd></div>
-              <div><dt>Status</dt><dd>{member.membershipStatus}</dd></div>
-              {member.termLabel ? <div><dt>Term</dt><dd>{member.termLabel}</dd></div> : null}
-            </dl>
+          <div className="portal-profile-sidebar">
+            <div className="portal-panel profile-photo-panel">
+              <p className="eyebrow">Profile Photo</p>
+              {member.hasProfilePhoto ? (
+                <img className="member-profile-photo" src={`/api/member/profile-photo?v=${photoVersion}`} alt={`${member.fullName} profile`} />
+              ) : (
+                <div className="member-profile-photo-fallback" aria-hidden="true"><img src="/ayu-logo.webp" alt="" /></div>
+              )}
+              <label className="field"><span>Choose photo</span><input type="file" accept="image/jpeg,image/png,image/webp" onChange={(event) => setPhoto(event.target.files?.[0] ?? null)} /></label>
+              <div className="profile-photo-actions">
+                <button className="button button-dark" type="button" onClick={uploadPhoto} disabled={photoBusy}>{photoBusy ? "Working…" : "Upload photo"}</button>
+                {member.hasProfilePhoto ? <button className="text-button" type="button" onClick={removePhoto} disabled={photoBusy}>Remove photo</button> : null}
+              </div>
+              <p className="field-hint">JPG, PNG or WebP, up to 3 MB. Public display remains controlled by your Privacy settings.</p>
+            </div>
+
+            <div className="portal-panel">
+              <p className="eyebrow">Membership Record</p>
+              <dl className="portal-detail-list">
+                <div><dt>Member number</dt><dd>{member.memberNumber}</dd></div>
+                <div><dt>Full name</dt><dd>{member.fullName}</dd></div>
+                <div><dt>Membership type</dt><dd>{member.membershipType === "honorary" ? "Honorary" : "Absolute"}</dd></div>
+                <div><dt>Status</dt><dd>{member.membershipStatus}</dd></div>
+                {member.termLabel ? <div><dt>Term</dt><dd>{member.termLabel}</dd></div> : null}
+              </dl>
+            </div>
           </div>
 
           <form className="portal-panel profile-edit-form" onSubmit={submit}>
