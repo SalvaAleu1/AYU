@@ -1,0 +1,28 @@
+.main-nav .member-login-link {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.main-nav .member-login-link:hover,
+.main-nav .member-login-link:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.membership-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 680px) {
+  .membership-action-row {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .membership-action-row .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
