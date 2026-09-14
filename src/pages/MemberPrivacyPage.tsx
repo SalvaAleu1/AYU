@@ -13,7 +13,7 @@ type VisibilityKey = "directoryVisible" | "photoVisible" | "bioVisible" | "email
 const preferenceCopy: Array<{ key: VisibilityKey; title: string; description: string }> = [
   {
     key: "directoryVisible",
-    title: "Appear in a future public member directory",
+    title: "Allow my profile in the public member directory",
     description: "Your member profile remains private unless you explicitly allow directory visibility."
   },
   {
