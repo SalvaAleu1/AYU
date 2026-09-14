@@ -8,7 +8,7 @@ export default function WorkPage() {
       <PageHero
         eyebrow="Our Work"
         title="AYU's constitutional mandate organized into clear areas of service."
-        description="The Our Work section translates AYU's constitutional objectives into nine public programme pillars, while preserving a clear distinction between institutional mandate and verified projects that have actually been implemented."
+        description="AYU's work is organized around nine programme pillars drawn from the Union's constitutional objectives, with projects and initiatives presented within the areas they serve."
         aside={
           <dl className="page-fact-list">
             <div><dt>Programme pillars</dt><dd>9</dd></div>
@@ -24,7 +24,7 @@ export default function WorkPage() {
           <SectionHeading
             eyebrow="Programme Pillars"
             title="Nine areas connect AYU's Constitution to practical community service."
-            description="Each pillar has its own public landing page showing the constitutional mandate, related objectives and the Executive portfolios most closely connected to that area."
+            description="Each programme area explains its constitutional mandate, related objectives and the Executive portfolios connected to that area of work."
           />
 
           <div className="program-pillar-grid">
@@ -64,7 +64,7 @@ export default function WorkPage() {
       {verifiedProjects.length > 0 ? (
         <section className="section section-soft">
           <div className="container">
-            <SectionHeading eyebrow="Projects & Initiatives" title="Verified AYU programmes and projects." />
+            <SectionHeading eyebrow="Projects & Initiatives" title="AYU programmes and projects." />
             <div className="project-card-grid">
               {verifiedProjects.map((project) => (
                 <a className="project-card" href={`/?page=project&slug=${project.slug}`} key={project.slug}>
