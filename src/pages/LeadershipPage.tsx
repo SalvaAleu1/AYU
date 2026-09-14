@@ -11,14 +11,13 @@ export default function LeadershipPage() {
     <>
       <PageHero
         eyebrow="Leadership"
-        title="Leadership defined by service, accountability and constitutional responsibility."
-        description="AYU-Juba is governed through the General Assembly, Executive Committee and Advisory Board. The Executive Committee comprises thirteen constitutional offices with defined responsibilities to the Union and its members."
+        title="Leadership guided by service, responsibility and accountability."
+        description="AYU-Juba is governed through the General Assembly, Executive Committee and Advisory Board. The Constitution defines the responsibilities of each leadership office and how leaders account to members."
         aside={
           <dl className="page-fact-list">
-            <div><dt>Executive Committee</dt><dd>13 constitutional offices</dd></div>
-            <div><dt>Women in Executive</dt><dd>At least 4 members</dd></div>
-            <div><dt>Executive tenure</dt><dd>2 years</dd></div>
-            <div><dt>Accountable to</dt><dd>General Assembly</dd></div>
+            <div><dt>Highest authority</dt><dd>General Assembly</dd></div>
+            <div><dt>Daily leadership</dt><dd>Executive Committee</dd></div>
+            <div><dt>Guidance</dt><dd>Advisory Board</dd></div>
           </dl>
         }
       />
@@ -26,7 +25,7 @@ export default function LeadershipPage() {
       {currentLeadership.length > 0 ? (
         <section className="section section-white">
           <div className="container">
-            <SectionHeading eyebrow="Current Executive Committee" title="The elected and appointed leadership of AYU-Juba." />
+            <SectionHeading eyebrow="Current Leadership" title="Serving AYU-Juba leadership." />
 
             {chairperson ? (
               <article className="leader-feature-card">
@@ -73,20 +72,19 @@ export default function LeadershipPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Executive Committee"
-            title="Thirteen offices, each with a defined constitutional mandate."
-            description="The Executive Committee conducts the day-to-day affairs of the Union, implements approved policies and programmes, raises and manages resources, and reports back to the General Assembly."
+            title="Leadership roles and responsibilities."
+            description="The Executive Committee manages the daily work of AYU, carries out approved plans and programmes, manages resources and reports to the General Assembly."
           />
 
           <div className="role-grid">
-            {executiveRoles.map((role, index) => (
+            {executiveRoles.map((role) => (
               <article className="role-card" key={role.title}>
                 <div className="role-card-topline">
-                  <span>{String(index + 1).padStart(2, "0")}</span>
                   <h3>{role.title}</h3>
                 </div>
                 <p>{role.summary}</p>
                 <details>
-                  <summary>Constitutional responsibilities</summary>
+                  <summary>Responsibilities</summary>
                   <ul>
                     {role.responsibilities.map((responsibility) => <li key={responsibility}>{responsibility}</li>)}
                   </ul>
@@ -100,14 +98,14 @@ export default function LeadershipPage() {
       <section className="section section-dark">
         <div className="container leadership-principles-grid">
           <div>
-            <p className="eyebrow eyebrow-light">Executive Responsibility</p>
+            <p className="eyebrow eyebrow-light">Leadership Responsibility</p>
             <h2 className="display-title display-title-light">Leadership is accountable to the General Assembly.</h2>
           </div>
           <div className="leadership-principles">
-            <div><strong>Policy & programmes</strong><p>The Executive Committee plans, initiates, monitors and evaluates projects and implements Union policies.</p></div>
-            <div><strong>Day-to-day management</strong><p>The Executive Committee conducts the ordinary affairs of AYU-Juba and coordinates institutional activities.</p></div>
-            <div><strong>Reporting</strong><p>The Executive Committee is required to report back and account to the General Assembly.</p></div>
-            <div><strong>Representation</strong><p>Executive offices carry defined responsibilities for administration, finance, communications, law, programmes, health, culture, sports, welfare and external relations.</p></div>
+            <div><strong>Plans & programmes</strong><p>The Executive Committee plans and follows up AYU projects and carries out Union policies.</p></div>
+            <div><strong>Daily management</strong><p>The Executive Committee manages the ordinary affairs of AYU-Juba and coordinates activities.</p></div>
+            <div><strong>Reporting</strong><p>The Executive Committee reports back and accounts to the General Assembly.</p></div>
+            <div><strong>Representation</strong><p>Executive offices support administration, finance, communication, legal matters, programmes, health, culture, sports, welfare and external relations.</p></div>
           </div>
         </div>
       </section>
@@ -117,6 +115,7 @@ export default function LeadershipPage() {
           <div>
             <p className="eyebrow">Constitutional Record</p>
             <h2 className="display-title">Amended 2025 Constitution</h2>
+            <p>The General Assembly amended and approved the Constitution. It was then signed into law by the serving Chairperson.</p>
           </div>
           <article className="record-card">
             <span>Signed into law by</span>
