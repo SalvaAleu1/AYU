@@ -23,7 +23,7 @@ export async function onRequestGet({ request, env }) {
       LIMIT 8
     `).bind(audiences[0], audiences[1]).all(),
     env.AYU_DB.prepare(`
-      SELECT id, title, description, external_url, published_at
+      SELECT id, title, description, external_url, file_key, published_at
       FROM member_documents
       WHERE is_published = 1 AND audience IN (?, ?)
       ORDER BY published_at DESC
@@ -45,6 +45,14 @@ export async function onRequestGet({ request, env }) {
       LIMIT 1
     `).bind(member.member_id).first(),
   ]);
+
+  const documents = (documentsResult.results || []).map((document) => ({
+    id: document.id,
+    title: document.title,
+    description: document.description,
+    published_at: document.published_at,
+    url: document.external_url || (document.file_key ? `/api/member/documents/${encodeURIComponent(document.id)}` : null),
+  }));
 
   return json({
     member: {
@@ -68,7 +76,7 @@ export async function onRequestGet({ request, env }) {
       phoneVisible: Boolean(privacy?.phone_visible),
     },
     announcements: announcementsResult.results || [],
-    documents: documentsResult.results || [],
+    documents,
     forms: formsResult.results || [],
   });
 }
