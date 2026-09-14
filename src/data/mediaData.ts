@@ -48,7 +48,7 @@ export const mediaResources: MediaResource[] = [
     title: "Constitution of Apuk Youth Union in Juba — Amended 2025",
     category: "Publications",
     description: "The governance foundation covering AYU's mission, membership, organs, leadership, finances, elections and institutional relationships.",
-    href: "/#constitution",
+    href: "/?page=constitution",
   },
 ];
 
