@@ -22,8 +22,8 @@ export default function ImpactPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Documented Milestones"
-            title="Institutional progress recorded with context, not promotional estimates."
-            description="Each record explains what happened, why it matters to AYU and any measurable figures that can be supported by the underlying record."
+            title="Institutional progress presented with context and measurable evidence."
+            description="Each record explains the milestone, its relevance to AYU and the figures or outcomes associated with it where these form part of the documented record."
           />
 
           <div className="impact-grid">
