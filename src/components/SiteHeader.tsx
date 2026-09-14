@@ -7,7 +7,8 @@ const navItems = [
   { href: "/?page=news", label: "News" },
   { href: "/?page=events", label: "Events" },
   { href: "/?page=impact", label: "Impact" },
-  { href: "/#membership", label: "Membership" },
+  { href: "/?page=media", label: "Media" },
+  { href: "/?page=membership", label: "Membership" },
 ];
 
 export default function SiteHeader() {
