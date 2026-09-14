@@ -10,6 +10,7 @@ export type MemberSummary = {
   jubaArea?: string | null;
   shortBio?: string | null;
   dateOfBirth?: string | null;
+  hasProfilePhoto?: boolean;
 };
 
 export type PrivacyPreferences = {
