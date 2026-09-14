@@ -13,7 +13,7 @@ export default function AdvisoryHistoryPage() {
       <PageHero
         eyebrow="Advisory Board & Institutional History"
         title="Preserving institutional memory while strengthening constitutional guidance."
-        description="AYU-Juba's Advisory Board provides constitutional counsel to the Union, while the leadership archive is designed to preserve verified records of previous administrations as the institution grows."
+        description="AYU-Juba's Advisory Board provides constitutional counsel to the Union, while the leadership archive preserves the record of service and institutional continuity across successive administrations."
         aside={
           <dl className="page-fact-list">
             <div><dt>Board size</dt><dd>{advisoryBoardStructure.size} members</dd></div>
@@ -80,10 +80,10 @@ export default function AdvisoryHistoryPage() {
             <h2 className="display-title display-title-light">Leadership changes. Institutional memory should remain.</h2>
           </div>
           <div className="history-principles">
-            <div><strong>Verified records</strong><p>Leadership history is published only from records that can be attributed to AYU or another reliable institutional source.</p></div>
-            <div><strong>Term-based archive</strong><p>Each administration can be preserved by term, officeholder and period of service instead of replacing earlier leadership when a new term begins.</p></div>
-            <div><strong>Respectful record</strong><p>The archive records institutional service without turning leadership history into a ranking or political commentary.</p></div>
-            <div><strong>Long-term continuity</strong><p>The structure supports future administrations without changing the page architecture every election cycle.</p></div>
+            <div><strong>Institutional record</strong><p>AYU's leadership history preserves the service of successive administrations as part of the Union's long-term institutional identity.</p></div>
+            <div><strong>Term-based history</strong><p>Each administration is recorded by its period of service and constitutional offices, allowing future generations to understand the Union's leadership journey.</p></div>
+            <div><strong>Service & responsibility</strong><p>The archive recognizes public service and constitutional responsibility without turning institutional history into political commentary.</p></div>
+            <div><strong>Continuity</strong><p>Preserving earlier administrations strengthens accountability, heritage and continuity as new leaders assume office.</p></div>
           </div>
         </div>
       </section>
