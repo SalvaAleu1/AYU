@@ -13,13 +13,12 @@ export default function GovernancePage() {
     <>
       <PageHero
         eyebrow="Governance & Transparency"
-        title="Clear institutions, constitutional accountability and responsible stewardship."
-        description="AYU-Juba's governance framework places the General Assembly at the centre of institutional authority while establishing defined responsibilities for leadership, finance, audit, reporting and public accountability."
+        title="Clear rules, accountability and responsible leadership."
+        description="AYU is guided by its Constitution. The General Assembly holds the main authority, while leadership is responsible for managing the Union, reporting to members and using resources properly."
         aside={
           <dl className="page-fact-list">
-            <div><dt>Supreme organ</dt><dd>General Assembly</dd></div>
-            <div><dt>Internal audit</dt><dd>Quarterly</dd></div>
-            <div><dt>External audit</dt><dd>Annual</dd></div>
+            <div><dt>Highest authority</dt><dd>General Assembly</dd></div>
+            <div><dt>Audit</dt><dd>Internal and external review</dd></div>
             <div><dt>Current Constitution</dt><dd>Amended 2025</dd></div>
           </dl>
         }
@@ -29,11 +28,11 @@ export default function GovernancePage() {
         <div className="container governance-intro-grid">
           <div>
             <p className="eyebrow">General Assembly</p>
-            <h2 className="display-title">The constitutional centre of AYU accountability.</h2>
+            <h2 className="display-title">The main decision-making body of AYU.</h2>
           </div>
           <div className="governance-power-list">
-            {generalAssemblyPowers.map((power, index) => (
-              <div key={power}><span>{String(index + 1).padStart(2, "0")}</span><p>{power}</p></div>
+            {generalAssemblyPowers.map((power) => (
+              <div key={power}><p>{power}</p></div>
             ))}
           </div>
         </div>
@@ -42,9 +41,9 @@ export default function GovernancePage() {
       <section className="section section-soft">
         <div className="container">
           <SectionHeading
-            eyebrow="Financial Governance"
-            title="Resources are subject to constitutional oversight."
-            description="AYU's Constitution connects resource mobilization with transparent use, formal oversight and audit responsibility."
+            eyebrow="Financial Responsibility"
+            title="AYU resources must be managed responsibly."
+            description="The Constitution requires proper use of resources, oversight, reporting and audit."
           />
           <div className="governance-card-grid">
             {financialGovernance.map((item) => (
@@ -60,19 +59,19 @@ export default function GovernancePage() {
       <section className="section section-dark">
         <div className="container governance-finance-grid">
           <div>
-            <p className="eyebrow eyebrow-light">Constitutional Sources of Funds</p>
-            <h2 className="display-title display-title-light">A defined financial framework.</h2>
-            <p>AYU may receive or generate resources through the sources recognized in its Constitution, while all funds remain tied to the objectives of the Union.</p>
+            <p className="eyebrow eyebrow-light">Sources of Funds</p>
+            <h2 className="display-title display-title-light">How AYU may receive or generate resources.</h2>
+            <p>All resources must support the objectives of the Union and be handled according to the Constitution.</p>
           </div>
-          <ol className="finance-source-list">
+          <ul className="finance-source-list">
             {financeSources.map((source) => <li key={source}>{source}</li>)}
-          </ol>
+          </ul>
         </div>
       </section>
 
       <section className="section section-white">
         <div className="container">
-          <SectionHeading eyebrow="Governance Principles" title="Transparency works together with responsibility and confidentiality." />
+          <SectionHeading eyebrow="Governance Principles" title="Transparency, responsibility and confidentiality all matter." />
           <div className="governance-card-grid">
             {governancePrinciples.map((item) => (
               <article className="governance-card governance-principle-card" key={item.title}>
@@ -87,9 +86,9 @@ export default function GovernancePage() {
       <section className="section section-sky">
         <div className="container">
           <SectionHeading
-            eyebrow="Public Governance Library"
-            title="AYU governance documents available for public access."
-            description="The library presents governance materials released for public access while respecting the confidentiality requirements of the Constitution."
+            eyebrow="Public Documents"
+            title="AYU governance documents available to the public."
+            description="Only documents approved for public access are shown here. Confidential records remain private."
           />
           <div className="governance-document-grid">
             {governanceDocuments.map((document) => (
@@ -108,7 +107,7 @@ export default function GovernancePage() {
       <section className="section section-gold">
         <div className="container governance-cta-grid">
           <div><p className="eyebrow">Constitution</p><h2>Read the AYU Constitution article by article.</h2></div>
-          <a className="button button-dark" href="/?page=constitution">Open digital Constitution</a>
+          <a className="button button-dark" href="/?page=constitution">Open Constitution</a>
         </div>
       </section>
     </>
