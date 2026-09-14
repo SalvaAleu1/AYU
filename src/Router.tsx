@@ -16,6 +16,7 @@ import NewsArticlePage from "./pages/NewsArticlePage";
 import NewsPage from "./pages/NewsPage";
 import ProgramPage from "./pages/ProgramPage";
 import ProjectPage from "./pages/ProjectPage";
+import SuccessStoryPage from "./pages/SuccessStoryPage";
 import WorkPage from "./pages/WorkPage";
 
 function PageShell({ children }: { children: ReactNode }) {
@@ -50,6 +51,7 @@ export default function Router() {
   if (page === "event") return <PageShell><EventPage slug={params.get("slug") ?? ""} /></PageShell>;
   if (page === "impact") return <PageShell><ImpactPage /></PageShell>;
   if (page === "impact-story") return <PageShell><ImpactStoryPage slug={params.get("slug") ?? ""} /></PageShell>;
+  if (page === "success-story") return <PageShell><SuccessStoryPage slug={params.get("slug") ?? ""} /></PageShell>;
 
   return <App />;
 }
