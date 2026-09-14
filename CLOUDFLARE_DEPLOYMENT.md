@@ -1,30 +1,34 @@
-# AYU-Juba — Cloudflare Pages Deployment
+# AYU-Juba — Cloudflare Workers Deployment
 
-The production architecture is a static Vite/React site. No D1 database, R2 bucket, Workers API, server-side membership account, or GitHub Actions workflow is required.
+The production architecture is a static Vite/React site deployed through **Cloudflare Workers Builds with Static Assets**. No D1 database, R2 membership storage, server-side membership account, or GitHub Actions workflow is required.
 
-## Cloudflare Pages settings
+## Cloudflare Workers Builds settings
 
 - Repository: `SalvaAleu1/AYU`
 - Production branch: `main`
-- Root directory: repository root
+- Root directory: `/`
 - Build command: `npm run build`
-- Build output directory: `dist`
-- Node.js: Cloudflare’s supported Node.js runtime
+- Deploy command: `npx wrangler deploy`
+- Version command: `npx wrangler versions upload`
 - Environment variables: none required for the public website
 
-## Deploy command
+## Wrangler configuration
 
-This is a **Cloudflare Pages** project, not a Workers-script project.
+`wrangler.toml` is configured for Workers Static Assets:
 
-- Do **not** use `npx wrangler deploy`.
-- If the Cloudflare Git-integration screen allows the deploy command field to be left empty, leave it empty and let Pages publish the configured `dist` output after a successful build.
-- If the deployment workflow explicitly requires a deploy command, use:
+```toml
+name = "ayu"
+compatibility_date = "2026-09-14"
+workers_dev = true
+send_metrics = false
 
-```bash
-npx wrangler pages deploy dist
+[assets]
+directory = "./dist"
+not_found_handling = "404-page"
+html_handling = "auto-trailing-slash"
 ```
 
-The repository already contains `pages_build_output_dir = "./dist"` in `wrangler.toml`, so Wrangler recognizes the project as Pages.
+Do not use `wrangler pages deploy` for this Cloudflare project. The dashboard project was created under Workers Builds, which requires a Deploy command. `npx wrangler deploy` reads the `[assets]` configuration above and uploads the built `dist` directory as static assets.
 
 ## Membership registration
 
@@ -32,8 +36,8 @@ The website does not store membership applications. Membership registration open
 
 ## Production behavior
 
-Cloudflare installs dependencies from `package.json`, runs the Vite production build and serves the generated `dist` directory. Security headers are defined in `public/_headers` and are copied into the production build.
+Cloudflare installs dependencies, runs the Vite production build, then Wrangler deploys the generated `dist` directory as Workers Static Assets. The `_headers` file in `public/` is copied into `dist` by Vite and is supported by Workers Static Assets for response headers.
 
 ## GitHub Actions
 
-Do not enable GitHub Actions for builds or deployment. Cloudflare Pages performs the production build directly from the repository.
+Do not enable GitHub Actions for builds or deployment. Cloudflare Workers Builds performs the production build and deployment directly from the connected repository.
