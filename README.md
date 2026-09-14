@@ -1,42 +1,34 @@
 # Apuk Youth Union in Juba (AYU)
 
-Official web platform for **Apuk Youth Union in Juba (AYU-Juba)**.
+Official public website of **Apuk Youth Union in Juba (AYU-Juba)**.
 
 > **Motto:** Together for Peace, Unity and Development.
 
 ## Constitutional foundation
 
-The public platform is being built from the amended 2025 Constitution of Apuk Youth Union in Juba. The first implementation reflects AYU's constitutional identity, mission, vision, values, objectives, membership framework, governance organs, executive structure and relationships with other Apuk institutions.
+The website is grounded in the amended 2025 Constitution of Apuk Youth Union in Juba. Public content covers AYU's constitutional identity, mission, vision, values, objectives, membership, governance organs, leadership structure, programmes, finances, elections and relationships with other Apuk institutions.
 
-AYU and Apuk Graduates Congress (AGC) are separate organizations. AGC appears on this platform only where the AYU Constitution identifies it as one of AYU's partner institutions.
+AYU and Apuk Graduates’ Congress (AGC) are separate organizations. AGC appears here only where the AYU Constitution identifies it as a community partner.
 
-## Current implementation
+## Production architecture
 
-### Phase 1 — Public institutional foundation
+- React + TypeScript + Vite
+- Static, database-free public website
+- Cloudflare Pages production hosting
+- GitHub repository used for source control; GitHub Actions are not required
+- Responsive mobile, tablet and desktop layouts
+- Source-controlled news, events, programmes, governance and election information
+- Searchable digital reader for the Amended 2025 AYU Constitution
+- Membership registration through an AYU-approved external Google Form once the official link is configured
+- Security headers, SEO/social metadata, Privacy Policy, Terms of Use, Accessibility statement and professional 404 page
 
-- React + TypeScript + Vite application
-- Responsive mobile, tablet and desktop layout
-- AYU mission, vision, values and motto
-- Constitutional objectives
-- Membership eligibility overview
-- General Assembly, Executive Committee and Advisory Board structure
-- All 13 constitutional Executive Committee offices
-- Constitutional partner relationships
-- Constitution overview
-- Mobile navigation and back-to-top control
-- AYU-specific branding foundation using green and gold tones
+## Public sections
 
-## Next build areas
+Home, About AYU, Identity & Symbols, Leadership, Advisory Board & History, Our Work, News & Official Communications, Events, Impact, Media Centre, Membership, Governance & Transparency, Constitution, Elections, Apuk Youth Hub, Partners & Support, Contact, Search and website utilities.
 
-1. Official AYU logo and brand assets
-2. Current leadership and Advisory Board profiles once official officeholder details are supplied
-3. News, announcements, programmes and events
-4. Public document centre, including the Constitution and approved institutional documents
-5. Membership registration and member accounts
-6. Administrative dashboard and role-based access
-7. Programme, finance and reporting workflows where constitutionally appropriate
-8. Contact, social media and official communication channels
-9. Deployment, domain, SEO, analytics, accessibility and production hardening
+## Content operations
+
+Public content is maintained in typed source files under `src/data/`. See `CONTENT_OPERATIONS.md` for the content map and publication principles. Internal repository roles and source-management policy are defined under `src/admin/`.
 
 ## Development
 
@@ -50,3 +42,12 @@ Production build:
 ```bash
 npm run build
 ```
+
+Cloudflare Pages:
+
+- Build command: `npm run build`
+- Output directory: `dist`
+- Production branch: `main`
+- Environment variables: none required for the static public site
+
+See `CLOUDFLARE_DEPLOYMENT.md` for deployment details.
