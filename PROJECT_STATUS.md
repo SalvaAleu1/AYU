@@ -12,8 +12,8 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 
 ## Current checkpoint
 
-**Completed:** Phases 1–15  
-**Next build block:** Phases 16–18  
+**Completed:** Phases 1–18  
+**Next build block:** Phases 19–21  
 **Repository:** `SalvaAleu1/AYU`  
 **Primary branch:** `main`
 
@@ -155,45 +155,79 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 
 ### Completed Phase 13 — Media Centre
 
-- Dedicated responsive Media Centre connected to global navigation
-- Resource model supports Publications, Press Resources, Downloads, Photos, Videos and Speeches
-- Empty media categories are not presented publicly until approved material exists
-- Official AYU emblem available as a direct downloadable resource
-- AYU identity/symbols, official communications archive and Amended 2025 Constitution linked as institutional resources
-- Search and category filtering for available media resources
-- Public communications section distinguishes Media Centre resources from News & Official Communications
-- No fake galleries, speeches, videos or media assets introduced
+- Dedicated Media Centre connected to public navigation
+- Structured media library for publications, press resources, downloads, photos, videos and speeches
+- Search/filter architecture across media resources
+- Official AYU logo and Constitution resources integrated where appropriate
+- Empty media categories stay hidden rather than displaying fake or placeholder assets
+- Media Centre kept separate from News & Official Communications
 
 ### Completed Phase 14 — Membership Information
 
-- Dedicated Membership page connected to global navigation
-- Absolute Membership and Honorary Membership explained from Article 17
-- Absolute Membership eligibility: Apuk citizen by origin or resident, age 18–45, sound mind, registration and mandatory fee obligations
-- Honorary Membership appointment and General Assembly approval rules reflected
-- Honorary members' restriction on voting and contesting reflected
-- All eight constitutional member rights presented
-- Six constitutional member duties presented
+- Dedicated Membership page connected to public navigation
+- Absolute Membership and Honorary Membership explained from the Constitution
+- Absolute Membership eligibility: Apuk origin/residence, age 18–45, sound mind, registration and mandatory fee obligations
+- Honorary Membership appointment/approval framework reflected without exposing private administrative process
+- Eight constitutional member rights and six core member duties presented
 - Constitutional registration fee shown as 30,000 SSP once per term
-- Membership FAQ section
-- Privacy-by-default public position for personal membership information
-- Clear application CTA for eligible Absolute Membership applicants
+- Membership FAQs and privacy principles
+- Member information explicitly private by default
 
 ### Completed Phase 15 — Membership Application & Registration
 
-- Dedicated Absolute Membership application page
-- Client-side validation for name, date of birth, constitutional age range, membership basis, Juba residence area, contact details, declarations and optional supporting documents
-- Optional PDF/JPG/PNG supporting-document upload capped at 5 MB
-- Consent and privacy declarations included in the application interface
-- Cloudflare-compatible `/api/membership/applications` POST endpoint implemented
-- Server-side revalidation of eligibility fields and file constraints
-- Same-origin request guard, request-size limit, honeypot abuse protection and no-store response headers
-- D1 persistence model added in `migrations/0001_membership_applications.sql`
-- Optional supporting documents stored under generated private R2 object keys through the `AYU_MEMBERSHIP_FILES` binding
-- Random application references returned after successful submission
-- Application data is not persisted in browser storage
-- Honorary Membership kept outside the public Absolute Membership application form
-- No internal membership decision-making or private administrative workflow exposed in public UI
-- Production D1/R2 resource provisioning and binding remain part of Phase 30 Cloudflare infrastructure, while the application module and API contract are now implemented
+- Responsive Absolute Membership application form
+- Client-side validation for name, date of birth/age, membership basis, Juba residence area, phone, optional email, declaration and privacy consent
+- Optional PDF/JPG/PNG supporting document upload capped at 5 MB
+- Cloudflare-compatible application API with server-side revalidation, same-origin protection, request-size limits and honeypot abuse protection
+- Secure random application references
+- D1 schema for membership applications
+- Private R2 storage path for optional supporting documents
+- No application data stored in browser local storage
+- No internal membership decision-making or confidential verification flow exposed publicly
+
+### Completed Phase 16 — Authentication & Account Security
+
+- Member login and one-time account activation pages
+- Member-number + password authentication
+- PBKDF2-SHA256 password hashing with per-account random salt
+- Strong-password requirements and server-side validation
+- Random session tokens stored only as hashes in D1
+- Secure HTTP-only, SameSite session cookies with seven-day expiry
+- Same-origin protection on state-changing authentication requests
+- Login and activation rate limiting
+- Session expiry and cleanup
+- Password change with current-password confirmation
+- Password changes revoke all active sessions
+- Dedicated sign-out and sign-out-all-sessions controls
+- Account activation codes are one-time and discarded after successful activation
+- Member account/session database schema added without exposing authentication internals on the public site
+
+### Completed Phase 17 — Member Portal
+
+- Authenticated AYU Member Portal with dedicated portal navigation
+- Member dashboard with membership type and status
+- Digital AYU membership card using authenticated membership data
+- My Profile area with contact information and short biography editing
+- Private member profile-photo upload, authenticated delivery and removal
+- Member-only announcements architecture
+- Member-only documents architecture with authenticated R2 delivery support
+- Member forms architecture
+- Quick access to AYU events and news
+- Member portal routes protected by authenticated API access
+- Private portal empty states use professional member-service language and do not expose public placeholders
+- Contributions/receipts and notifications intentionally remain in their later roadmap phases rather than being prematurely implemented here
+
+### Completed Phase 18 — Member Privacy & Public Visibility Controls
+
+- Privacy settings page inside the authenticated member portal
+- Member records are private by default
+- Separate opt-in controls for public-directory visibility, profile photo, short bio, email address and phone number
+- Public-directory API returns only active members who explicitly enable directory visibility
+- Individual fields are withheld unless their specific visibility control is enabled
+- Public profile-photo delivery checks both directory visibility and photo visibility on every request
+- Privacy-controlled public photos use no-store caching so visibility changes are not prolonged by cache
+- Member number, date of birth, membership status and private administration fields are never exposed by the public-directory API
+- Private membership administration records remain outside public visibility controls
 
 ## Full 31-phase roadmap
 
@@ -229,10 +263,10 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 30. Cloudflare Production Architecture & Data Services
 31. Production Hardening, SEO, Legal, Testing & Launch
 
-## Next build block — Phases 16–18
+## Next build block — Phases 19–21
 
-- **Phase 16:** Authentication & Account Security
-- **Phase 17:** Member Portal
-- **Phase 18:** Member Privacy & Public Visibility Controls
+- **Phase 19:** Contributions, Payments & Receipts Framework
+- **Phase 20:** Governance & Transparency Centre
+- **Phase 21:** Constitution Digital Reader
 
-Do not begin Phase 19 until Phases 16–18 have been completed and reported.
+Do not begin Phase 22 until Phases 19–21 have been completed and reported.
