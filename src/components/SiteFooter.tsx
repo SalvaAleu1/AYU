@@ -15,7 +15,7 @@ const footerLinks = [
   { href: "/?page=membership", label: "Membership" },
   { href: "/?page=contact", label: "Contact" },
   { href: "/?page=search", label: "Search" },
-  { href: "/?page=utilities", label: "Website Utilities" },
+  { href: "/?page=utilities", label: "Website Tools" },
 ];
 
 const legalLinks = [
