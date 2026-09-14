@@ -142,6 +142,7 @@ export default function MemberPortalPage() {
           <div className="portal-panel portal-quick-links">
             <p className="eyebrow">Quick Access</p>
             <h2>AYU services</h2>
+            <a href="/?page=member-contributions">Contributions & receipts <span>→</span></a>
             <a href="/?page=events">Events <span>→</span></a>
             <a href="/?page=news">News & updates <span>→</span></a>
             <a href="/?page=member-privacy">Privacy settings <span>→</span></a>
