@@ -64,6 +64,7 @@ export default function SiteHeader() {
               {item.label}
             </a>
           ))}
+          <a className="member-login-link" href="/?page=member-login" onClick={closeMenu}>Member Login</a>
         </nav>
       </div>
     </header>
