@@ -9,6 +9,7 @@ import "./pages/work.css";
 import "./pages/communications.css";
 import "./pages/membership-media.css";
 import "./pages/portal.css";
+import "./pages/portal-polish.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
