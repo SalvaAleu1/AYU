@@ -7,11 +7,12 @@ const footerLinks = [
   { href: "/?page=events", label: "Events" },
   { href: "/?page=impact", label: "Impact" },
   { href: "/?page=media", label: "Media Centre" },
+  { href: "/?page=governance", label: "Governance & Transparency" },
+  { href: "/?page=constitution", label: "Constitution" },
   { href: "/?page=membership", label: "Membership" },
   { href: "/?page=membership-apply", label: "Apply for Membership" },
   { href: "/?page=member-login", label: "Member Login" },
   { href: "/?page=identity", label: "Identity & Symbols" },
-  { href: "/#constitution", label: "Constitution" },
 ];
 
 export default function SiteFooter() {
