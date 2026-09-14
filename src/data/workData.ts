@@ -11,7 +11,7 @@ export type ProjectRecord = {
   slug: string;
   title: string;
   pillarSlug: string;
-  status: "planned" | "active" | "completed";
+  status: "announced" | "planned" | "active" | "completed";
   summary: string;
   description: string;
   startDate?: string;
@@ -126,8 +126,18 @@ export const workPillars: WorkPillar[] = [
   },
 ];
 
-// Only verified AYU project records should be published here.
-export const verifiedProjects: ProjectRecord[] = [];
+export const verifiedProjects: ProjectRecord[] = [
+  {
+    slug: "peace-reconciliation-committee-2026",
+    title: "AYU Peace and Reconciliation Committee",
+    pillarSlug: "peace-reconciliation",
+    status: "announced",
+    summary: "A 2026 AYU initiative established to promote peace, unity, reconciliation, forgiveness and harmonious coexistence among youth in the community.",
+    description: "Chairperson's Order No. 04/2026 established the AYU Peace and Reconciliation Committee. Its mandate includes coordinating a two-day consultative meeting involving community leaders, youth representatives, elders, Members of Parliament, intellectuals and leadership structures to discuss approaches to strengthening unity and sustaining peace. The committee is also responsible for coordinating preparations, mobilizing resources, documenting proceedings and submitting recommendations and a final report to the Executive Committee.",
+    startDate: "May 2026",
+    beneficiaries: "Apuk youth and wider community stakeholders",
+  },
+];
 
 export const projectGovernance = [
   {
