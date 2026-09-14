@@ -1,8 +1,3 @@
-export type ImpactMetric = {
-  label: string;
-  value: string;
-};
-
 export type ImpactRecord = {
   slug: string;
   title: string;
@@ -10,7 +5,6 @@ export type ImpactRecord = {
   category: "Governance" | "Peace & Reconciliation" | "Education" | "Health" | "Culture & Sports" | "Community Development";
   summary: string;
   details: string[];
-  metrics?: ImpactMetric[];
   relatedPage?: string;
   sourceLabel?: string;
   sourceUrl?: string;
@@ -30,32 +24,27 @@ export type SuccessStory = {
 export const impactRecords: ImpactRecord[] = [
   {
     slug: "constitutional-renewal-2025",
-    title: "AYU strengthens its institutional framework through the Amended 2025 Constitution",
+    title: "AYU adopts the Amended 2025 Constitution",
     period: "2025",
     category: "Governance",
-    summary: "The Amended 2025 Constitution consolidated AYU's governance, membership, leadership, accountability, election and partnership framework.",
+    summary: "The General Assembly amended and approved the Constitution, strengthening the rules that guide AYU membership, leadership, accountability, elections and community relationships.",
     details: [
-      "The General Assembly approved the amended Constitution on 14 September 2025, providing AYU-Juba with a comprehensive institutional framework for its current term and future administrations.",
-      "The Constitution defines three principal organs — the General Assembly, Executive Committee and Advisory Board — and sets out thirteen Executive Committee offices with defined responsibilities.",
-      "It also formalizes programme governance, financial accountability, electoral administration, membership rules, institutional relationships and confidentiality obligations.",
+      "The General Assembly approved the amended Constitution on 14 September 2025.",
+      "The Constitution sets out the roles of the General Assembly, Executive Committee and Advisory Board and explains the responsibilities of AYU leadership.",
+      "It also covers programmes, finances, elections, membership, community relationships and confidentiality.",
     ],
-    metrics: [
-      { label: "Constitutional objectives", value: "10" },
-      { label: "Executive Committee offices", value: "13" },
-      { label: "Advisory Board members", value: "3" },
-    ],
-    relatedPage: "/#constitution",
+    relatedPage: "/?page=constitution",
   },
   {
     slug: "peace-reconciliation-committee-2026",
-    title: "Peace and Reconciliation Committee established to advance dialogue and unity",
+    title: "Peace and Reconciliation Committee established",
     period: "2026",
     category: "Peace & Reconciliation",
-    summary: "AYU-Juba established a dedicated Peace and Reconciliation Committee to support dialogue, forgiveness, unity and harmonious coexistence among youth and community stakeholders.",
+    summary: "AYU-Juba established a Peace and Reconciliation Committee to support dialogue, forgiveness, unity and peaceful coexistence among youth and the wider community.",
     details: [
-      "Chairperson’s Order No. 04/2026 established the committee with responsibilities centred on peace, unity, reconciliation, forgiveness and harmonious coexistence.",
-      "The committee was tasked with preparing a two-day consultative meeting bringing together community leaders, youth representatives, elders, Members of Parliament, intellectuals and leadership wings.",
-      "The mandate includes resource mobilization, documentation of proceedings, recommendations and a final report to the Executive Committee.",
+      "Chairperson’s Order No. 04/2026 established the committee to support peace, unity, reconciliation, forgiveness and peaceful coexistence.",
+      "The committee was asked to prepare a consultative meeting involving community and youth representatives.",
+      "Its work also includes preparations, resource mobilization, keeping records of discussions and submitting recommendations and a final report.",
     ],
     relatedPage: "/?page=project&slug=peace-reconciliation-committee-2026",
     sourceLabel: "Akol Nyin TV public report",
@@ -63,14 +52,14 @@ export const impactRecords: ImpactRecord[] = [
   },
   {
     slug: "public-support-for-gogrial-reconciliation-2026",
-    title: "AYU publicly supports reconciliation and peaceful coexistence in Gogrial",
+    title: "AYU supports reconciliation and peaceful coexistence in Gogrial",
     period: "2026",
     category: "Peace & Reconciliation",
-    summary: "AYU-Juba welcomed the conclusion of a months-long reconciliation process among prominent Gogrial leaders, reinforcing the Union's constitutional commitment to peace and social cohesion.",
+    summary: "AYU-Juba welcomed the conclusion of a reconciliation process among Gogrial leaders, in line with the Union's commitment to peace and unity.",
     details: [
-      "In June 2026, AYU-Juba publicly welcomed a reconciliation process completed in Luonyaker Payam, Gogrial East County.",
-      "The Union's response aligned with its constitutional objectives to foster peace and reconciliation and to provide leadership in conflict management and peacebuilding.",
-      "The public position adds to AYU's continuing institutional emphasis on dialogue, unity and peaceful community relations.",
+      "In June 2026, AYU-Juba welcomed a reconciliation process completed in Luonyaker Payam, Gogrial East County.",
+      "The response reflected AYU's commitment to peace, reconciliation and peaceful community relations.",
+      "The development added to AYU's wider efforts to encourage dialogue and unity.",
     ],
     sourceLabel: "Eye Radio",
     sourceUrl: "https://www.eyeradio.org/prominent-gogrial-leaders-conclude-months-long-reconciliation-process/",
@@ -80,14 +69,14 @@ export const impactRecords: ImpactRecord[] = [
 export const successStories: SuccessStory[] = [];
 
 export const impactAreas = [
-  "Education and youth capacity",
+  "Education and youth development",
   "Peace and reconciliation",
   "Culture and heritage",
   "Sports and youth participation",
   "Health awareness and wellbeing",
   "Gender equality and social welfare",
   "Environment and sustainability",
-  "Community development and institutional accountability",
+  "Community development and accountability",
 ];
 
 export function getImpactRecord(slug: string) {
