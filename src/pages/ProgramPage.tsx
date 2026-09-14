@@ -66,7 +66,7 @@ export default function ProgramPage({ slug }: { slug: string }) {
       {projects.length > 0 ? (
         <section className="section section-white">
           <div className="container">
-            <SectionHeading eyebrow="Projects & Initiatives" title={`Verified work under ${pillar.title}.`} />
+            <SectionHeading eyebrow="Projects & Initiatives" title={`AYU work under ${pillar.title}.`} />
             <div className="project-card-grid">
               {projects.map((project) => (
                 <a className="project-card" href={`/?page=project&slug=${project.slug}`} key={project.slug}>
@@ -85,11 +85,11 @@ export default function ProgramPage({ slug }: { slug: string }) {
       <section className="section section-dark programme-standard-section">
         <div className="container programme-standard-grid">
           <div>
-            <p className="eyebrow eyebrow-light">Programme Standard</p>
-            <h2 className="display-title display-title-light">Activities published under this pillar must be real AYU work.</h2>
+            <p className="eyebrow eyebrow-light">Programme Accountability</p>
+            <h2 className="display-title display-title-light">Projects are carried out within AYU's constitutional framework.</h2>
           </div>
           <p>
-            Project pages are designed to publish verified objectives, dates, locations, beneficiary information, results, photographs and reports when those records are available. The platform does not manufacture programme achievements to make a section look busy.
+            AYU programme implementation is guided by defined objectives, responsible resource use, regular progress reporting and final financial and narrative accountability to the Executive Committee.
           </p>
         </div>
       </section>
