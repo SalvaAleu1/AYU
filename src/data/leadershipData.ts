@@ -20,8 +20,8 @@ export const currentLeadership: LeadershipProfile[] = [
     slug: "agany-geng-ayiei",
     name: "Agany Geng Ayiei",
     role: "Chairperson",
-    shortBio: "Chairperson of Apuk Youth Union in Juba, leading the Executive Committee and representing AYU-Juba in public affairs.",
-    biography: "Agany Geng Ayiei serves as Chairperson of Apuk Youth Union in Juba. He signed the Amended 2025 Constitution into law following its approval by the General Assembly and has continued to serve publicly as AYU-Juba Chairperson in 2026.",
+    shortBio: "Chairperson of Apuk Youth Union in Juba, serving the Union and representing AYU-Juba in public affairs.",
+    biography: "Agany Geng Ayiei serves as Chairperson of Apuk Youth Union in Juba. The General Assembly amended and approved the Constitution in 2025, and he signed it into law in his role as Chairperson. He has continued to serve publicly as AYU-Juba Chairperson in 2026.",
     responsibilities: [
       "Heads the Executive Committee and oversees the proper management of the Union.",
       "Presides over meetings of the General Assembly and Executive Committee.",
@@ -36,14 +36,14 @@ export const currentLeadership: LeadershipProfile[] = [
 export const constitutionSignatory = {
   name: "Agany Geng Ayiei",
   role: "Chairperson of Apuk Youth Union in Juba",
-  context: "Signed the Amended 2025 Constitution into law following its approval by the General Assembly.",
+  context: "The General Assembly amended and approved the Constitution in 2025. It was then signed into law by the Chairperson.",
   date: "14 September 2025",
 };
 
 export const executiveRoles: ExecutiveRole[] = [
   {
     title: "Chairperson",
-    summary: "Heads the Executive Committee and carries overall responsibility for the proper management and public representation of AYU-Juba.",
+    summary: "Heads the Executive Committee and oversees the management and public representation of AYU-Juba.",
     responsibilities: [
       "Presides over meetings of the General Assembly and Executive Committee.",
       "Supervises the work of the Executive Committee.",
@@ -62,7 +62,7 @@ export const executiveRoles: ExecutiveRole[] = [
   },
   {
     title: "Secretary General",
-    summary: "Leads the Union's administration, records, correspondence, meeting documentation and coordination of programme execution.",
+    summary: "Leads AYU administration, records, correspondence, meeting documentation and coordination of activities.",
     responsibilities: [
       "Maintains administrative records and correspondence.",
       "Records minutes and serves as secretary of the Union.",
@@ -72,7 +72,7 @@ export const executiveRoles: ExecutiveRole[] = [
   },
   {
     title: "Secretary for Finance and Planning",
-    summary: "Maintains financial records, receives and safeguards Union funds, supports financial policy and serves as a bank-account co-signatory.",
+    summary: "Keeps financial records, receives and safeguards Union funds, supports financial planning and serves as a bank-account co-signatory.",
     responsibilities: [
       "Keeps proper financial documents and records.",
       "Receives funds and issues receipts on behalf of the Union.",
@@ -82,7 +82,7 @@ export const executiveRoles: ExecutiveRole[] = [
   },
   {
     title: "Secretary for Information and Media",
-    summary: "Serves as AYU-Juba's spokesperson and leads official communications, social media and website management.",
+    summary: "Leads AYU public communication, media, social media and website work.",
     responsibilities: [
       "Acts as spokesperson for AYU-Juba.",
       "Circulates official information to Executive Committee and General Assembly members.",
@@ -92,7 +92,7 @@ export const executiveRoles: ExecutiveRole[] = [
   },
   {
     title: "Secretary for External Affairs",
-    summary: "Leads AYU-Juba's external relations and represents the Union in matters involving other communities, unions and associations.",
+    summary: "Leads AYU's external relations with other communities, unions and associations.",
     responsibilities: [
       "Manages external-affairs relationships.",
       "Represents the Union in external-affairs matters.",
@@ -101,7 +101,7 @@ export const executiveRoles: ExecutiveRole[] = [
   },
   {
     title: "Secretary for Legal Affairs",
-    summary: "Provides legal guidance, interprets the Union's laws, represents AYU in legal matters and heads the disciplinary committee.",
+    summary: "Provides legal guidance, explains Union laws and represents AYU in legal matters.",
     responsibilities: [
       "Advises on interpretation of the Constitution and other Union laws.",
       "Provides legal assistance to the Union.",
@@ -111,7 +111,7 @@ export const executiveRoles: ExecutiveRole[] = [
   },
   {
     title: "Secretary for Education and Trainings",
-    summary: "Leads AYU education and training activities and supports recognition of learners across basic and higher education.",
+    summary: "Leads AYU education and training activities and supports recognition of learners.",
     responsibilities: [
       "Organizes education and training programmes.",
       "Organizes recognition activities for students.",
@@ -121,7 +121,7 @@ export const executiveRoles: ExecutiveRole[] = [
   },
   {
     title: "Secretary for Projects and Logistics",
-    summary: "Supports project policy and implementation, stakeholder engagement and management of the Union's logistical resources.",
+    summary: "Supports AYU projects, stakeholder engagement and management of logistical resources.",
     responsibilities: [
       "Supports project policy formulation and implementation.",
       "Represents Union interests in development discussions with stakeholders.",
@@ -131,7 +131,7 @@ export const executiveRoles: ExecutiveRole[] = [
   },
   {
     title: "Secretary for Health",
-    summary: "Coordinates community-health programmes, first-aid and public-health awareness while serving as a focal point for medical stakeholders.",
+    summary: "Coordinates health activities, first-aid awareness and public-health information.",
     responsibilities: [
       "Organizes health training and first-aid activities.",
       "Promotes awareness on HIV/AIDS and communicable diseases.",
@@ -141,7 +141,7 @@ export const executiveRoles: ExecutiveRole[] = [
   },
   {
     title: "Secretary for Culture and Sports",
-    summary: "Leads sports, youth and cultural activities that strengthen participation, talent and community identity.",
+    summary: "Leads sports, youth and cultural activities that support participation, talent and community identity.",
     responsibilities: [
       "Coordinates sports and youth issues.",
       "Organizes youth programmes and sports activities.",
@@ -151,7 +151,7 @@ export const executiveRoles: ExecutiveRole[] = [
   },
   {
     title: "Secretary for Gender, Social Welfare, Peace and Reconciliation",
-    summary: "Leads gender inclusion, social-welfare support and peace and reconciliation activities within the Union.",
+    summary: "Leads gender inclusion, social-welfare support and peace and reconciliation activities.",
     responsibilities: [
       "Supports general social-welfare and youth services.",
       "Promotes equality and inclusive representation.",
