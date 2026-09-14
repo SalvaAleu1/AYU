@@ -13,6 +13,13 @@ import ImpactStoryPage from "./pages/ImpactStoryPage";
 import LeaderProfilePage from "./pages/LeaderProfilePage";
 import LeadershipPage from "./pages/LeadershipPage";
 import MediaCentrePage from "./pages/MediaCentrePage";
+import MemberActivatePage from "./pages/MemberActivatePage";
+import MemberLoginPage from "./pages/MemberLoginPage";
+import MemberLogoutPage from "./pages/MemberLogoutPage";
+import MemberPortalPage from "./pages/MemberPortalPage";
+import MemberPrivacyPage from "./pages/MemberPrivacyPage";
+import MemberProfilePage from "./pages/MemberProfilePage";
+import MemberSecurityPage from "./pages/MemberSecurityPage";
 import MembershipApplicationPage from "./pages/MembershipApplicationPage";
 import MembershipPage from "./pages/MembershipPage";
 import NewsArticlePage from "./pages/NewsArticlePage";
@@ -58,6 +65,13 @@ export default function Router() {
   if (page === "media") return <PageShell><MediaCentrePage /></PageShell>;
   if (page === "membership") return <PageShell><MembershipPage /></PageShell>;
   if (page === "membership-apply") return <PageShell><MembershipApplicationPage /></PageShell>;
+  if (page === "member-login") return <PageShell><MemberLoginPage /></PageShell>;
+  if (page === "member-activate") return <PageShell><MemberActivatePage /></PageShell>;
+  if (page === "member-logout") return <MemberLogoutPage />;
+  if (page === "member-portal") return <MemberPortalPage />;
+  if (page === "member-profile") return <MemberProfilePage />;
+  if (page === "member-privacy") return <MemberPrivacyPage />;
+  if (page === "member-security") return <MemberSecurityPage />;
 
   return <App />;
 }
