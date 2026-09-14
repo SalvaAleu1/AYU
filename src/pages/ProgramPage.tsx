@@ -13,14 +13,14 @@ export default function ProgramPage({ slug }: { slug: string }) {
   return (
     <>
       <PageHero
-        eyebrow="AYU Programme Area"
+        eyebrow="AYU Area of Work"
         title={pillar.title}
         description={pillar.summary}
         aside={
           <dl className="page-fact-list">
-            <div><dt>Programme area</dt><dd>{pillar.title}</dd></div>
-            <div><dt>Related offices</dt><dd>{pillar.relatedOffices.join(", ")}</dd></div>
-            <div><dt>Institutional basis</dt><dd>AYU Constitution</dd></div>
+            <div><dt>Area</dt><dd>{pillar.title}</dd></div>
+            <div><dt>Related AYU offices</dt><dd>{pillar.relatedOffices.join(", ")}</dd></div>
+            <div><dt>Guided by</dt><dd>AYU Constitution</dd></div>
           </dl>
         }
       />
@@ -28,8 +28,8 @@ export default function ProgramPage({ slug }: { slug: string }) {
       <section className="section section-white">
         <div className="container program-mandate-grid">
           <div>
-            <p className="eyebrow">Mandate</p>
-            <h2 className="display-title">Why this programme area matters to AYU.</h2>
+            <p className="eyebrow">Purpose</p>
+            <h2 className="display-title">Why this area matters to AYU.</h2>
           </div>
           <div className="prose-stack">
             <p>{pillar.mandate}</p>
@@ -39,11 +39,10 @@ export default function ProgramPage({ slug }: { slug: string }) {
 
       <section className="section section-soft">
         <div className="container">
-          <SectionHeading eyebrow="Related Objectives" title="Constitutional priorities connected to this programme area." />
+          <SectionHeading eyebrow="Related Objectives" title="AYU objectives connected to this area of work." />
           <div className="program-objective-grid">
-            {pillar.relatedObjectives.map((objective, index) => (
+            {pillar.relatedObjectives.map((objective) => (
               <article key={objective}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
                 <p>{objective}</p>
               </article>
             ))}
@@ -54,8 +53,8 @@ export default function ProgramPage({ slug }: { slug: string }) {
       <section className="section section-sky">
         <div className="container related-office-grid">
           <div>
-            <p className="eyebrow">Related Executive Portfolios</p>
-            <h2 className="display-title">Institutional responsibility remains connected to AYU's governance structure.</h2>
+            <p className="eyebrow">Related AYU Offices</p>
+            <h2 className="display-title">The relevant AYU offices support this area of work.</h2>
           </div>
           <div className="related-office-list">
             {pillar.relatedOffices.map((office) => <div key={office}>{office}</div>)}
@@ -85,11 +84,11 @@ export default function ProgramPage({ slug }: { slug: string }) {
       <section className="section section-dark programme-standard-section">
         <div className="container programme-standard-grid">
           <div>
-            <p className="eyebrow eyebrow-light">Programme Accountability</p>
-            <h2 className="display-title display-title-light">Projects are carried out within AYU's constitutional framework.</h2>
+            <p className="eyebrow eyebrow-light">Project Responsibility</p>
+            <h2 className="display-title display-title-light">AYU projects should be clear, responsible and well reported.</h2>
           </div>
           <p>
-            AYU programme implementation is guided by defined objectives, responsible resource use, regular progress reporting and final financial and narrative accountability to the Executive Committee.
+            Projects are guided by AYU objectives, responsible use of resources, progress updates and final reports to the Executive Committee.
           </p>
         </div>
       </section>
