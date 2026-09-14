@@ -1,5 +1,6 @@
 import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
+import { membershipRegistrationUrl } from "../data/finalPlatformData";
 import {
   applicationPrivacyPoints,
   memberDuties,
@@ -39,9 +40,7 @@ export default function MembershipPage() {
               <article className="membership-category-card" key={category.name}>
                 <h3>{category.name}</h3>
                 <p>{category.summary}</p>
-                <ul>
-                  {category.notes.map((note) => <li key={note}>{note}</li>)}
-                </ul>
+                <ul>{category.notes.map((note) => <li key={note}>{note}</li>)}</ul>
               </article>
             ))}
           </div>
@@ -53,17 +52,12 @@ export default function MembershipPage() {
           <div>
             <p className="eyebrow">Member Rights</p>
             <h2 className="display-title">Participation is protected by the Constitution.</h2>
-            <ol className="membership-numbered-list">
-              {memberRights.map((right) => <li key={right}>{right}</li>)}
-            </ol>
+            <ol className="membership-numbered-list">{memberRights.map((right) => <li key={right}>{right}</li>)}</ol>
           </div>
-
           <div>
             <p className="eyebrow">Member Duties</p>
             <h2 className="display-title">Membership also carries responsibility.</h2>
-            <ol className="membership-numbered-list">
-              {memberDuties.map((duty) => <li key={duty}>{duty}</li>)}
-            </ol>
+            <ol className="membership-numbered-list">{memberDuties.map((duty) => <li key={duty}>{duty}</li>)}</ol>
           </div>
         </div>
       </section>
@@ -86,11 +80,9 @@ export default function MembershipPage() {
         <div className="container membership-privacy-grid">
           <div>
             <p className="eyebrow">Membership Privacy</p>
-            <h2 className="display-title">Personal membership information is private by default.</h2>
+            <h2 className="display-title">Membership registration is handled outside the public website.</h2>
           </div>
-          <div className="privacy-point-list">
-            {applicationPrivacyPoints.map((point) => <p key={point}>{point}</p>)}
-          </div>
+          <div className="privacy-point-list">{applicationPrivacyPoints.map((point) => <p key={point}>{point}</p>)}</div>
         </div>
       </section>
 
@@ -98,28 +90,19 @@ export default function MembershipPage() {
         <div className="container">
           <SectionHeading eyebrow="Membership FAQs" title="Common questions about joining AYU-Juba." />
           <div className="faq-list">
-            {membershipFaqs.map((item) => (
-              <details key={item.question}>
-                <summary>{item.question}</summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
+            {membershipFaqs.map((item) => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}
           </div>
         </div>
       </section>
 
-      <section className="section section-gold membership-cta">
-        <div className="container cta-grid">
-          <div>
-            <p className="eyebrow">AYU Membership</p>
-            <h2>Apply for membership or securely access your existing member account.</h2>
+      {membershipRegistrationUrl ? (
+        <section className="section section-gold membership-cta">
+          <div className="container cta-grid">
+            <div><p className="eyebrow">AYU Membership Registration</p><h2>Submit your registration through the official AYU form.</h2></div>
+            <a className="button button-dark" href={membershipRegistrationUrl} target="_blank" rel="noreferrer">Open registration form ↗</a>
           </div>
-          <div className="membership-action-row">
-            <a className="button button-dark" href="/?page=membership-apply">Apply for membership</a>
-            <a className="button button-outline-dark" href="/?page=member-login">Member Login</a>
-          </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
     </>
   );
 }
