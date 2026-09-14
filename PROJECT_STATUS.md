@@ -12,8 +12,8 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 
 ## Current checkpoint
 
-**Completed:** Phases 1–12  
-**Next build block:** Phases 13–15  
+**Completed:** Phases 1–15  
+**Next build block:** Phases 16–18  
 **Repository:** `SalvaAleu1/AYU`  
 **Primary branch:** `main`
 
@@ -153,6 +153,48 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 - Personal success stories remain unpublished until an attributable story with publication consent is available
 - Responsive layouts for news, events, impact and article/detail pages
 
+### Completed Phase 13 — Media Centre
+
+- Dedicated responsive Media Centre connected to global navigation
+- Resource model supports Publications, Press Resources, Downloads, Photos, Videos and Speeches
+- Empty media categories are not presented publicly until approved material exists
+- Official AYU emblem available as a direct downloadable resource
+- AYU identity/symbols, official communications archive and Amended 2025 Constitution linked as institutional resources
+- Search and category filtering for available media resources
+- Public communications section distinguishes Media Centre resources from News & Official Communications
+- No fake galleries, speeches, videos or media assets introduced
+
+### Completed Phase 14 — Membership Information
+
+- Dedicated Membership page connected to global navigation
+- Absolute Membership and Honorary Membership explained from Article 17
+- Absolute Membership eligibility: Apuk citizen by origin or resident, age 18–45, sound mind, registration and mandatory fee obligations
+- Honorary Membership appointment and General Assembly approval rules reflected
+- Honorary members' restriction on voting and contesting reflected
+- All eight constitutional member rights presented
+- Six constitutional member duties presented
+- Constitutional registration fee shown as 30,000 SSP once per term
+- Membership FAQ section
+- Privacy-by-default public position for personal membership information
+- Clear application CTA for eligible Absolute Membership applicants
+
+### Completed Phase 15 — Membership Application & Registration
+
+- Dedicated Absolute Membership application page
+- Client-side validation for name, date of birth, constitutional age range, membership basis, Juba residence area, contact details, declarations and optional supporting documents
+- Optional PDF/JPG/PNG supporting-document upload capped at 5 MB
+- Consent and privacy declarations included in the application interface
+- Cloudflare-compatible `/api/membership/applications` POST endpoint implemented
+- Server-side revalidation of eligibility fields and file constraints
+- Same-origin request guard, request-size limit, honeypot abuse protection and no-store response headers
+- D1 persistence model added in `migrations/0001_membership_applications.sql`
+- Optional supporting documents stored under generated private R2 object keys through the `AYU_MEMBERSHIP_FILES` binding
+- Random application references returned after successful submission
+- Application data is not persisted in browser storage
+- Honorary Membership kept outside the public Absolute Membership application form
+- No internal membership decision-making or private administrative workflow exposed in public UI
+- Production D1/R2 resource provisioning and binding remain part of Phase 30 Cloudflare infrastructure, while the application module and API contract are now implemented
+
 ## Full 31-phase roadmap
 
 1. Project Foundation & AYU Design System
@@ -187,10 +229,10 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 30. Cloudflare Production Architecture & Data Services
 31. Production Hardening, SEO, Legal, Testing & Launch
 
-## Next build block — Phases 13–15
+## Next build block — Phases 16–18
 
-- **Phase 13:** Media Centre
-- **Phase 14:** Membership Information
-- **Phase 15:** Membership Application & Registration
+- **Phase 16:** Authentication & Account Security
+- **Phase 17:** Member Portal
+- **Phase 18:** Member Privacy & Public Visibility Controls
 
-Do not begin Phase 16 until Phases 13–15 have been completed and reported.
+Do not begin Phase 19 until Phases 16–18 have been completed and reported.
