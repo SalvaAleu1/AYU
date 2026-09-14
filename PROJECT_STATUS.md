@@ -12,8 +12,8 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 
 ## Current checkpoint
 
-**Completed:** Phases 1–3  
-**Next build block:** Phases 4–6  
+**Completed:** Phases 1–6  
+**Next build block:** Phases 7–9  
 **Repository:** `SalvaAleu1/AYU`  
 **Primary branch:** `main`
 
@@ -52,6 +52,42 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 - Conditional architecture for future verified news, events, gallery and featured projects; empty/unverified content is not rendered publicly
 - Responsive CTA and full institutional footer
 
+### Completed Phase 4 — About AYU
+
+- Dedicated About AYU page connected to global navigation
+- Our Story grounded in the Constitution and AYU's non-political, non-profit institutional identity
+- Vision and Mission presentation
+- Motto and constitutional meaning
+- Full values presentation
+- Ten constitutional objectives
+- Registered office and constitutional history
+- AYU relationship to the Apuk Community Association in Juba
+- Language framework: Jieng (official), English (second official) and Arabic where constitutionally provided
+- Justice, dignity, human-rights and environmental stewardship sections
+- Fully responsive mobile/tablet/desktop layouts
+
+### Completed Phase 5 — AYU Identity, Logo & Symbols
+
+- Dedicated AYU Identity page using the official AYU emblem
+- Constitutional explanation of Hawk, Handshake, Green and Stars
+- Motto integrated as the central public brand line
+- Constitutional instrument of office: hawk and grey gown for the Chairperson
+- Website colour palette drawn from the approved emblem: deep green, white, black, sky blue and restrained gold/yellow
+- Professional institutional logo-use principles
+- Responsive official-emblem presentation
+
+### Completed Phase 6 — Leadership System
+
+- Dedicated Leadership page connected to global navigation
+- Data-driven leadership profile model supporting photos, biographies, duties and individual profile pages
+- All 13 Executive Committee offices with concise constitutional responsibilities
+- Chairperson, Deputy Chairperson, Secretary General, Finance, Information & Media, External Affairs, Legal Affairs, Education & Trainings, Projects & Logistics, Health, Culture & Sports, Gender/Social Welfare/Peace & Reconciliation and Deputy Finance portfolios represented
+- Verified current Chairperson Agany Geng Ayiei published from the 2025 constitutional record and independent 2026 public reporting
+- Individual profile route implemented for verified officeholder records
+- No unverified names, fake photographs or blank public leader cards
+- Executive accountability, two-year tenure and minimum four-women representation reflected from the Constitution
+- Constitutional signing record preserved separately from the current-leadership data model
+
 ## Full 31-phase roadmap
 
 1. Project Foundation & AYU Design System
@@ -86,10 +122,10 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 30. Cloudflare Production Architecture & Data Services
 31. Production Hardening, SEO, Legal, Testing & Launch
 
-## Next build block — Phases 4–6
+## Next build block — Phases 7–9
 
-- **Phase 4:** About AYU
-- **Phase 5:** AYU Identity, Logo & Symbols
-- **Phase 6:** Leadership System
+- **Phase 7:** Advisory Board & Past Leadership
+- **Phase 8:** Our Work / Program Architecture
+- **Phase 9:** Individual Programs & Projects
 
-Do not begin Phase 7 until Phases 4–6 have been completed and reported.
+Do not begin Phase 10 until Phases 7–9 have been completed and reported.
