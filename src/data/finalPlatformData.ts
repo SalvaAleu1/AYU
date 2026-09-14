@@ -14,10 +14,8 @@ export type PublicElectionRecord = {
 
 export const electionFacts = [
   { label: "Electoral body", value: "Independent Electoral Committee (IEC)" },
-  { label: "IEC membership", value: "7 members" },
-  { label: "Minimum women in IEC", value: "2" },
-  { label: "Practicing lawyers in IEC", value: "2" },
-  { label: "Electoral period", value: "2 months" },
+  { label: "Appointed through", value: "General Assembly" },
+  { label: "Guided by", value: "AYU Constitution" },
 ];
 
 export const electionPrinciples = [
