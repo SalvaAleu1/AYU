@@ -9,7 +9,7 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 - Missing noncritical public data remains absent or conditionally hidden rather than being fabricated.
 - GitHub is the source-code repository only. GitHub Actions/CI is not used.
 - The production website is intentionally static and database-free.
-- Membership registration uses an AYU-approved external Google Form after the exact official URL is supplied.
+- Membership registration uses the official AYU Google Form: `https://forms.gle/4GTEwGTtW1wYq3ry5`.
 - Cloudflare Pages performs dependency installation, production build and deployment from `main`.
 
 ## Final checkpoint
@@ -36,7 +36,7 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 12. **Impact & Success Stories** — documented milestones and consent-aware story architecture.
 13. **Media Centre** — publications, press resources and official downloads.
 14. **Membership Information** — categories, eligibility, rights, duties and constitutional fee.
-15. **Membership Application & Registration** — superseded for production by external AYU Google Form registration to keep the site database-free.
+15. **Membership Application & Registration** — implemented through the official AYU Google Form to keep the website database-free.
 16. **Authentication & Account Security** — superseded for production by the static public-site architecture; no website member account is required.
 17. **Member Portal** — superseded for production by the static public-site architecture.
 18. **Member Privacy & Public Visibility Controls** — public privacy principles retained; database-backed member-directory controls are not required in production.
@@ -44,7 +44,7 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 20. **Governance & Transparency Centre** — General Assembly oversight, finance, audit, anti-corruption and authorized public governance resources.
 21. **Constitution Digital Reader** — searchable Amended 2025 Constitution, Preamble and Articles 1–64 across eight chapters.
 22. **Elections Module** — IEC framework, voter information, constitutional timeline and conditional public election records.
-23. **Election Administration** — public IEC responsibilities, candidate/debate/results architecture with unissued records hidden.
+23. **Election Administration** — public IEC responsibilities with unissued records hidden.
 24. **Apuk Youth Hub** — opportunities, scholarships, trainings, events, jobs/internships, announcements and sports pathways.
 25. **Partners, Sponsors & Support** — nine constitutional community relationships and responsible support pathways.
 26. **Contact & Official Communication Channels** — registered office and verified website communication routes without invented contact details.
@@ -66,7 +66,7 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 
 ## Membership registration
 
-Set the exact official AYU Google Form URL in `membershipRegistrationUrl` inside `src/data/finalPlatformData.ts`. Until the verified URL is supplied, the registration button remains hidden rather than presenting a broken or fabricated destination.
+The official membership registration destination is configured in `membershipRegistrationUrl` inside `src/data/finalPlatformData.ts` and points to `https://forms.gle/4GTEwGTtW1wYq3ry5`. The Membership and Contact pages expose the registration action directly.
 
 ## Launch note
 
