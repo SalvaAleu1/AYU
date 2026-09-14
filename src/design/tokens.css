@@ -1,0 +1,37 @@
+:root {
+  --ayu-green-950: #062d20;
+  --ayu-green-900: #073a28;
+  --ayu-green-800: #0a4a31;
+  --ayu-green-700: #0b633e;
+  --ayu-green-600: #0b7a49;
+  --ayu-green-100: #e5f3eb;
+  --ayu-green-50: #f2f8f4;
+
+  --ayu-sky-500: #55b9df;
+  --ayu-sky-100: #dff4fb;
+  --ayu-gold-500: #d6b53f;
+  --ayu-gold-300: #ead77c;
+
+  --ayu-black: #0d120f;
+  --ayu-ink: #193228;
+  --ayu-muted: #617168;
+  --ayu-white: #ffffff;
+  --ayu-surface: #fbfcfa;
+  --ayu-surface-soft: #f1f6f2;
+  --ayu-border: rgba(11, 99, 62, 0.15);
+
+  --ayu-shadow-sm: 0 8px 24px rgba(6, 45, 32, 0.08);
+  --ayu-shadow-md: 0 18px 48px rgba(6, 45, 32, 0.12);
+  --ayu-shadow-lg: 0 30px 80px rgba(3, 30, 20, 0.2);
+
+  --ayu-radius-sm: 10px;
+  --ayu-radius-md: 16px;
+  --ayu-radius-lg: 24px;
+  --ayu-radius-pill: 999px;
+
+  --ayu-container: 1180px;
+  --ayu-header-height: 78px;
+
+  --ayu-font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ayu-font-display: Georgia, "Times New Roman", serif;
+}
