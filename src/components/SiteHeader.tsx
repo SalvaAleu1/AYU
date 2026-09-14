@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#work", label: "Our Work" },
-  { href: "#membership", label: "Membership" },
-  { href: "#governance", label: "Governance" },
-  { href: "#partners", label: "Partners" },
-  { href: "#constitution", label: "Constitution" },
+  { href: "/?page=about", label: "About" },
+  { href: "/?page=leadership", label: "Leadership" },
+  { href: "/#work", label: "Our Work" },
+  { href: "/#membership", label: "Membership" },
+  { href: "/?page=identity", label: "Identity" },
+  { href: "/#governance", label: "Governance" },
 ];
 
 export default function SiteHeader() {
@@ -31,7 +31,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container nav-wrap">
-        <a className="brand" href="#home" onClick={closeMenu} aria-label="Apuk Youth Union in Juba home">
+        <a className="brand" href="/" onClick={closeMenu} aria-label="Apuk Youth Union in Juba home">
           <img className="brand-logo" src="/ayu-logo.webp" alt="" width="52" height="50" />
           <span className="brand-text">
             <strong>Apuk Youth Union</strong>
