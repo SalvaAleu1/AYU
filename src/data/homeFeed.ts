@@ -1,3 +1,7 @@
+import { events } from "./eventsData";
+import { newsArticles } from "./newsData";
+import { verifiedProjects } from "./workData";
+
 export type NewsItem = {
   id: string;
   title: string;
@@ -25,9 +29,30 @@ export type FeaturedProject = {
   href: string;
 } | null;
 
-// Homepage feed sections are rendered only when verified AYU content exists.
-// Keeping these collections empty prevents fabricated news, events, projects or impact claims.
-export const newsItems: NewsItem[] = [];
-export const eventItems: EventItem[] = [];
+export const newsItems: NewsItem[] = newsArticles.slice(0, 3).map((article) => ({
+  id: article.slug,
+  title: article.title,
+  category: article.category,
+  publishedAt: article.displayDate,
+  excerpt: article.excerpt,
+}));
+
+export const eventItems: EventItem[] = events
+  .filter((event) => event.status === "upcoming")
+  .map((event) => ({
+    id: event.slug,
+    title: event.title,
+    date: event.displayDate,
+    venue: event.location ?? "",
+  }));
+
 export const galleryItems: GalleryItem[] = [];
-export const featuredProject: FeaturedProject = null;
+
+const featured = verifiedProjects[0];
+export const featuredProject: FeaturedProject = featured
+  ? {
+      title: featured.title,
+      summary: featured.summary,
+      href: `/?page=project&slug=${featured.slug}`,
+    }
+  : null;
