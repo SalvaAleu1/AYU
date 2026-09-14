@@ -6,8 +6,10 @@ const footerLinks = [
   { href: "/?page=news", label: "News & Updates" },
   { href: "/?page=events", label: "Events" },
   { href: "/?page=impact", label: "Impact" },
+  { href: "/?page=media", label: "Media Centre" },
+  { href: "/?page=membership", label: "Membership" },
+  { href: "/?page=membership-apply", label: "Apply for Membership" },
   { href: "/?page=identity", label: "Identity & Symbols" },
-  { href: "/#membership", label: "Membership" },
   { href: "/#constitution", label: "Constitution" },
 ];
 
