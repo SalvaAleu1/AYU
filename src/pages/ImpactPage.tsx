@@ -7,13 +7,12 @@ export default function ImpactPage() {
     <>
       <PageHero
         eyebrow="Impact"
-        title="Documenting AYU's institutional progress and community contribution."
-        description="AYU's impact record brings together constitutional milestones, programme initiatives, peacebuilding efforts and measurable community outcomes as they are documented over time."
+        title="AYU's work and progress in the community."
+        description="This section shares important AYU milestones, peace efforts, community work and other results that are supported by public records."
         aside={
           <dl className="page-fact-list">
-            <div><dt>Documented records</dt><dd>{impactRecords.length}</dd></div>
-            <div><dt>Programme areas</dt><dd>{impactAreas.length}</dd></div>
-            <div><dt>Guiding principle</dt><dd>Transparency & accountability</dd></div>
+            <div><dt>Focus</dt><dd>Community service and progress</dd></div>
+            <div><dt>Reporting</dt><dd>Based on public records</dd></div>
           </dl>
         }
       />
@@ -21,9 +20,9 @@ export default function ImpactPage() {
       <section className="section section-white">
         <div className="container">
           <SectionHeading
-            eyebrow="Documented Milestones"
-            title="Institutional progress presented with context and measurable evidence."
-            description="Each record explains the milestone, its relevance to AYU and the figures or outcomes associated with it where these form part of the documented record."
+            eyebrow="Milestones"
+            title="Important AYU developments and community work."
+            description="Each item explains what happened, why it matters and the record that supports it."
           />
 
           <div className="impact-grid">
@@ -35,18 +34,6 @@ export default function ImpactPage() {
                 </div>
                 <h3>{record.title}</h3>
                 <p>{record.summary}</p>
-
-                {record.metrics?.length ? (
-                  <div className="impact-mini-metrics">
-                    {record.metrics.map((metric) => (
-                      <div key={metric.label}>
-                        <strong>{metric.value}</strong>
-                        <span>{metric.label}</span>
-                      </div>
-                    ))}
-                  </div>
-                ) : null}
-
                 <span className="text-link">Read milestone →</span>
               </a>
             ))}
@@ -78,12 +65,11 @@ export default function ImpactPage() {
         <div className="container impact-area-grid">
           <div>
             <p className="eyebrow">Areas of Contribution</p>
-            <h2 className="display-title">AYU's impact framework follows its constitutional mandate.</h2>
+            <h2 className="display-title">AYU works across community priorities set out in its Constitution.</h2>
           </div>
           <div className="impact-area-list">
-            {impactAreas.map((area, index) => (
+            {impactAreas.map((area) => (
               <div key={area}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
                 <strong>{area}</strong>
               </div>
             ))}
@@ -95,13 +81,13 @@ export default function ImpactPage() {
         <div className="container impact-principle-grid">
           <div>
             <p className="eyebrow eyebrow-light">Accountability</p>
-            <h2 className="display-title display-title-light">Community impact should be visible, measurable and responsibly reported.</h2>
+            <h2 className="display-title display-title-light">AYU should clearly show what was done and what came from it.</h2>
           </div>
           <div className="impact-principles">
-            <div><strong>Projects</strong><p>Programme records can show objectives, activities, dates, implementing structures and completion status.</p></div>
-            <div><strong>People reached</strong><p>Beneficiary figures can be presented alongside the programmes and activities from which they are derived.</p></div>
-            <div><strong>Results</strong><p>Completed initiatives can record practical outcomes, recommendations, reports and follow-up actions.</p></div>
-            <div><strong>Stories</strong><p>Community and youth stories can preserve the human dimension of AYU's work alongside institutional reporting.</p></div>
+            <div><strong>Projects</strong><p>Project records can show the purpose, activities, dates and completion status.</p></div>
+            <div><strong>Results</strong><p>Completed work can show practical results, recommendations and follow-up actions.</p></div>
+            <div><strong>Reports</strong><p>Public reports can explain progress and lessons from completed work.</p></div>
+            <div><strong>Stories</strong><p>Community and youth stories can show the human side of AYU's work where publication is appropriate.</p></div>
           </div>
         </div>
       </section>
