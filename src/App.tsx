@@ -1,275 +1,297 @@
-import { useState } from "react";
-
-const objectives = [
-  "Build members’ capacity in organizational development, programming and management.",
-  "Promote unity, self-help, hard work, cooperation and tolerance among Apuk youth.",
-  "Promote and develop the diverse cultural heritage that defines Apuk identity.",
-  "Foster peace and reconciliation among Apuk youth and neighbouring communities.",
-  "Mobilize resources for programmes and community initiatives.",
-  "Provide leadership in conflict management and peacebuilding.",
-  "Promote gender equality, women’s empowerment and girl-child education.",
-  "Promote community public health through awareness and outreach.",
-  "Advance sustainable development and sound environmental management.",
-  "Promote sports, Jieng language and cultural activities among Apuk youth.",
-];
-
-const executiveOffices = [
-  "Chairperson",
-  "Deputy Chairperson",
-  "Secretary General",
-  "Secretary for Finance and Planning",
-  "Secretary for Information and Media",
-  "Secretary for External Affairs",
-  "Secretary for Legal Affairs",
-  "Secretary for Education and Trainings",
-  "Secretary for Projects and Logistics",
-  "Secretary for Health",
-  "Secretary for Culture and Sports",
-  "Secretary for Gender, Social Welfare, Peace and Reconciliation",
-  "Deputy Secretary for Finance and Planning",
-];
-
-const partners = [
-  "Apuk Olympics Association",
-  "Apuk Graduates Congress",
-  "Apuk Lith Cultural Group",
-  "Apuk Lith Football Team",
-  "Apuk Lith Volleyball Team",
-  "Apuk Medical Professionals and Students’ Association",
-  "Apuk Universities and Higher Institutes’ Students Association",
-  "Apuk Lith Women’s Union",
-  "Sectional Youth Associations in Juba",
-];
+import BackToTop from "./components/BackToTop";
+import SectionHeading from "./components/SectionHeading";
+import SiteFooter from "./components/SiteFooter";
+import SiteHeader from "./components/SiteHeader";
+import { eventItems, featuredProject, galleryItems, newsItems } from "./data/homeFeed";
+import {
+  ayuIdentity,
+  communityRelationships,
+  constitutionRecord,
+  constitutionalObjectives,
+  executiveOffices,
+  institutionalStats,
+  membershipEligibility,
+  workPillars,
+} from "./data/siteData";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const closeMenu = () => setMenuOpen(false);
+  const hasUpdates = newsItems.length > 0;
+  const hasEvents = eventItems.length > 0;
+  const hasGallery = galleryItems.length > 0;
 
   return (
     <div className="site-shell">
-      <header className="site-header">
-        <div className="container nav-wrap">
-          <a className="brand" href="#home" onClick={closeMenu} aria-label="Apuk Youth Union home">
-            <span className="brand-mark" aria-hidden="true">AYU</span>
-            <span className="brand-text">
-              <strong>Apuk Youth Union</strong>
-              <small>Juba, South Sudan</small>
-            </span>
-          </a>
-
-          <button
-            className="menu-button"
-            type="button"
-            aria-label="Toggle navigation"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((open) => !open)}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
-
-          <nav className={menuOpen ? "main-nav open" : "main-nav"} aria-label="Primary navigation">
-            <a href="#about" onClick={closeMenu}>About</a>
-            <a href="#objectives" onClick={closeMenu}>Objectives</a>
-            <a href="#membership" onClick={closeMenu}>Membership</a>
-            <a href="#governance" onClick={closeMenu}>Governance</a>
-            <a href="#partners" onClick={closeMenu}>Partners</a>
-            <a href="#constitution" onClick={closeMenu}>Constitution</a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="hero" id="home">
+          <div className="hero-accent hero-accent-sky" aria-hidden="true" />
+          <div className="hero-accent hero-accent-gold" aria-hidden="true" />
+
           <div className="container hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">Apuk Youth Union in Juba</p>
-              <h1>Together for Peace, Unity and Development.</h1>
+              <p className="eyebrow eyebrow-light">Apuk Youth Union in Juba</p>
+              <h1>{ayuIdentity.motto}.</h1>
               <p className="hero-lead">
-                A non-political, non-profit youth union working to educate, train, mentor, grow and develop young people for the transformation of the Apuk community.
+                Empowering Apuk youth through education, unity, culture, leadership, peacebuilding and sustainable community development.
               </p>
+
               <div className="hero-actions">
-                <a className="button primary" href="#about">Discover AYU</a>
-                <a className="button secondary" href="#membership">Membership</a>
+                <a className="button button-gold" href="#membership">Membership</a>
+                <a className="button button-outline" href="#work">Explore Our Work</a>
+                {hasUpdates ? <a className="button button-ghost" href="#latest-updates">Latest Updates</a> : null}
+              </div>
+
+              <div className="hero-microcopy">
+                <span>Non-political</span>
+                <span aria-hidden="true">•</span>
+                <span>Non-profit</span>
+                <span aria-hidden="true">•</span>
+                <span>Juba, South Sudan</span>
               </div>
             </div>
 
-            <aside className="identity-card" aria-label="AYU constitutional identity">
-              <div className="identity-topline">Constitutional identity</div>
-              <dl>
-                <div><dt>Registered office</dt><dd>Juba, South Sudan</dd></div>
-                <div><dt>Membership age</dt><dd>18–45 years</dd></div>
-                <div><dt>Executive Committee</dt><dd>13 members</dd></div>
-                <div><dt>Advisory Board</dt><dd>3 members</dd></div>
-              </dl>
+            <aside className="hero-emblem" aria-label="Apuk Youth Union identity">
+              <div className="hero-emblem-ring">
+                <img src="/ayu-logo.webp" alt="Apuk Youth Union in Juba logo" width="192" height="185" />
+              </div>
+              <p>The hawk represents Apuk identity, the handshake represents harmony and togetherness, green represents resources, and the stars represent the sections of the Apuk Community.</p>
             </aside>
           </div>
         </section>
 
-        <section className="section" id="about">
+        <section className="section section-white" id="about">
           <div className="container">
-            <div className="section-heading">
-              <p className="eyebrow">Who we are</p>
-              <h2>A youth institution rooted in community, service and responsibility.</h2>
-            </div>
+            <SectionHeading
+              eyebrow="About AYU"
+              title="The digital home of Apuk youth in Juba."
+              description="AYU-Juba is a community youth institution established to educate and support its members while strengthening unity, peace, self-reliance and sustainable development."
+            />
 
             <div className="three-card-grid">
-              <article className="info-card">
+              <article className="info-card info-card-featured">
                 <span>Vision</span>
                 <h3>An enlightened and developed community</h3>
-                <p>To attain an enlightened, progressive, self-reliant, just and all-round developed community.</p>
+                <p>{ayuIdentity.vision}</p>
               </article>
+
               <article className="info-card">
                 <span>Mission</span>
                 <h3>Developing youth for transformation</h3>
-                <p>To educate, train, mentor, grow and develop the youth for the transformation of the Apuk community.</p>
+                <p>{ayuIdentity.mission}</p>
               </article>
+
               <article className="info-card">
-                <span>Values</span>
-                <h3>Integrity in public service</h3>
-                <p>Transparency, accountability, volunteerism, self-reliance, impartiality, fairness, honesty, confidentiality, human rights and credibility.</p>
+                <span>Core values</span>
+                <h3>Service with integrity</h3>
+                <p>{ayuIdentity.values.join(" · ")}</p>
               </article>
             </div>
           </div>
         </section>
 
-        <section className="section section-muted" id="objectives">
+        <section className="section section-soft" id="work">
           <div className="container">
-            <div className="section-heading split-heading">
-              <div>
-                <p className="eyebrow">Constitutional objectives</p>
-                <h2>What AYU exists to advance.</h2>
-              </div>
-              <p>The Union’s objectives connect youth development with peace, culture, education, health, gender equality, sports and sustainable community development.</p>
-            </div>
+            <SectionHeading
+              eyebrow="Our Work"
+              title="Constitutional priorities translated into practical areas of service."
+              description="These pillars organize AYU's public work around the responsibilities and objectives established in the Union's Constitution."
+            />
 
-            <div className="objective-grid">
-              {objectives.map((objective, index) => (
-                <article className="objective-card" key={objective}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <p>{objective}</p>
+            <div className="work-grid">
+              {workPillars.map((pillar, index) => (
+                <article className="work-card" key={pillar.title}>
+                  <span className="work-index">{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{pillar.title}</h3>
+                  <p>{pillar.description}</p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="section" id="membership">
-          <div className="container membership-grid">
-            <div>
-              <p className="eyebrow">Membership</p>
-              <h2>Belonging comes with rights and responsibilities.</h2>
-              <p className="section-copy">
-                AYU’s constitution provides for absolute and honorary membership. Absolute membership is intended for eligible Apuk youth who are registered with the Union and meet the constitutional requirements.
-              </p>
-            </div>
-
-            <div className="membership-panel">
-              <h3>Absolute membership eligibility</h3>
-              <ul className="check-list">
-                <li>Apuk citizen by origin or resident</li>
-                <li>18 to 45 years of age</li>
-                <li>Of sound mind</li>
-                <li>Registered with the Union</li>
-                <li>Meets mandatory fee obligations determined by the Union</li>
-              </ul>
-              <p className="note">Honorary membership may be granted in accordance with the Constitution and does not carry voting or election-contesting rights.</p>
-            </div>
+        <section className="stats-band" aria-label="AYU institutional facts">
+          <div className="container stats-grid">
+            {institutionalStats.map((stat) => (
+              <div className="stat-item" key={stat.label}>
+                <strong>{stat.value}</strong>
+                <span>{stat.label}</span>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="section section-dark" id="governance">
           <div className="container">
-            <div className="section-heading light-heading">
-              <p className="eyebrow">Governance</p>
-              <h2>AYU is governed through three constitutional organs.</h2>
-            </div>
+            <SectionHeading
+              light
+              eyebrow="Leadership & Governance"
+              title="Accountability begins with a clear constitutional structure."
+              description="The General Assembly is AYU's supreme organ. The Executive Committee manages the Union's affairs and the Advisory Board provides constitutional guidance and counsel."
+            />
 
             <div className="organ-grid">
               <article className="organ-card">
-                <div className="organ-number">01</div>
+                <span>01</span>
                 <h3>General Assembly</h3>
-                <p>The supreme organ of AYU, comprising all registered members of the Union based in Juba.</p>
+                <p>Comprises all registered AYU members based in Juba and serves as the supreme organ of the Union.</p>
               </article>
-              <article className="organ-card">
-                <div className="organ-number">02</div>
+              <article className="organ-card organ-card-accent">
+                <span>02</span>
                 <h3>Executive Committee</h3>
-                <p>A 13-member executive responsible for policy implementation, programmes, administration and accountability to the General Assembly.</p>
+                <p>Thirteen constitutional offices responsible for administration, programmes, policy implementation and accountability.</p>
               </article>
               <article className="organ-card">
-                <div className="organ-number">03</div>
+                <span>03</span>
                 <h3>Advisory Board</h3>
                 <p>A three-member board headed by the Patron, advising on unity, social development, conflict resolution, projects and community heritage.</p>
               </article>
             </div>
 
-            <div className="office-list-wrap">
-              <div>
-                <p className="eyebrow">Executive structure</p>
-                <h3>Constitutional offices</h3>
+            <div className="executive-structure">
+              <div className="executive-intro">
+                <p className="eyebrow eyebrow-light">Executive structure</p>
+                <h3>13 constitutional offices</h3>
+                <p>The Constitution requires at least four women among the thirteen Executive Committee members.</p>
               </div>
-              <div className="office-list">
-                {executiveOffices.map((office, index) => (
-                  <div className="office-item" key={office}>
-                    <span>{index + 1}</span>
-                    <p>{office}</p>
-                  </div>
+
+              <ol className="office-list">
+                {executiveOffices.map((office) => <li key={office}>{office}</li>)}
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        {featuredProject ? (
+          <section className="section section-white" id="featured-project">
+            <div className="container featured-project">
+              <p className="eyebrow">Featured Project</p>
+              <h2>{featuredProject.title}</h2>
+              <p>{featuredProject.summary}</p>
+              <a className="text-link" href={featuredProject.href}>Read project details →</a>
+            </div>
+          </section>
+        ) : null}
+
+        {hasEvents ? (
+          <section className="section section-soft" id="events">
+            <div className="container">
+              <SectionHeading eyebrow="Upcoming Events" title="What is happening next." />
+              <div className="feed-grid">
+                {eventItems.map((event) => (
+                  <article className="feed-card" key={event.id}>
+                    <span>{event.date}</span>
+                    <h3>{event.title}</h3>
+                    <p>{event.venue}</p>
+                  </article>
                 ))}
               </div>
             </div>
+          </section>
+        ) : null}
+
+        {hasUpdates ? (
+          <section className="section section-white" id="latest-updates">
+            <div className="container">
+              <SectionHeading eyebrow="Latest Updates" title="Official AYU news and announcements." />
+              <div className="feed-grid">
+                {newsItems.map((item) => (
+                  <article className="feed-card" key={item.id}>
+                    <span>{item.category} · {item.publishedAt}</span>
+                    <h3>{item.title}</h3>
+                    <p>{item.excerpt}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        {hasGallery ? (
+          <section className="section section-soft" id="gallery">
+            <div className="container">
+              <SectionHeading eyebrow="Gallery" title="AYU in the community." />
+              <div className="gallery-grid">
+                {galleryItems.map((item) => (
+                  <img key={item.id} src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        <section className="section section-white" id="membership">
+          <div className="container membership-grid">
+            <div className="membership-copy">
+              <p className="eyebrow">Membership</p>
+              <h2>Belonging comes with rights, participation and responsibility.</h2>
+              <p>
+                The Constitution provides for Absolute Membership and Honorary Membership. Absolute members participate in the life and governance of the Union subject to constitutional eligibility and obligations.
+              </p>
+              <p className="membership-note">Honorary members have the other rights of membership but do not vote or contest for an elective position.</p>
+            </div>
+
+            <div className="membership-panel">
+              <span className="panel-label">Absolute membership</span>
+              <h3>Constitutional eligibility</h3>
+              <ul className="check-list">
+                {membershipEligibility.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
           </div>
         </section>
 
-        <section className="section" id="partners">
+        <section className="section section-sky" id="partners">
           <div className="container">
-            <div className="section-heading split-heading">
-              <div>
-                <p className="eyebrow">Community relationships</p>
-                <h2>Working with other Apuk institutions.</h2>
-              </div>
-              <p>AYU is the representative youth wing under the Apuk Community Association in Juba and constitutionally collaborates with community institutions in their respective areas of responsibility.</p>
-            </div>
+            <SectionHeading
+              eyebrow="Community Relationships"
+              title="Working with the wider Apuk institutional family."
+              description="AYU operates under the Apuk Community Association in Juba and maintains constitutionally defined relationships with community institutions in their respective areas of responsibility."
+            />
 
             <div className="partner-grid">
-              {partners.map((partner) => <div className="partner-chip" key={partner}>{partner}</div>)}
+              {communityRelationships.map((partner, index) => (
+                <div className="partner-card" key={partner}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{partner}</strong>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="section section-accent" id="constitution">
+        <section className="section constitution-section" id="constitution">
           <div className="container constitution-grid">
             <div>
-              <p className="eyebrow">Amended 2025 Constitution</p>
-              <h2>The Constitution is the institutional foundation of AYU.</h2>
+              <p className="eyebrow eyebrow-light">Governance foundation</p>
+              <h2>Constitution of Apuk Youth Union in Juba — Amended 2025.</h2>
             </div>
-            <div>
+
+            <div className="constitution-copy">
               <p>
-                The Constitution establishes AYU’s mandate, membership, organs, leadership responsibilities, meetings, finances, elections, discipline, tenure and relationships with other Apuk institutions.
+                The Constitution establishes AYU's mandate, membership, organs, leadership responsibilities, meetings, finances, elections, discipline, tenure and relationships with other Apuk institutions.
               </p>
-              <p className="constitution-note">
-                The official constitutional document will be made available here as part of the document centre when the public document library is enabled.
-              </p>
+              <dl>
+                <div><dt>Approved</dt><dd>{constitutionRecord.approvedDate}</dd></div>
+                <div><dt>Signed into law by</dt><dd>{constitutionRecord.signedBy}, {constitutionRecord.signedAs}</dd></div>
+              </dl>
             </div>
+          </div>
+        </section>
+
+        <section className="section section-gold membership-cta">
+          <div className="container cta-grid">
+            <div>
+              <p className="eyebrow">AYU-Juba</p>
+              <h2>Building peace, unity and development through young people.</h2>
+            </div>
+            <a className="button button-dark" href="#membership">Learn about membership</a>
           </div>
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="container footer-grid">
-          <div>
-            <strong>Apuk Youth Union in Juba</strong>
-            <p>Together for Peace, Unity and Development.</p>
-          </div>
-          <div className="footer-meta">
-            <span>Juba, South Sudan</span>
-            <span>Non-political · Non-profit</span>
-          </div>
-        </div>
-      </footer>
-
-      <a className="back-to-top" href="#home" aria-label="Back to top">↑</a>
+      <SiteFooter />
+      <BackToTop />
     </div>
   );
 }
