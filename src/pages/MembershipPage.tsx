@@ -111,10 +111,13 @@ export default function MembershipPage() {
       <section className="section section-gold membership-cta">
         <div className="container cta-grid">
           <div>
-            <p className="eyebrow">Absolute Membership</p>
-            <h2>Eligible Apuk youth in Juba can submit a membership application.</h2>
+            <p className="eyebrow">AYU Membership</p>
+            <h2>Apply for membership or securely access your existing member account.</h2>
           </div>
-          <a className="button button-dark" href="/?page=membership-apply">Apply for membership</a>
+          <div className="membership-action-row">
+            <a className="button button-dark" href="/?page=membership-apply">Apply for membership</a>
+            <a className="button button-outline-dark" href="/?page=member-login">Member Login</a>
+          </div>
         </div>
       </section>
     </>
