@@ -1,5 +1,5 @@
 import { events } from "./eventsData";
-import { newsArticles } from "./newsData";
+import { publishedNewsArticles } from "./newsData";
 import { verifiedProjects } from "./workData";
 
 export type NewsItem = {
@@ -29,7 +29,7 @@ export type FeaturedProject = {
   href: string;
 } | null;
 
-export const newsItems: NewsItem[] = newsArticles.slice(0, 3).map((article) => ({
+export const newsItems: NewsItem[] = publishedNewsArticles.slice(0, 3).map((article) => ({
   id: article.slug,
   title: article.title,
   category: article.category,
