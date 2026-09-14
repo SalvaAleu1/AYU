@@ -49,7 +49,6 @@ export const electionStages: ElectionStage[] = [
   { step: "08", title: "Inauguration", description: "The incoming leadership is sworn in and the IEC concludes its mandate." },
 ];
 
-// Public election records are source-controlled. Empty arrays remain hidden on the public site.
 export const electionNotices: PublicElectionRecord[] = [];
 export const electionCandidates: PublicElectionRecord[] = [];
 export const electionDebates: PublicElectionRecord[] = [];
@@ -109,28 +108,26 @@ export const siteSearchIndex: SearchEntry[] = [
   { title: "Our Work", description: "AYU programme pillars, projects and community service areas.", category: "Programmes", href: "/?page=work", keywords: ["programmes", "projects", "education", "peace", "sports", "health"] },
   { title: "News & Official Communications", description: "AYU news, statements and community updates.", category: "Communications", href: "/?page=news", keywords: ["news", "statements", "updates", "announcements"] },
   { title: "Events", description: "AYU events and constitutional meeting calendar.", category: "Communications", href: "/?page=events", keywords: ["events", "meetings", "calendar"] },
-  { title: "Impact", description: "Documented AYU milestones and success-story architecture.", category: "Programmes", href: "/?page=impact", keywords: ["impact", "milestones", "stories"] },
+  { title: "Impact", description: "Documented AYU milestones and success stories.", category: "Programmes", href: "/?page=impact", keywords: ["impact", "milestones", "stories"] },
   { title: "Media Centre", description: "Publications, press resources and AYU downloads.", category: "Communications", href: "/?page=media", keywords: ["media", "downloads", "press", "logo"] },
   { title: "Membership", description: "Eligibility, categories, rights, duties and registration information.", category: "Membership", href: "/?page=membership", keywords: ["membership", "join", "register", "rights", "duties"] },
   { title: "Governance & Transparency", description: "Constitutional governance, financial oversight, audit and public documents.", category: "Governance", href: "/?page=governance", keywords: ["governance", "audit", "transparency", "finance", "general assembly"] },
   { title: "Constitution", description: "Search and read the Amended 2025 AYU Constitution digitally.", category: "Governance", href: "/?page=constitution", keywords: ["constitution", "articles", "laws", "rules"] },
-  { title: "Elections", description: "IEC, voter information, electoral process, notices, candidates and results architecture.", category: "Governance", href: "/?page=elections", keywords: ["elections", "iec", "voters", "candidates", "results"] },
+  { title: "Elections", description: "IEC, voter information, electoral process, notices, candidates and results.", category: "Governance", href: "/?page=elections", keywords: ["elections", "iec", "voters", "candidates", "results"] },
   { title: "Apuk Youth Hub", description: "Youth opportunities, scholarships, trainings, jobs, announcements and sports.", category: "Youth Hub", href: "/?page=youth-hub", keywords: ["opportunities", "scholarships", "training", "jobs", "internships"] },
   { title: "Partners & Support", description: "Constitutional community relationships and partnership pathways.", category: "Institution", href: "/?page=partners", keywords: ["partners", "support", "sponsors", "donations"] },
   { title: "Contact", description: "Registered office and official AYU public communication routes.", category: "Institution", href: "/?page=contact", keywords: ["contact", "office", "juba", "communication"] },
   { title: "AYU Identity & Symbols", description: "Official emblem, motto and constitutional meaning of AYU symbols.", category: "Institution", href: "/?page=identity", keywords: ["logo", "identity", "hawk", "handshake", "motto"] },
 ];
 
-// The AYU membership Google Form URL will be inserted here once supplied by AYU.
-// Keeping it null prevents a broken or fabricated public registration link.
-export const membershipRegistrationUrl: string | null = null;
+export const membershipRegistrationUrl = "https://forms.gle/4GTEwGTtW1wYq3ry5";
 
 export const legalUpdated = "14 September 2026";
 
 export const privacySections = [
-  { title: "Information AYU may receive", body: "The public website can be used without creating an account. If a person chooses to use an external registration form or another official AYU service, information is handled according to the notice presented with that service." },
+  { title: "Information AYU may receive", body: "The public website can be used without creating an account. If a person chooses to use the official membership registration form or another AYU service, information is handled according to the notice presented with that service." },
   { title: "Public website data", body: "The website is designed as a primarily static public information service. AYU does not require a public website account for ordinary browsing." },
-  { title: "Membership registration", body: "Membership registration is handled through an AYU-approved external form when the official registration link is active. The form provider’s privacy practices also apply to information submitted there." },
+  { title: "Membership registration", body: "Membership registration is handled through the official AYU Google Form. Google’s privacy practices also apply to information submitted through that service." },
   { title: "Published personal information", body: "Names, photographs, biographies or contact details are published only where AYU has an institutional basis and appropriate authorization to make them public." },
   { title: "External links", body: "The website may link to external sources, partner institutions or third-party services. Those services operate under their own privacy and security practices." },
   { title: "Security", body: "AYU uses reasonable technical and organizational measures for the public website, including encrypted HTTPS delivery and security headers at the hosting layer." },
