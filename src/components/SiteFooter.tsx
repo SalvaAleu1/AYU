@@ -1,10 +1,10 @@
 const footerLinks = [
-  { href: "#about", label: "About AYU" },
-  { href: "#work", label: "Our Work" },
-  { href: "#membership", label: "Membership" },
-  { href: "#governance", label: "Governance" },
-  { href: "#partners", label: "Partners" },
-  { href: "#constitution", label: "Constitution" },
+  { href: "/?page=about", label: "About AYU" },
+  { href: "/?page=leadership", label: "Leadership" },
+  { href: "/?page=identity", label: "Identity & Symbols" },
+  { href: "/#work", label: "Our Work" },
+  { href: "/#membership", label: "Membership" },
+  { href: "/#constitution", label: "Constitution" },
 ];
 
 export default function SiteFooter() {
@@ -34,7 +34,7 @@ export default function SiteFooter() {
 
       <div className="container footer-bottom">
         <span>© 2026 Apuk Youth Union in Juba. All rights reserved.</span>
-        <a href="#home">Back to top ↑</a>
+        <a href="#main-content">Back to top ↑</a>
       </div>
     </footer>
   );
