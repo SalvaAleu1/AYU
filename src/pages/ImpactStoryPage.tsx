@@ -17,7 +17,7 @@ export default function ImpactStoryPage({ slug }: { slug: string }) {
           <dl className="page-fact-list">
             <div><dt>Period</dt><dd>{record.period}</dd></div>
             <div><dt>Category</dt><dd>{record.category}</dd></div>
-            {record.sourceLabel ? <div><dt>Reference</dt><dd>{record.sourceLabel}</dd></div> : null}
+            {record.sourceLabel ? <div><dt>Source</dt><dd>{record.sourceLabel}</dd></div> : null}
           </dl>
         }
       />
@@ -27,26 +27,15 @@ export default function ImpactStoryPage({ slug }: { slug: string }) {
           <article className="article-body">
             {record.details.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
 
-            {record.metrics?.length ? (
-              <div className="story-metrics">
-                {record.metrics.map((metric) => (
-                  <div key={metric.label}>
-                    <strong>{metric.value}</strong>
-                    <span>{metric.label}</span>
-                  </div>
-                ))}
-              </div>
-            ) : null}
-
             <div className="story-links">
               {record.relatedPage ? <a className="button button-dark" href={record.relatedPage}>Related AYU page</a> : null}
-              {record.sourceUrl ? <a className="text-link" href={record.sourceUrl} target="_blank" rel="noreferrer">Source reference ↗</a> : null}
+              {record.sourceUrl ? <a className="text-link" href={record.sourceUrl} target="_blank" rel="noreferrer">Source ↗</a> : null}
             </div>
           </article>
 
           <aside className="article-aside">
             <strong>AYU Impact</strong>
-            <p>Institutional milestones, programme results and community contribution.</p>
+            <p>Important AYU developments, project results and community work.</p>
             <a className="text-link" href="/?page=impact">← Back to Impact</a>
           </aside>
         </div>
