@@ -1,0 +1,658 @@
+.page-hero {
+  color: var(--ayu-white);
+  background:
+    radial-gradient(circle at 82% 12%, rgba(85, 185, 223, 0.14), transparent 28%),
+    linear-gradient(125deg, var(--ayu-green-950), var(--ayu-green-800));
+}
+
+.page-hero-grid {
+  min-height: 430px;
+  padding: 74px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(290px, 0.8fr);
+  align-items: center;
+  gap: 64px;
+}
+
+.page-hero h1,
+.display-title {
+  margin: 0;
+  font-family: var(--ayu-font-display);
+  font-size: clamp(2.5rem, 6vw, 4.7rem);
+  line-height: 1.03;
+  letter-spacing: -0.038em;
+}
+
+.page-hero > .container > div > p:last-child {
+  max-width: 750px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+}
+
+.page-hero-aside {
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--ayu-radius-lg);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.page-fact-list {
+  margin: 0;
+}
+
+.page-fact-list > div {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.page-fact-list > div:first-child {
+  padding-top: 0;
+}
+
+.page-fact-list > div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.page-fact-list dt {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.72rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.page-fact-list dd {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.display-title {
+  color: var(--ayu-ink);
+}
+
+.display-title-light {
+  color: var(--ayu-white);
+}
+
+.section-body-copy {
+  max-width: 720px;
+  color: var(--ayu-muted);
+  line-height: 1.75;
+}
+
+.story-grid,
+.stewardship-grid,
+.motto-grid,
+.language-grid,
+.power-symbol-grid,
+.identity-usage-grid,
+.leadership-principles-grid,
+.constitutional-record-grid,
+.profile-page-grid {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.prose-stack {
+  max-width: 760px;
+}
+
+.prose-stack p {
+  margin: 0 0 20px;
+  color: var(--ayu-muted);
+  font-size: 1rem;
+  line-height: 1.82;
+}
+
+.prose-stack p:last-child {
+  margin-bottom: 0;
+}
+
+.two-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.statement-panel {
+  min-height: 300px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-lg);
+  background: var(--ayu-white);
+  box-shadow: var(--ayu-shadow-sm);
+}
+
+.statement-panel-green {
+  color: var(--ayu-white);
+  background: var(--ayu-green-800);
+  border-color: transparent;
+}
+
+.statement-panel > span {
+  color: var(--ayu-green-700);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.statement-panel-green > span {
+  color: var(--ayu-gold-300);
+}
+
+.statement-panel h3 {
+  margin: 70px 0 0;
+  font-family: var(--ayu-font-display);
+  font-size: clamp(1.7rem, 3.5vw, 2.55rem);
+  line-height: 1.2;
+}
+
+.motto-grid > p,
+.power-symbol-grid > p {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.value-card {
+  min-height: 120px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-md);
+  background: var(--ayu-white);
+}
+
+.value-card span {
+  color: var(--ayu-gold-500);
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.value-card strong {
+  color: var(--ayu-green-950);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.objective-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  counter-reset: objectives;
+}
+
+.objective-list li {
+  min-height: 108px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: start;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-md);
+  background: var(--ayu-white);
+  line-height: 1.6;
+  counter-increment: objectives;
+}
+
+.objective-list li::before {
+  content: counter(objectives, decimal-leading-zero);
+  color: var(--ayu-green-600);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.language-list {
+  overflow: hidden;
+  border: 1px solid rgba(7, 58, 40, 0.13);
+  border-radius: var(--ayu-radius-lg);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.language-list > div {
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid rgba(7, 58, 40, 0.1);
+}
+
+.language-list > div:last-child {
+  border-bottom: 0;
+}
+
+.language-list strong {
+  color: var(--ayu-green-950);
+}
+
+.language-list span {
+  color: var(--ayu-muted);
+  text-align: right;
+  font-size: 0.87rem;
+}
+
+.identity-hero-logo {
+  display: grid;
+  place-items: center;
+}
+
+.identity-hero-logo img {
+  width: min(260px, 85%);
+  height: auto;
+  filter: drop-shadow(0 18px 38px rgba(0, 0, 0, 0.22));
+}
+
+.identity-logo-grid {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.official-mark-card {
+  min-height: 430px;
+  padding: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ayu-border);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at center, rgba(85, 185, 223, 0.12), transparent 58%),
+    var(--ayu-white);
+  box-shadow: var(--ayu-shadow-md);
+}
+
+.official-mark-card img {
+  width: min(360px, 90%);
+  height: auto;
+}
+
+.symbol-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.symbol-card {
+  min-height: 230px;
+  padding: 26px;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-md);
+  background: var(--ayu-white);
+}
+
+.symbol-card > span {
+  color: var(--ayu-gold-500);
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.symbol-card h3 {
+  margin: 42px 0 10px;
+  font-family: var(--ayu-font-display);
+  font-size: 1.55rem;
+}
+
+.symbol-card p {
+  margin: 0;
+  color: var(--ayu-muted);
+  line-height: 1.7;
+}
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.palette-card {
+  overflow: hidden;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-md);
+  background: var(--ayu-white);
+}
+
+.colour-swatch {
+  display: block;
+  width: 100%;
+  height: 130px;
+}
+
+.palette-card strong {
+  display: block;
+  padding: 16px;
+  color: var(--ayu-ink);
+  font-size: 0.85rem;
+}
+
+.swatch-green { background: var(--ayu-green-700); }
+.swatch-white { background: #fff; border-bottom: 1px solid var(--ayu-border); }
+.swatch-black { background: #0d120f; }
+.swatch-sky { background: var(--ayu-sky-500); }
+.swatch-gold { background: var(--ayu-gold-500); }
+
+.usage-principles,
+.leadership-principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.usage-principles > div,
+.leadership-principles > div {
+  padding: 22px;
+  border: 1px solid rgba(7, 58, 40, 0.13);
+  border-radius: var(--ayu-radius-md);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.usage-principles strong,
+.leadership-principles strong {
+  color: var(--ayu-green-950);
+}
+
+.usage-principles p,
+.leadership-principles p {
+  margin: 8px 0 0;
+  color: var(--ayu-muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.role-card {
+  padding: 24px;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-md);
+  background: var(--ayu-white);
+  box-shadow: var(--ayu-shadow-sm);
+}
+
+.role-card-topline {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.role-card-topline > span {
+  flex: 0 0 auto;
+  padding-top: 5px;
+  color: var(--ayu-gold-500);
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.role-card h3 {
+  margin: 0;
+  font-family: var(--ayu-font-display);
+  font-size: 1.42rem;
+  line-height: 1.25;
+}
+
+.role-card > p {
+  margin: 14px 0 0;
+  color: var(--ayu-muted);
+  line-height: 1.7;
+}
+
+.role-card details {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ayu-border);
+}
+
+.role-card summary {
+  color: var(--ayu-green-700);
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.role-card ul,
+.profile-responsibilities {
+  margin: 14px 0 0;
+  padding-left: 20px;
+  color: var(--ayu-muted);
+  line-height: 1.7;
+}
+
+.leadership-principles > div {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.leadership-principles strong {
+  color: var(--ayu-gold-300);
+}
+
+.leadership-principles p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.record-card {
+  padding: 30px;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-lg);
+  background: var(--ayu-white);
+  box-shadow: var(--ayu-shadow-sm);
+}
+
+.record-card > span {
+  color: var(--ayu-green-700);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.record-card h3 {
+  margin: 14px 0 4px;
+  font-family: var(--ayu-font-display);
+  font-size: 2rem;
+}
+
+.record-card > strong {
+  color: var(--ayu-green-800);
+  font-size: 0.88rem;
+}
+
+.record-card p {
+  margin: 18px 0;
+  color: var(--ayu-muted);
+  line-height: 1.7;
+}
+
+.record-card time {
+  color: var(--ayu-muted);
+  font-size: 0.82rem;
+}
+
+.leader-feature-card,
+.leader-deputy-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) 1.28fr;
+  gap: 36px;
+  align-items: center;
+  padding: 28px;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-lg);
+  background: var(--ayu-white);
+}
+
+.leader-feature-card img,
+.leader-deputy-card img,
+.profile-hero-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--ayu-radius-md);
+}
+
+.leader-feature-card span,
+.leader-deputy-card span,
+.leader-card span {
+  color: var(--ayu-green-700);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.leader-feature-card h2,
+.leader-deputy-card h3,
+.leader-card h3 {
+  margin: 12px 0;
+  font-family: var(--ayu-font-display);
+}
+
+.leader-feature-card h2 { font-size: clamp(2rem, 4vw, 3.4rem); }
+.leader-deputy-card { margin-top: 18px; }
+.leader-deputy-card h3 { font-size: 2rem; }
+
+.leader-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.leader-card {
+  padding: 20px;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-md);
+  background: var(--ayu-white);
+}
+
+.leader-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin-bottom: 18px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+.leader-card p,
+.leader-feature-card p,
+.leader-deputy-card p {
+  color: var(--ayu-muted);
+  line-height: 1.65;
+}
+
+.profile-page-grid h3 {
+  margin-top: 28px;
+  font-family: var(--ayu-font-display);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 980px) {
+  .page-hero-grid,
+  .story-grid,
+  .stewardship-grid,
+  .motto-grid,
+  .language-grid,
+  .power-symbol-grid,
+  .identity-logo-grid,
+  .identity-usage-grid,
+  .leadership-principles-grid,
+  .constitutional-record-grid,
+  .profile-page-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .page-hero-grid {
+    min-height: auto;
+  }
+
+  .page-hero-aside {
+    max-width: 620px;
+  }
+
+  .value-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .symbol-grid,
+  .palette-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leader-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .page-hero-grid {
+    padding: 58px 0 64px;
+  }
+
+  .page-hero h1,
+  .display-title {
+    font-size: clamp(2.35rem, 12vw, 3.6rem);
+  }
+
+  .two-panel-grid,
+  .objective-list,
+  .usage-principles,
+  .leadership-principles,
+  .role-grid,
+  .leader-grid,
+  .symbol-grid,
+  .palette-grid,
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .statement-panel {
+    min-height: 245px;
+  }
+
+  .language-list > div {
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .language-list span {
+    text-align: left;
+  }
+
+  .official-mark-card {
+    min-height: 320px;
+  }
+
+  .leader-feature-card,
+  .leader-deputy-card {
+    grid-template-columns: 1fr;
+  }
+}
