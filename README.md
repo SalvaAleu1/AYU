@@ -14,7 +14,7 @@ AYU and Apuk Graduates’ Congress (AGC) are separate organizations. AGC appears
 
 - React + TypeScript + Vite
 - Static, database-free public website
-- Cloudflare Pages production hosting
+- Cloudflare Workers Builds with Static Assets
 - GitHub repository used for source control; GitHub Actions are not required
 - Responsive mobile, tablet and desktop layouts
 - Source-controlled news, events, programmes, governance and election information
@@ -43,11 +43,15 @@ Production build:
 npm run build
 ```
 
-Cloudflare Pages:
+Cloudflare Workers Builds:
 
 - Build command: `npm run build`
-- Output directory: `dist`
+- Deploy command: `npx wrangler deploy`
+- Version command: `npx wrangler versions upload`
 - Production branch: `main`
+- Root directory: `/`
 - Environment variables: none required for the static public site
+
+The `wrangler.toml` file deploys `./dist` as Workers Static Assets.
 
 See `CLOUDFLARE_DEPLOYMENT.md` for deployment details.
