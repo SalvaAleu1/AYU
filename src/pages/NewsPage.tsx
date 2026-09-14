@@ -66,7 +66,7 @@ export default function NewsPage() {
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search by title or topic"
+                aria-label="Search AYU news and updates"
               />
             </label>
 
