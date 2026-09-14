@@ -12,6 +12,9 @@ import ImpactPage from "./pages/ImpactPage";
 import ImpactStoryPage from "./pages/ImpactStoryPage";
 import LeaderProfilePage from "./pages/LeaderProfilePage";
 import LeadershipPage from "./pages/LeadershipPage";
+import MediaCentrePage from "./pages/MediaCentrePage";
+import MembershipApplicationPage from "./pages/MembershipApplicationPage";
+import MembershipPage from "./pages/MembershipPage";
 import NewsArticlePage from "./pages/NewsArticlePage";
 import NewsPage from "./pages/NewsPage";
 import ProgramPage from "./pages/ProgramPage";
@@ -52,6 +55,9 @@ export default function Router() {
   if (page === "impact") return <PageShell><ImpactPage /></PageShell>;
   if (page === "impact-story") return <PageShell><ImpactStoryPage slug={params.get("slug") ?? ""} /></PageShell>;
   if (page === "success-story") return <PageShell><SuccessStoryPage slug={params.get("slug") ?? ""} /></PageShell>;
+  if (page === "media") return <PageShell><MediaCentrePage /></PageShell>;
+  if (page === "membership") return <PageShell><MembershipPage /></PageShell>;
+  if (page === "membership-apply") return <PageShell><MembershipApplicationPage /></PageShell>;
 
   return <App />;
 }
