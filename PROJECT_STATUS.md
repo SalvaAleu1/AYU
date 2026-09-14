@@ -12,8 +12,8 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 
 ## Current checkpoint
 
-**Completed:** Phases 1–6  
-**Next build block:** Phases 7–9  
+**Completed:** Phases 1–9  
+**Next build block:** Phases 10–12  
 **Repository:** `SalvaAleu1/AYU`  
 **Primary branch:** `main`
 
@@ -88,6 +88,37 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 - Executive accountability, two-year tenure and minimum four-women representation reflected from the Constitution
 - Constitutional signing record preserved separately from the current-leadership data model
 
+### Completed Phase 7 — Advisory Board & Past Leadership
+
+- Dedicated Advisory Board & Institutional History page
+- Three-member Advisory Board structure headed by the Patron
+- General Assembly appointment/relief rule and simple-majority basis reflected
+- Advisory Board tenure tied to the Executive Committee tenure
+- Constitutional advisory functions covering projects, unity, social development, conflict resolution, leadership counsel and community heritage
+- Data model for current Advisory Board profiles without publishing unverified names
+- Term-based past-leadership archive architecture
+- Documented 2016–2017 administration record added: Bol Deng Akeen (Chairperson), Darius Adup Anyuon (Secretary General) and Lang Madut Aguer (Information Secretary)
+- Institutional-history copy kept professional and free of internal verification/process language
+
+### Completed Phase 8 — Our Work / Program Architecture
+
+- Dedicated Our Work page connected to global navigation
+- Nine programme pillars: Education & Training; Peace & Reconciliation; Youth Empowerment; Culture & Heritage; Sports; Health & Wellbeing; Gender & Social Welfare; Environment & Sustainability; Community Development
+- Each pillar mapped to constitutional mandate, related objectives and relevant Executive portfolios
+- Dedicated responsive programme-area pages for all nine pillars
+- Constitutional project-governance cycle presented: committee establishment, planning/implementation, progress reporting and final financial/narrative accountability
+- Project and programme records structured for future content growth without changing page architecture
+
+### Completed Phase 9 — Individual Programs & Projects
+
+- Data-driven project model supporting status, summary, description, dates, location, beneficiaries, outcomes, cover image, gallery and public reports
+- Individual project-detail route and responsive project-detail page
+- Projects automatically appear under their relevant programme pillar
+- Real AYU Peace and Reconciliation Committee initiative added from 2026 public reporting under Chairperson's Order No. 04/2026
+- Initiative recorded as announced rather than claiming completion without evidence
+- Peace initiative page records its mandate, consultative-meeting purpose, stakeholder participation, resource mobilization, documentation and final reporting responsibilities
+- No invented project achievements, beneficiary totals, photos or completion claims
+
 ## Full 31-phase roadmap
 
 1. Project Foundation & AYU Design System
@@ -122,10 +153,10 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 30. Cloudflare Production Architecture & Data Services
 31. Production Hardening, SEO, Legal, Testing & Launch
 
-## Next build block — Phases 7–9
+## Next build block — Phases 10–12
 
-- **Phase 7:** Advisory Board & Past Leadership
-- **Phase 8:** Our Work / Program Architecture
-- **Phase 9:** Individual Programs & Projects
+- **Phase 10:** News & Official Communications
+- **Phase 11:** Events System
+- **Phase 12:** Impact & Success Stories
 
-Do not begin Phase 10 until Phases 7–9 have been completed and reported.
+Do not begin Phase 13 until Phases 10–12 have been completed and reported.
