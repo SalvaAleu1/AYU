@@ -21,23 +21,23 @@ export type AYUEvent = {
 export const constitutionalCalendar = [
   {
     title: "Executive Committee meetings",
-    cadence: "Quarterly",
-    description: "The Executive Committee is required to hold quarterly meetings each year, with emergency meetings permitted when urgent matters arise.",
+    cadence: "Regular meetings",
+    description: "The Executive Committee meets during the year and may also meet when urgent matters arise.",
   },
   {
     title: "General Assembly — Mid-year meeting",
-    cadence: "Mandatory each year",
-    description: "The Constitution requires a mid-year meeting of the General Assembly.",
+    cadence: "Each year",
+    description: "The Constitution provides for a mid-year General Assembly meeting.",
   },
   {
     title: "General Assembly — End-year meeting",
-    cadence: "Mandatory each year",
-    description: "The Constitution requires an end-year General Assembly meeting, at which auditors present their annual report.",
+    cadence: "Each year",
+    description: "The Constitution provides for an end-year General Assembly meeting, including presentation of the audit report.",
   },
   {
     title: "General Assembly — Extraordinary meeting",
-    cadence: "When required",
-    description: "An extraordinary General Assembly meeting may be convened when circumstances demand it.",
+    cadence: "When needed",
+    description: "An extraordinary General Assembly meeting may be called when necessary.",
   },
 ];
 
@@ -50,13 +50,13 @@ export const events: AYUEvent[] = [
     startDate: "2025-09-14",
     displayDate: "14 September 2025",
     organizer: "Apuk Youth Union in Juba",
-    summary: "The General Assembly approved the amended Constitution of Apuk Youth Union in Juba, establishing the current governance framework of the Union.",
+    summary: "The General Assembly amended and approved the Constitution of Apuk Youth Union in Juba on 14 September 2025.",
     description: [
-      "The amended Constitution of Apuk Youth Union in Juba was approved by the General Assembly on 14 September 2025.",
-      "The Constitution defines AYU's vision, mission, values, membership, organs, Executive Committee, Advisory Board, meetings, finances, elections, tenure, accountability and relationships with other Apuk institutions.",
-      "The document was signed into law by Chairperson Agany Geng Ayiei and remains the principal governance foundation for AYU-Juba.",
+      "The General Assembly amended and approved the Constitution of Apuk Youth Union in Juba on 14 September 2025.",
+      "The Constitution sets out AYU's vision, mission, values, membership, leadership, meetings, finances, elections, accountability and community relationships.",
+      "After its approval by the General Assembly, the Constitution was signed into law by the serving Chairperson.",
     ],
-    relatedPage: "/#constitution",
+    relatedPage: "/?page=constitution",
   },
 ];
 
