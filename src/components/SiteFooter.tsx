@@ -9,6 +9,7 @@ const footerLinks = [
   { href: "/?page=media", label: "Media Centre" },
   { href: "/?page=membership", label: "Membership" },
   { href: "/?page=membership-apply", label: "Apply for Membership" },
+  { href: "/?page=member-login", label: "Member Login" },
   { href: "/?page=identity", label: "Identity & Symbols" },
   { href: "/#constitution", label: "Constitution" },
 ];
