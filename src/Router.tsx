@@ -5,9 +5,15 @@ import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
 import AboutPage from "./pages/AboutPage";
 import AdvisoryHistoryPage from "./pages/AdvisoryHistoryPage";
+import EventPage from "./pages/EventPage";
+import EventsPage from "./pages/EventsPage";
 import IdentityPage from "./pages/IdentityPage";
+import ImpactPage from "./pages/ImpactPage";
+import ImpactStoryPage from "./pages/ImpactStoryPage";
 import LeaderProfilePage from "./pages/LeaderProfilePage";
 import LeadershipPage from "./pages/LeadershipPage";
+import NewsArticlePage from "./pages/NewsArticlePage";
+import NewsPage from "./pages/NewsPage";
 import ProgramPage from "./pages/ProgramPage";
 import ProjectPage from "./pages/ProjectPage";
 import WorkPage from "./pages/WorkPage";
@@ -38,6 +44,12 @@ export default function Router() {
   if (page === "work") return <PageShell><WorkPage /></PageShell>;
   if (page === "program") return <PageShell><ProgramPage slug={params.get("slug") ?? ""} /></PageShell>;
   if (page === "project") return <PageShell><ProjectPage slug={params.get("slug") ?? ""} /></PageShell>;
+  if (page === "news") return <PageShell><NewsPage /></PageShell>;
+  if (page === "news-article") return <PageShell><NewsArticlePage slug={params.get("slug") ?? ""} /></PageShell>;
+  if (page === "events") return <PageShell><EventsPage /></PageShell>;
+  if (page === "event") return <PageShell><EventPage slug={params.get("slug") ?? ""} /></PageShell>;
+  if (page === "impact") return <PageShell><ImpactPage /></PageShell>;
+  if (page === "impact-story") return <PageShell><ImpactStoryPage slug={params.get("slug") ?? ""} /></PageShell>;
 
   return <App />;
 }
