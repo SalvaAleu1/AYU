@@ -1,10 +1,11 @@
 type MemberPortalNavProps = {
-  active: "dashboard" | "profile" | "privacy" | "security";
+  active: "dashboard" | "profile" | "contributions" | "privacy" | "security";
 };
 
 const links = [
   { key: "dashboard", label: "Dashboard", href: "/?page=member-portal" },
   { key: "profile", label: "My Profile", href: "/?page=member-profile" },
+  { key: "contributions", label: "Contributions", href: "/?page=member-contributions" },
   { key: "privacy", label: "Privacy", href: "/?page=member-privacy" },
   { key: "security", label: "Security", href: "/?page=member-security" },
 ] as const;
