@@ -23,7 +23,7 @@ export async function onRequestGet({ env, params }) {
   const headers = new Headers();
   object.writeHttpMetadata(headers);
   headers.set("content-type", member.profile_photo_type || headers.get("content-type") || "application/octet-stream");
-  headers.set("cache-control", "public, max-age=300");
+  headers.set("cache-control", "no-store, max-age=0");
   headers.set("x-content-type-options", "nosniff");
   return new Response(object.body, { headers });
 }
