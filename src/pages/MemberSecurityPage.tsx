@@ -1,14 +1,31 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import MemberPortalNav from "../components/MemberPortalNav";
-import { apiJson } from "../lib/memberApi";
+import { apiJson, isUnauthorized } from "../lib/memberApi";
 
 export default function MemberSecurityPage() {
+  const [authorized, setAuthorized] = useState(false);
+  const [checking, setChecking] = useState(true);
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
   const [saving, setSaving] = useState(false);
   const [endingSessions, setEndingSessions] = useState(false);
+
+  useEffect(() => {
+    apiJson("/api/auth/session")
+      .then(() => {
+        setAuthorized(true);
+        setChecking(false);
+      })
+      .catch((error) => {
+        if (isUnauthorized(error)) window.location.replace("/?page=member-login");
+        else {
+          setMessage(error instanceof Error ? error.message : "Account security could not be loaded.");
+          setChecking(false);
+        }
+      });
+  }, []);
 
   const changePassword = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -42,6 +59,9 @@ export default function MemberSecurityPage() {
       setEndingSessions(false);
     }
   };
+
+  if (checking) return <div className="portal-loading"><div className="container">Loading account security…</div></div>;
+  if (!authorized) return <div className="portal-loading"><div className="container">{message || "Account security is unavailable."}</div></div>;
 
   return (
     <div className="portal-page">
