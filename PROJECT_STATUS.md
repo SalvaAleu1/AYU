@@ -7,6 +7,11 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 - AYU and Apuk Graduates’ Congress (AGC) are separate organizations. AGC appears in AYU only where the AYU Constitution identifies it as a community partner.
 - Public production UI must not contain placeholders, developer notes, fake statistics, fabricated news/projects/events, invented leadership details, or confidential/internal verification processes.
 - Missing noncritical public data remains absent or conditionally hidden rather than fabricated.
+- Use clear, simple public English. Avoid unnecessary technical or internal terms.
+- Do not publish the AYU membership fee amount on the website. Current registration requirements and fee details are provided through the official membership Google Form.
+- Avoid unnecessary public counting of programme areas, leadership offices, board members or similar organizational information. Show what AYU does instead of emphasizing totals.
+- News should focus mainly on what happened or what AYU did, rather than presenting routine organizational actions as the work of one individual.
+- The Amended 2025 Constitution was amended and approved by the General Assembly. Agany Geng Ayiei was the serving Chairperson who signed it into law.
 - GitHub is the source-code repository only. GitHub Actions/CI is not used.
 - The production website is static and database-free.
 - Membership registration uses the official AYU Google Form: `https://forms.gle/4GTEwGTtW1wYq3ry5`.
@@ -68,8 +73,18 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 
 ## Membership registration
 
-`membershipRegistrationUrl` in `src/data/finalPlatformData.ts` points to the official form at `https://forms.gle/4GTEwGTtW1wYq3ry5`. The Membership and Contact pages expose the registration action directly.
+`membershipRegistrationUrl` in `src/data/finalPlatformData.ts` points to the official form at `https://forms.gle/4GTEwGTtW1wYq3ry5`. The Membership and Contact pages link directly to it. The website does not display the membership fee amount.
+
+## Public-content cleanup completed
+
+- Removed the membership fee amount from public membership pages, election summaries and the online Constitution reader.
+- Removed unnecessary public totals and decorative numbering from leadership, work, impact, events, governance, Youth Hub and related pages.
+- Rewrote public wording in simple English across the main website sections.
+- Reworked news items to focus on events and AYU actions rather than individual personalities.
+- Corrected Constitution wording throughout: the General Assembly amended and approved the Constitution; the serving Chairperson signed it into law.
+- Removed internal design guidance from the public Identity page.
+- Kept the full list of constitutional leadership roles where useful, without presenting the number of offices as a public statistic.
 
 ## Launch note
 
-The application build has already passed in Cloudflare (`tsc --noEmit && vite build`). The deployment configuration now matches the actual Cloudflare Workers Builds project shown in the dashboard. Domain-specific canonical and sitemap URLs should only be generated after the production hostname is known.
+A Cloudflare production build passed before the final wording cleanup. The latest source changes are ready for Cloudflare to rebuild and verify on the next deployment. The deployment configuration matches the Cloudflare Workers Builds project shown in the dashboard. Domain-specific canonical and sitemap URLs should only be generated after the production hostname is known.
