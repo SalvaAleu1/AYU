@@ -6,8 +6,7 @@ const navItems = [
   { href: "/?page=work", label: "Our Work" },
   { href: "/?page=news", label: "News" },
   { href: "/?page=events", label: "Events" },
-  { href: "/?page=impact", label: "Impact" },
-  { href: "/?page=media", label: "Media" },
+  { href: "/?page=governance", label: "Governance" },
   { href: "/?page=membership", label: "Membership" },
 ];
 
