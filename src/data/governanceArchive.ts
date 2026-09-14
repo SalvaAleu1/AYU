@@ -19,7 +19,18 @@ export type LeadershipTerm = {
 
 // Publish names only when supported by verified AYU records.
 export const currentAdvisoryBoard: AdvisoryBoardMember[] = [];
-export const pastLeadershipTerms: LeadershipTerm[] = [];
+
+export const pastLeadershipTerms: LeadershipTerm[] = [
+  {
+    id: "documented-2016-2017",
+    termLabel: "Documented administration · 2016–2017",
+    chairperson: "Bol Deng Akeen",
+    members: [
+      { name: "Darius Adup Anyuon", role: "Secretary General" },
+      { name: "Lang Madut Aguer", role: "Information Secretary" },
+    ],
+  },
+];
 
 export const advisoryBoardStructure = {
   size: 3,
