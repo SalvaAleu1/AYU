@@ -13,6 +13,8 @@ CREATE TABLE IF NOT EXISTS members (
   email TEXT,
   juba_area TEXT,
   short_bio TEXT,
+  profile_photo_key TEXT,
+  profile_photo_type TEXT,
   created_at TEXT NOT NULL,
   updated_at TEXT NOT NULL
 );
