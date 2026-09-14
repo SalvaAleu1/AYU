@@ -25,14 +25,13 @@ export default function NewsPage() {
   return (
     <>
       <PageHero
-        eyebrow="News & Official Communications"
-        title="AYU news, public statements and community updates in one institutional archive."
-        description="This section brings together AYU-Juba announcements, official statements, community developments and public-interest updates relevant to the Union's constitutional mandate."
+        eyebrow="News & Updates"
+        title="AYU news, statements and community updates."
+        description="Read what has happened, what AYU has announced and updates that matter to the Union and the community."
         aside={
           <dl className="page-fact-list">
-            <div><dt>Archive entries</dt><dd>{publishedNewsArticles.length}</dd></div>
-            <div><dt>Latest record</dt><dd>{publishedNewsArticles[0]?.displayDate ?? ""}</dd></div>
-            <div><dt>Communications office</dt><dd>Secretary for Information and Media</dd></div>
+            <div><dt>Latest update</dt><dd>{publishedNewsArticles[0]?.displayDate ?? ""}</dd></div>
+            <div><dt>Includes</dt><dd>News, statements and community updates</dd></div>
           </dl>
         }
       />
@@ -54,9 +53,9 @@ export default function NewsPage() {
       <section className="section section-soft">
         <div className="container">
           <SectionHeading
-            eyebrow="Archive"
-            title="Browse AYU communications by topic."
-            description="Search the archive or filter by communication category."
+            eyebrow="News Archive"
+            title="Browse AYU updates by topic."
+            description="Use the search box or choose a topic to find an update."
           />
 
           <div className="news-toolbar">
@@ -101,7 +100,7 @@ export default function NewsPage() {
           {filteredArticles.length === 0 ? (
             <div className="archive-empty-state">
               <strong>No matching updates</strong>
-              <p>Try a different search term or communication category.</p>
+              <p>Try a different search term or topic.</p>
             </div>
           ) : null}
         </div>
@@ -110,11 +109,11 @@ export default function NewsPage() {
       <section className="section section-dark">
         <div className="container communications-role-grid">
           <div>
-            <p className="eyebrow eyebrow-light">Institutional Communications</p>
-            <h2 className="display-title display-title-light">Clear public communication is part of AYU's constitutional responsibility.</h2>
+            <p className="eyebrow eyebrow-light">Public Communication</p>
+            <h2 className="display-title display-title-light">AYU shares clear and responsible public information.</h2>
           </div>
           <p>
-            The Secretary for Information and Media serves as AYU-Juba's spokesperson, circulates official information and manages the Union's website and social-media accounts.
+            Official updates are published to keep members, partners and the wider community informed about AYU activities, statements and important developments.
           </p>
         </div>
       </section>
