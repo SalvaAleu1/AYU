@@ -13,6 +13,10 @@ export async function onRequestGet({ request, env }) {
   const member = await requireMember(env, request);
   if (!member) return json({ message: "Sign in to continue." }, 401);
 
+  const photo = await env.AYU_DB.prepare("SELECT profile_photo_key FROM members WHERE id = ? LIMIT 1")
+    .bind(member.member_id)
+    .first();
+
   return json({
     member: {
       memberNumber: member.member_number,
@@ -25,6 +29,7 @@ export async function onRequestGet({ request, env }) {
       email: member.email,
       jubaArea: member.juba_area,
       shortBio: member.short_bio,
+      hasProfilePhoto: Boolean(photo?.profile_photo_key),
     },
   });
 }
