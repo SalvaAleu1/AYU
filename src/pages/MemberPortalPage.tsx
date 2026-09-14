@@ -125,7 +125,7 @@ export default function MemberPortalPage() {
             <div className="portal-panel-heading"><div><p className="eyebrow">Documents</p><h2>Member documents</h2></div></div>
             {documents.length > 0 ? (
               <div className="portal-list compact">
-                {documents.map((item) => <article key={item.id}><time>{formatDate(item.published_at)}</time><h3>{item.title}</h3>{item.description ? <p>{item.description}</p> : null}{item.external_url ? <a className="text-link" href={item.external_url} target="_blank" rel="noreferrer">Open document →</a> : null}</article>)}
+                {documents.map((item) => <article key={item.id}><time>{formatDate(item.published_at)}</time><h3>{item.title}</h3>{item.description ? <p>{item.description}</p> : null}{item.url ? <a className="text-link" href={item.url} target="_blank" rel="noreferrer">Open document →</a> : null}</article>)}
               </div>
             ) : <p className="portal-empty">There are no member documents published at this time.</p>}
           </div>
