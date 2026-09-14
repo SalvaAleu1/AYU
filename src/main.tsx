@@ -8,6 +8,7 @@ import "./pages/leadership.css";
 import "./pages/work.css";
 import "./pages/communications.css";
 import "./pages/membership-media.css";
+import "./pages/portal.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
