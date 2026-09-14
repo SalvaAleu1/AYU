@@ -1,8 +1,9 @@
 const footerLinks = [
   { href: "/?page=about", label: "About AYU" },
   { href: "/?page=leadership", label: "Leadership" },
+  { href: "/?page=history", label: "Advisory & History" },
+  { href: "/?page=work", label: "Our Work" },
   { href: "/?page=identity", label: "Identity & Symbols" },
-  { href: "/#work", label: "Our Work" },
   { href: "/#membership", label: "Membership" },
   { href: "/#constitution", label: "Constitution" },
 ];
