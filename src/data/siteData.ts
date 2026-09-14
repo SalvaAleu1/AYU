@@ -99,23 +99,17 @@ export const communityRelationships = [
   "Sectional Youth Associations in Juba",
 ];
 
-export const institutionalStats = [
-  { value: "10", label: "Constitutional objectives" },
-  { value: "13", label: "Executive Committee offices" },
-  { value: "3", label: "Advisory Board members" },
-  { value: "9", label: "Constitutional community relationships" },
-];
-
 export const membershipEligibility = [
   "Apuk citizen by origin or resident",
   "18 to 45 years of age",
   "Of sound mind",
   "Registered with the Union",
-  "Meets mandatory fee obligations of the Union",
+  "Meets the membership obligations set by AYU",
 ];
 
 export const constitutionRecord = {
   amendedYear: 2025,
+  amendedBy: "General Assembly",
   signedBy: "Agany Geng Ayiei",
   signedAs: "Chairperson of Apuk Youth Union in Juba",
   approvedDate: "14 September 2025",
