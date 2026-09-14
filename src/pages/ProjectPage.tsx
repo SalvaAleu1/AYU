@@ -38,13 +38,13 @@ export default function ProjectPage({ slug }: { slug: string }) {
         <div className="container project-detail-grid">
           <div>
             <p className="eyebrow">Project Overview</p>
-            <h2 className="display-title">About this initiative.</h2>
+            <h2 className="display-title">About this work.</h2>
           </div>
           <div className="prose-stack">
             <p>{project.description}</p>
             {project.beneficiaries ? (
               <div className="project-detail-fact">
-                <span>Beneficiaries</span>
+                <span>Who it serves</span>
                 <strong>{project.beneficiaries}</strong>
               </div>
             ) : null}
@@ -55,11 +55,10 @@ export default function ProjectPage({ slug }: { slug: string }) {
       {project.outcomes?.length ? (
         <section className="section section-soft">
           <div className="container">
-            <SectionHeading eyebrow="Results" title="Verified outcomes and achievements." />
+            <SectionHeading eyebrow="Results" title="What the project achieved." />
             <div className="project-outcome-grid">
-              {project.outcomes.map((outcome, index) => (
+              {project.outcomes.map((outcome) => (
                 <article key={outcome}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
                   <p>{outcome}</p>
                 </article>
               ))}
@@ -71,7 +70,7 @@ export default function ProjectPage({ slug }: { slug: string }) {
       {project.gallery?.length ? (
         <section className="section section-white">
           <div className="container">
-            <SectionHeading eyebrow="Project Gallery" title="Documenting the work." />
+            <SectionHeading eyebrow="Project Gallery" title="Photos from the work." />
             <div className="project-gallery-grid">
               {project.gallery.map((image) => (
                 <img key={image.src} src={image.src} alt={image.alt} loading="lazy" decoding="async" />
@@ -86,7 +85,7 @@ export default function ProjectPage({ slug }: { slug: string }) {
           <div className="container project-report-grid">
             <div>
               <p className="eyebrow">Reports & Documents</p>
-              <h2 className="display-title">Public project records.</h2>
+              <h2 className="display-title">Public project documents.</h2>
             </div>
             <div className="project-report-list">
               {project.reports.map((report) => <a key={report.href} href={report.href}>{report.label} →</a>)}
