@@ -7,14 +7,13 @@ export default function WorkPage() {
     <>
       <PageHero
         eyebrow="Our Work"
-        title="AYU's constitutional mandate organized into clear areas of service."
-        description="AYU's work is organized around nine programme pillars drawn from the Union's constitutional objectives, with projects and initiatives presented within the areas they serve."
+        title="AYU serves young people and the community through practical areas of work."
+        description="Our work follows the aims of the AYU Constitution and focuses on learning, peace, culture, health, sports, welfare, the environment and community development."
         aside={
           <dl className="page-fact-list">
-            <div><dt>Programme pillars</dt><dd>9</dd></div>
-            <div><dt>Constitutional objectives</dt><dd>10</dd></div>
-            <div><dt>Project oversight</dt><dd>Chairperson & Executive Committee</dd></div>
-            <div><dt>Project reporting</dt><dd>Financial & narrative accountability</dd></div>
+            <div><dt>Guided by</dt><dd>AYU Constitution</dd></div>
+            <div><dt>Project oversight</dt><dd>Executive Committee</dd></div>
+            <div><dt>Reporting</dt><dd>Progress and final reports</dd></div>
           </dl>
         }
       />
@@ -22,18 +21,17 @@ export default function WorkPage() {
       <section className="section section-white">
         <div className="container">
           <SectionHeading
-            eyebrow="Programme Pillars"
-            title="Nine areas connect AYU's Constitution to practical community service."
-            description="Each programme area explains its constitutional mandate, related objectives and the Executive portfolios connected to that area of work."
+            eyebrow="Areas of Work"
+            title="AYU's work brings the Constitution into practical service for the community."
+            description="Each area explains what AYU aims to do and how it supports young people and the wider community."
           />
 
           <div className="program-pillar-grid">
-            {workPillars.map((pillar, index) => (
+            {workPillars.map((pillar) => (
               <a className="program-pillar-card" href={`/?page=program&slug=${pillar.slug}`} key={pillar.slug}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{pillar.title}</h3>
                 <p>{pillar.summary}</p>
-                <strong>Explore programme area →</strong>
+                <strong>Explore this area →</strong>
               </a>
             ))}
           </div>
@@ -44,15 +42,14 @@ export default function WorkPage() {
         <div className="container">
           <SectionHeading
             light
-            eyebrow="Project Governance"
-            title="AYU projects follow a constitutional accountability cycle."
-            description="Specific programmes and projects may be assigned to organizing committees under the supervision of the Chairperson and Executive Committee."
+            eyebrow="How Projects Are Managed"
+            title="AYU projects are planned, carried out and reported responsibly."
+            description="A project may be assigned to a committee that works under the supervision of AYU leadership and reports on its progress and results."
           />
 
           <div className="governance-cycle-grid">
             {projectGovernance.map((item) => (
               <article className="governance-cycle-card" key={item.step}>
-                <span>{item.step}</span>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </article>
