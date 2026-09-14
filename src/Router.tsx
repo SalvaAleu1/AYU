@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import App from "./App";
 import BackToTop from "./components/BackToTop";
 import SiteFooter from "./components/SiteFooter";
@@ -33,6 +33,48 @@ import ProjectPage from "./pages/ProjectPage";
 import SuccessStoryPage from "./pages/SuccessStoryPage";
 import WorkPage from "./pages/WorkPage";
 
+type PageMeta = { title: string; description: string };
+
+const defaultMeta: PageMeta = {
+  title: "Apuk Youth Union in Juba | AYU-Juba",
+  description: "Official website of Apuk Youth Union in Juba — Together for Peace, Unity and Development.",
+};
+
+const pageMeta: Record<string, PageMeta> = {
+  about: { title: "About AYU | AYU-Juba", description: "Learn about Apuk Youth Union in Juba, its mission, vision, values, objectives and constitutional identity." },
+  identity: { title: "Identity & Symbols | AYU-Juba", description: "Explore the official AYU-Juba emblem, motto and constitutional meaning of its symbols." },
+  leadership: { title: "Leadership | AYU-Juba", description: "Explore the constitutional leadership structure and verified leadership records of Apuk Youth Union in Juba." },
+  history: { title: "Advisory Board & History | AYU-Juba", description: "Explore AYU-Juba's Advisory Board framework and documented institutional history." },
+  work: { title: "Our Work | AYU-Juba", description: "Explore AYU-Juba programmes, projects and community service priorities." },
+  news: { title: "News & Official Communications | AYU-Juba", description: "Read official AYU-Juba news, statements and community updates." },
+  events: { title: "Events | AYU-Juba", description: "View AYU-Juba events and the Union's constitutional meeting calendar." },
+  impact: { title: "Impact | AYU-Juba", description: "Explore documented AYU-Juba institutional milestones and community contribution areas." },
+  media: { title: "Media Centre | AYU-Juba", description: "Access AYU-Juba publications, press resources and official downloads." },
+  membership: { title: "Membership | AYU-Juba", description: "Learn about AYU-Juba membership categories, eligibility, rights, duties and registration." },
+  governance: { title: "Governance & Transparency | AYU-Juba", description: "Explore AYU-Juba governance, accountability, audit and public constitutional resources." },
+  constitution: { title: "Constitution | AYU-Juba", description: "Search and read the Amended 2025 Constitution of Apuk Youth Union in Juba." },
+  elections: { title: "Elections | AYU-Juba", description: "Explore AYU-Juba's constitutional electoral framework, IEC, voter information and public election records." },
+  "election-administration": { title: "Election Administration | AYU-Juba", description: "Learn about the Independent Electoral Committee's constitutional responsibilities and public election process." },
+  "youth-hub": { title: "Apuk Youth Hub | AYU-Juba", description: "Explore youth opportunities, scholarships, trainings, events, jobs, announcements and sports activities." },
+  partners: { title: "Partners & Support | AYU-Juba", description: "Explore AYU-Juba's constitutional community relationships and pathways for responsible partnership and support." },
+  contact: { title: "Contact AYU | AYU-Juba", description: "Find official public routes to Apuk Youth Union in Juba." },
+  search: { title: "Search | AYU-Juba", description: "Search public information across the AYU-Juba website." },
+  utilities: { title: "Website Utilities | AYU-Juba", description: "Search, share and follow AYU-Juba public information from your device." },
+  privacy: { title: "Privacy Policy | AYU-Juba", description: "Read the AYU-Juba public website Privacy Policy." },
+  terms: { title: "Terms of Use | AYU-Juba", description: "Read the terms governing use of the AYU-Juba public website." },
+  accessibility: { title: "Accessibility | AYU-Juba", description: "Read AYU-Juba's public website accessibility commitment." },
+};
+
+function setMeta(name: string, value: string) {
+  const element = document.querySelector(`meta[name="${name}"]`);
+  if (element) element.setAttribute("content", value);
+}
+
+function setPropertyMeta(property: string, value: string) {
+  const element = document.querySelector(`meta[property="${property}"]`);
+  if (element) element.setAttribute("content", value);
+}
+
 function PageShell({ children }: { children: ReactNode }) {
   return (
     <div className="site-shell">
@@ -48,6 +90,16 @@ function PageShell({ children }: { children: ReactNode }) {
 export default function Router() {
   const params = new URLSearchParams(window.location.search);
   const page = params.get("page");
+
+  useEffect(() => {
+    const meta = page ? (pageMeta[page] ?? defaultMeta) : defaultMeta;
+    document.title = meta.title;
+    setMeta("description", meta.description);
+    setMeta("twitter:title", meta.title);
+    setMeta("twitter:description", meta.description);
+    setPropertyMeta("og:title", meta.title);
+    setPropertyMeta("og:description", meta.description);
+  }, [page]);
 
   if (!page) return <App />;
 
