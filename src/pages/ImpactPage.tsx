@@ -1,6 +1,6 @@
 import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
-import { impactAreas, impactRecords } from "../data/impactData";
+import { impactAreas, impactRecords, successStories } from "../data/impactData";
 
 export default function ImpactPage() {
   return (
@@ -53,6 +53,26 @@ export default function ImpactPage() {
           </div>
         </div>
       </section>
+
+      {successStories.length > 0 ? (
+        <section className="section section-sky">
+          <div className="container">
+            <SectionHeading eyebrow="Youth & Community Stories" title="People and experiences behind AYU's work." />
+            <div className="impact-grid">
+              {successStories.filter((story) => story.consentForPublication).map((story) => (
+                <a className="impact-card" href={`/?page=success-story&slug=${story.slug}`} key={story.slug}>
+                  <div className="impact-card-meta">
+                    <span>{story.programmeArea}</span>
+                  </div>
+                  <h3>{story.title}</h3>
+                  <p>{story.summary}</p>
+                  <span className="text-link">Read story →</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section section-soft">
         <div className="container impact-area-grid">
