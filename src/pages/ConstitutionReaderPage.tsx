@@ -62,13 +62,12 @@ export default function ConstitutionReaderPage() {
       <PageHero
         eyebrow="Constitution"
         title="Read the AYU Constitution article by article."
-        description="The digital reader makes the Amended 2025 Constitution easier to search, navigate and read while preserving the signed Constitution as AYU-Juba's authoritative governance instrument."
+        description="This reader makes the Amended 2025 Constitution easier to search and read. The signed Constitution remains the official version."
         aside={
           <dl className="page-fact-list">
             <div><dt>Edition</dt><dd>{constitutionMeta.edition}</dd></div>
+            <div><dt>Approved by</dt><dd>General Assembly</dd></div>
             <div><dt>Approved</dt><dd>{constitutionMeta.approvedDate}</dd></div>
-            <div><dt>Chapters</dt><dd>{constitutionMeta.totalChapters}</dd></div>
-            <div><dt>Articles</dt><dd>{constitutionMeta.totalArticles}</dd></div>
           </dl>
         }
       />
@@ -78,7 +77,7 @@ export default function ConstitutionReaderPage() {
           <div className="constitution-reader-modes" aria-label="Constitution reading modes">
             <button type="button" className={mode === "preamble" ? "active" : undefined} onClick={() => selectMode("preamble")}>Preamble</button>
             <button type="button" className={mode === "article" ? "active" : undefined} onClick={() => selectMode("article")}>Article view</button>
-            <button type="button" className={mode === "full" ? "active" : undefined} onClick={() => selectMode("full")}>Full text</button>
+            <button type="button" className={mode === "full" ? "active" : undefined} onClick={() => selectMode("full")}>Read all</button>
           </div>
           <button className="button button-dark constitution-print-button" type="button" onClick={() => window.print()}>Print / save as PDF</button>
         </div>
@@ -155,7 +154,7 @@ export default function ConstitutionReaderPage() {
                   <img src="/ayu-logo.webp" alt="Apuk Youth Union in Juba logo" width="128" height="124" />
                   <p className="eyebrow">{constitutionMeta.edition}</p>
                   <h1>{constitutionMeta.title}</h1>
-                  <p>Approved by the General Assembly on {constitutionMeta.approvedDate}</p>
+                  <p>Amended and approved by the General Assembly on {constitutionMeta.approvedDate}</p>
                 </section>
 
                 <section className="constitution-reading-block">
@@ -179,8 +178,8 @@ export default function ConstitutionReaderPage() {
             ) : null}
 
             <footer className="constitution-transcription-note">
-              <strong>Authoritative text</strong>
-              <p>This digital transcription is provided for accessibility and navigation. If any difference arises between this reader and the signed Constitution, the signed Constitution remains authoritative.</p>
+              <strong>Official text</strong>
+              <p>This online reader is provided for easier access. If there is any difference between this reader and the signed Constitution, the signed Constitution remains the official version.</p>
             </footer>
           </article>
         </div>
