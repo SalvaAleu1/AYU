@@ -25,7 +25,7 @@ export type PortalPayload = {
   member: MemberSummary;
   privacy: PrivacyPreferences;
   announcements: Array<{ id: string; title: string; body: string; published_at: string }>;
-  documents: Array<{ id: string; title: string; description?: string | null; external_url?: string | null; published_at: string }>;
+  documents: Array<{ id: string; title: string; description?: string | null; url?: string | null; published_at: string }>;
   forms: Array<{ id: string; title: string; description?: string | null; destination_url?: string | null; opens_at?: string | null; closes_at?: string | null }>;
 };
 
