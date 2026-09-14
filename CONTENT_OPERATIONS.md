@@ -5,7 +5,7 @@ The production website is intentionally designed as a static, source-controlled 
 ## Publishing model
 
 - Public content is maintained in typed source files under `src/data/`.
-- The approved AYU membership Google Form is linked from `src/data/finalPlatformData.ts` once the exact AYU form URL is supplied.
+- The official AYU membership Google Form is configured in `src/data/finalPlatformData.ts` as `https://forms.gle/4GTEwGTtW1wYq3ry5`.
 - News, events, projects, leadership, governance documents and election records are published by updating their relevant source collection.
 - Records that are not approved for public release remain absent from the public collections.
 - Repository permissions and branch controls are the administrative boundary for public content changes.
