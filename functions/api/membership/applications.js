@@ -1,4 +1,5 @@
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
+const MAX_REQUEST_SIZE = 6 * 1024 * 1024;
 const ALLOWED_FILE_TYPES = new Set(["application/pdf", "image/jpeg", "image/png"]);
 
 function json(body, status = 200) {
@@ -8,12 +9,16 @@ function json(body, status = 200) {
       "content-type": "application/json; charset=utf-8",
       "cache-control": "no-store, max-age=0",
       "x-content-type-options": "nosniff",
+      "referrer-policy": "same-origin",
     },
   });
 }
 
 function clean(value, maxLength) {
-  return String(value ?? "").trim().slice(0, maxLength);
+  return String(value ?? "")
+    .replace(/[\u0000-\u001F\u007F]/g, " ")
+    .trim()
+    .slice(0, maxLength);
 }
 
 function ageFromDate(dateString) {
@@ -49,6 +54,13 @@ function documentExtension(type) {
 }
 
 export async function onRequestPost({ request, env }) {
+  const requestUrl = new URL(request.url);
+  const origin = request.headers.get("origin");
+  if (origin && origin !== requestUrl.origin) return json({ message: "This request is not permitted." }, 403);
+
+  const contentLength = Number(request.headers.get("content-length") || 0);
+  if (contentLength > MAX_REQUEST_SIZE) return json({ message: "The submitted application is too large." }, 413);
+
   if (!env.AYU_DB) return json({ message: "Membership applications are temporarily unavailable. Please try again later." }, 503);
 
   let form;
