@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
-import { newsArticles, newsCategories } from "../data/newsData";
+import { newsCategories, publishedNewsArticles } from "../data/newsData";
 
 export default function NewsPage() {
   const [category, setCategory] = useState<(typeof newsCategories)[number]>("All");
@@ -10,7 +10,7 @@ export default function NewsPage() {
   const filteredArticles = useMemo(() => {
     const normalized = query.trim().toLowerCase();
 
-    return newsArticles.filter((article) => {
+    return publishedNewsArticles.filter((article) => {
       const matchesCategory = category === "All" || article.category === category;
       const matchesQuery = !normalized || [article.title, article.excerpt, article.category]
         .join(" ")
@@ -20,7 +20,7 @@ export default function NewsPage() {
     });
   }, [category, query]);
 
-  const featuredArticle = newsArticles.find((article) => article.featured);
+  const featuredArticle = publishedNewsArticles.find((article) => article.featured);
 
   return (
     <>
@@ -30,8 +30,8 @@ export default function NewsPage() {
         description="This section brings together AYU-Juba announcements, official statements, community developments and public-interest updates relevant to the Union's constitutional mandate."
         aside={
           <dl className="page-fact-list">
-            <div><dt>Archive entries</dt><dd>{newsArticles.length}</dd></div>
-            <div><dt>Latest record</dt><dd>{newsArticles[0]?.displayDate ?? ""}</dd></div>
+            <div><dt>Archive entries</dt><dd>{publishedNewsArticles.length}</dd></div>
+            <div><dt>Latest record</dt><dd>{publishedNewsArticles[0]?.displayDate ?? ""}</dd></div>
             <div><dt>Communications office</dt><dd>Secretary for Information and Media</dd></div>
           </dl>
         }
