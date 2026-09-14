@@ -8,7 +8,6 @@ import {
   communityRelationships,
   constitutionRecord,
   executiveOffices,
-  institutionalStats,
   membershipEligibility,
   workPillars,
 } from "./data/siteData";
@@ -57,7 +56,7 @@ function App() {
               <p className="eyebrow eyebrow-light">Apuk Youth Union in Juba</p>
               <h1>{ayuIdentity.motto}.</h1>
               <p className="hero-lead">
-                Empowering Apuk youth through education, unity, culture, leadership, peacebuilding and sustainable community development.
+                Supporting Apuk youth through education, unity, culture, leadership, peace and community development.
               </p>
 
               <div className="hero-actions">
@@ -89,7 +88,7 @@ function App() {
             <SectionHeading
               eyebrow="About AYU"
               title="The digital home of Apuk youth in Juba."
-              description="AYU-Juba is a community youth institution established to educate and support its members while strengthening unity, peace, self-reliance and sustainable development."
+              description="AYU-Juba is a community youth body that supports learning, unity, peace, self-reliance and community development."
             />
 
             <div className="three-card-grid">
@@ -118,14 +117,13 @@ function App() {
           <div className="container">
             <SectionHeading
               eyebrow="Our Work"
-              title="Constitutional priorities translated into practical areas of service."
-              description="These pillars organize AYU's public work around the responsibilities and objectives established in the Union's Constitution."
+              title="Turning AYU's purpose into practical service."
+              description="AYU works in areas that support young people, strengthen the community and reflect the aims of the Constitution."
             />
 
             <div className="work-grid">
-              {workPillars.map((pillar, index) => (
+              {workPillars.map((pillar) => (
                 <article className="work-card" key={pillar.title}>
-                  <span className="work-index">{String(index + 1).padStart(2, "0")}</span>
                   <h3>{pillar.title}</h3>
                   <p>{pillar.description}</p>
                 </article>
@@ -134,54 +132,40 @@ function App() {
           </div>
         </section>
 
-        <section className="stats-band" aria-label="AYU institutional facts">
-          <div className="container stats-grid">
-            {institutionalStats.map((stat) => (
-              <div className="stat-item" key={stat.label}>
-                <strong>{stat.value}</strong>
-                <span>{stat.label}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
         <section className="section section-dark" id="governance">
           <div className="container">
             <SectionHeading
               light
               eyebrow="Leadership & Governance"
-              title="Accountability begins with a clear constitutional structure."
-              description="The General Assembly is AYU's supreme organ. The Executive Committee manages the Union's affairs and the Advisory Board provides constitutional guidance and counsel."
+              title="AYU is guided by its Constitution and accountable to its members."
+              description="The General Assembly is the highest decision-making body. The Executive Committee manages the Union's work, while the Advisory Board provides advice and guidance."
             />
 
             <div className="organ-grid">
               <article className="organ-card">
-                <span>01</span>
                 <h3>General Assembly</h3>
-                <p>Comprises all registered AYU members based in Juba and serves as the supreme organ of the Union.</p>
+                <p>Made up of registered AYU members based in Juba and serves as the highest decision-making body of the Union.</p>
               </article>
               <article className="organ-card organ-card-accent">
-                <span>02</span>
                 <h3>Executive Committee</h3>
-                <p>Thirteen constitutional offices responsible for administration, programmes, policy implementation and accountability.</p>
+                <p>Manages AYU's daily work, programmes, administration and reporting.</p>
               </article>
               <article className="organ-card">
-                <span>03</span>
                 <h3>Advisory Board</h3>
-                <p>A three-member board headed by the Patron, advising on unity, social development, conflict resolution, projects and community heritage.</p>
+                <p>Provides advice on unity, social development, conflict resolution, projects and community heritage.</p>
               </article>
             </div>
 
             <div className="executive-structure">
               <div className="executive-intro">
-                <p className="eyebrow eyebrow-light">Executive structure</p>
-                <h3>13 constitutional offices</h3>
-                <p>The Constitution requires at least four women among the thirteen Executive Committee members.</p>
+                <p className="eyebrow eyebrow-light">Executive Committee</p>
+                <h3>Roles set out in the Constitution</h3>
+                <p>The Constitution defines the main Executive Committee offices and requires fair representation of women in leadership.</p>
               </div>
 
-              <ol className="office-list">
+              <ul className="office-list">
                 {executiveOffices.map((office) => <li key={office}>{office}</li>)}
-              </ol>
+              </ul>
             </div>
           </div>
         </section>
@@ -217,7 +201,7 @@ function App() {
         {hasUpdates ? (
           <section className="section section-white" id="latest-updates">
             <div className="container">
-              <SectionHeading eyebrow="Latest Updates" title="Official AYU news and announcements." />
+              <SectionHeading eyebrow="Latest Updates" title="AYU news and announcements." />
               <div className="feed-grid">
                 {newsItems.map((item) => (
                   <article className="feed-card" key={item.id}>
@@ -250,14 +234,14 @@ function App() {
               <p className="eyebrow">Membership</p>
               <h2>Belonging comes with rights, participation and responsibility.</h2>
               <p>
-                The Constitution provides for Absolute Membership and Honorary Membership. Absolute members participate in the life and governance of the Union subject to constitutional eligibility and obligations.
+                The Constitution provides for Absolute Membership and Honorary Membership. Absolute members take part in the work and governance of the Union when they meet the membership requirements.
               </p>
               <p className="membership-note">Honorary members have the other rights of membership but do not vote or contest for an elective position.</p>
             </div>
 
             <div className="membership-panel">
               <span className="panel-label">Absolute membership</span>
-              <h3>Constitutional eligibility</h3>
+              <h3>Who can join</h3>
               <ul className="check-list">
                 {membershipEligibility.map((item) => <li key={item}>{item}</li>)}
               </ul>
@@ -269,14 +253,13 @@ function App() {
           <div className="container">
             <SectionHeading
               eyebrow="Community Relationships"
-              title="Working with the wider Apuk institutional family."
-              description="AYU operates under the Apuk Community Association in Juba and maintains constitutionally defined relationships with community institutions in their respective areas of responsibility."
+              title="Working with the wider Apuk community."
+              description="AYU operates under the Apuk Community Association in Juba and works with community institutions in their areas of responsibility."
             />
 
             <div className="partner-grid">
-              {communityRelationships.map((partner, index) => (
+              {communityRelationships.map((partner) => (
                 <div className="partner-card" key={partner}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
                   <strong>{partner}</strong>
                 </div>
               ))}
@@ -287,16 +270,17 @@ function App() {
         <section className="section constitution-section" id="constitution">
           <div className="container constitution-grid">
             <div>
-              <p className="eyebrow eyebrow-light">Governance foundation</p>
+              <p className="eyebrow eyebrow-light">Constitution</p>
               <h2>Constitution of Apuk Youth Union in Juba — Amended 2025.</h2>
             </div>
 
             <div className="constitution-copy">
               <p>
-                The Constitution establishes AYU's mandate, membership, organs, leadership responsibilities, meetings, finances, elections, discipline, tenure and relationships with other Apuk institutions.
+                The Constitution sets out AYU's purpose, membership, leadership, meetings, finances, elections, discipline and relationships with other Apuk institutions.
               </p>
               <dl>
-                <div><dt>Approved</dt><dd>{constitutionRecord.approvedDate}</dd></div>
+                <div><dt>Amended and approved by</dt><dd>{constitutionRecord.amendedBy}</dd></div>
+                <div><dt>Date</dt><dd>{constitutionRecord.approvedDate}</dd></div>
                 <div><dt>Signed into law by</dt><dd>{constitutionRecord.signedBy}, {constitutionRecord.signedAs}</dd></div>
               </dl>
             </div>
