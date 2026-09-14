@@ -7,14 +7,37 @@ import {
   ayuIdentity,
   communityRelationships,
   constitutionRecord,
-  constitutionalObjectives,
   executiveOffices,
   institutionalStats,
   membershipEligibility,
   workPillars,
 } from "./data/siteData";
+import AboutPage from "./pages/AboutPage";
+import IdentityPage from "./pages/IdentityPage";
+import LeaderProfilePage from "./pages/LeaderProfilePage";
+import LeadershipPage from "./pages/LeadershipPage";
+
+function InnerPage({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="site-shell">
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <SiteHeader />
+      <main id="main-content">{children}</main>
+      <SiteFooter />
+      <BackToTop />
+    </div>
+  );
+}
 
 function App() {
+  const params = new URLSearchParams(window.location.search);
+  const page = params.get("page");
+
+  if (page === "about") return <InnerPage><AboutPage /></InnerPage>;
+  if (page === "identity") return <InnerPage><IdentityPage /></InnerPage>;
+  if (page === "leadership") return <InnerPage><LeadershipPage /></InnerPage>;
+  if (page === "leader") return <InnerPage><LeaderProfilePage slug={params.get("slug") ?? ""} /></InnerPage>;
+
   const hasUpdates = newsItems.length > 0;
   const hasEvents = eventItems.length > 0;
   const hasGallery = galleryItems.length > 0;
