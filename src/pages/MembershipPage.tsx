@@ -7,7 +7,6 @@ import {
   memberRights,
   membershipCategories,
   membershipFaqs,
-  registrationFee,
 } from "../data/membershipData";
 
 export default function MembershipPage() {
@@ -16,13 +15,12 @@ export default function MembershipPage() {
       <PageHero
         eyebrow="Membership"
         title="Membership built on participation, responsibility and service."
-        description="AYU-Juba membership connects eligible young people to the constitutional life of the Union while setting clear rights, duties and standards of participation."
+        description="AYU-Juba membership gives eligible young people a way to take part in the Union, contribute to its work and exercise their rights and responsibilities."
         aside={
           <dl className="page-fact-list">
             <div><dt>AYU youth age</dt><dd>18–45 years</dd></div>
-            <div><dt>Membership categories</dt><dd>Absolute & Honorary</dd></div>
-            <div><dt>Registration fee</dt><dd>{registrationFee.amount}</dd></div>
-            <div><dt>Fee cadence</dt><dd>{registrationFee.cadence}</dd></div>
+            <div><dt>Membership types</dt><dd>Absolute and Honorary</dd></div>
+            <div><dt>Registration</dt><dd>Official AYU Google Form</dd></div>
           </dl>
         }
       />
@@ -30,9 +28,9 @@ export default function MembershipPage() {
       <section className="section section-white">
         <div className="container">
           <SectionHeading
-            eyebrow="Membership Categories"
-            title="Two constitutional forms of AYU membership."
-            description="Absolute Membership is the full participatory membership category. Honorary Membership recognizes individuals, communities or unions of goodwill that share values or objectives similar to AYU-Juba."
+            eyebrow="Membership Types"
+            title="Membership options provided by the AYU Constitution."
+            description="Absolute Membership is for eligible members who take part fully in AYU. Honorary Membership recognizes people, communities or unions of goodwill that share values or aims similar to AYU-Juba."
           />
 
           <div className="membership-category-grid">
@@ -51,27 +49,13 @@ export default function MembershipPage() {
         <div className="container rights-duties-grid">
           <div>
             <p className="eyebrow">Member Rights</p>
-            <h2 className="display-title">Participation is protected by the Constitution.</h2>
-            <ol className="membership-numbered-list">{memberRights.map((right) => <li key={right}>{right}</li>)}</ol>
+            <h2 className="display-title">Members have clear rights under the Constitution.</h2>
+            <ul className="membership-numbered-list">{memberRights.map((right) => <li key={right}>{right}</li>)}</ul>
           </div>
           <div>
             <p className="eyebrow">Member Duties</p>
-            <h2 className="display-title">Membership also carries responsibility.</h2>
-            <ol className="membership-numbered-list">{memberDuties.map((duty) => <li key={duty}>{duty}</li>)}</ol>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-dark">
-        <div className="container fee-panel-grid">
-          <div>
-            <p className="eyebrow eyebrow-light">Registration Fee</p>
-            <h2 className="display-title display-title-light">{registrationFee.amount}</h2>
-            <p className="fee-caption">Payable once for each term under Article 39 of the AYU Constitution.</p>
-          </div>
-          <div className="fee-explainer">
-            <strong>Membership obligations</strong>
-            <p>The Constitution requires members to meet applicable fee obligations while also contributing their skills, knowledge and participation to the work of the Union.</p>
+            <h2 className="display-title">Membership also comes with responsibilities.</h2>
+            <ul className="membership-numbered-list">{memberDuties.map((duty) => <li key={duty}>{duty}</li>)}</ul>
           </div>
         </div>
       </section>
@@ -80,7 +64,7 @@ export default function MembershipPage() {
         <div className="container membership-privacy-grid">
           <div>
             <p className="eyebrow">Membership Privacy</p>
-            <h2 className="display-title">Membership registration is handled outside the public website.</h2>
+            <h2 className="display-title">Registration is handled through the official AYU form.</h2>
           </div>
           <div className="privacy-point-list">{applicationPrivacyPoints.map((point) => <p key={point}>{point}</p>)}</div>
         </div>
@@ -95,14 +79,12 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      {membershipRegistrationUrl ? (
-        <section className="section section-gold membership-cta">
-          <div className="container cta-grid">
-            <div><p className="eyebrow">AYU Membership Registration</p><h2>Submit your registration through the official AYU form.</h2></div>
-            <a className="button button-dark" href={membershipRegistrationUrl} target="_blank" rel="noreferrer">Open registration form ↗</a>
-          </div>
-        </section>
-      ) : null}
+      <section className="section section-gold membership-cta">
+        <div className="container cta-grid">
+          <div><p className="eyebrow">AYU Membership Registration</p><h2>Register through the official AYU membership form.</h2></div>
+          <a className="button button-dark" href={membershipRegistrationUrl} target="_blank" rel="noreferrer">Open registration form ↗</a>
+        </div>
+      </section>
     </>
   );
 }
