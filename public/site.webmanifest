@@ -1,0 +1,17 @@
+{
+  "name": "Apuk Youth Union in Juba",
+  "short_name": "AYU-Juba",
+  "description": "Official public website of Apuk Youth Union in Juba — Together for Peace, Unity and Development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#062d20",
+  "icons": [
+    {
+      "src": "/ayu-logo.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ]
+}
