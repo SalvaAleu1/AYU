@@ -14,7 +14,7 @@ The production architecture is a static Vite/React site. No D1 database, R2 buck
 
 ## Membership registration
 
-The website does not store membership applications. Once AYU supplies its exact Google Form URL, add it to `membershipRegistrationUrl` in `src/data/finalPlatformData.ts`. The Membership page will then show the external registration button automatically.
+The website does not store membership applications. Membership registration opens the official AYU Google Form at `https://forms.gle/4GTEwGTtW1wYq3ry5`. The link is configured in `membershipRegistrationUrl` inside `src/data/finalPlatformData.ts` and is used by the public Membership and Contact pages.
 
 ## Production behavior
 
