@@ -4,9 +4,10 @@ const navItems = [
   { href: "/?page=about", label: "About" },
   { href: "/?page=leadership", label: "Leadership" },
   { href: "/?page=work", label: "Our Work" },
+  { href: "/?page=news", label: "News" },
+  { href: "/?page=events", label: "Events" },
+  { href: "/?page=impact", label: "Impact" },
   { href: "/#membership", label: "Membership" },
-  { href: "/?page=identity", label: "Identity" },
-  { href: "/#governance", label: "Governance" },
 ];
 
 export default function SiteHeader() {
