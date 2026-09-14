@@ -41,7 +41,7 @@ export default function EventPage({ slug }: { slug: string }) {
 
           <aside className="article-aside">
             <strong>AYU Events</strong>
-            <p>Meetings, community activities and institutional milestones of Apuk Youth Union in Juba.</p>
+            <p>Meetings, community activities and important AYU events.</p>
             <a className="text-link" href="/?page=events">← Back to Events</a>
           </aside>
         </div>
