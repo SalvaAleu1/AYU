@@ -41,9 +41,9 @@ export const advisoryBoardStructure = {
 };
 
 export const advisoryBoardFunctions = [
-  "Acts as a consultant for youth projects and programmes.",
-  "Advises on unity, social development, conflict resolution and matters related to projects of the Union.",
+  "Advises on AYU projects and programmes.",
+  "Gives advice on unity, social development, conflict resolution and Union projects.",
   "May advise the Chairperson and Secretaries on their duties.",
-  "May act as a reference point for community heritage and cultural values.",
-  "Carries constitutional responsibilities in matters where the Advisory Board is required to investigate and advise the General Assembly.",
+  "May provide guidance on community heritage and cultural values.",
+  "May investigate matters and advise the General Assembly where the Constitution requires it.",
 ];
