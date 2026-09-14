@@ -16,6 +16,17 @@ export type ImpactRecord = {
   sourceUrl?: string;
 };
 
+export type SuccessStory = {
+  slug: string;
+  name: string;
+  title: string;
+  programmeArea: string;
+  summary: string;
+  story: string[];
+  photo?: string;
+  consentForPublication: boolean;
+};
+
 export const impactRecords: ImpactRecord[] = [
   {
     slug: "constitutional-renewal-2025",
@@ -66,6 +77,8 @@ export const impactRecords: ImpactRecord[] = [
   },
 ];
 
+export const successStories: SuccessStory[] = [];
+
 export const impactAreas = [
   "Education and youth capacity",
   "Peace and reconciliation",
@@ -79,4 +92,8 @@ export const impactAreas = [
 
 export function getImpactRecord(slug: string) {
   return impactRecords.find((record) => record.slug === slug);
+}
+
+export function getSuccessStory(slug: string) {
+  return successStories.find((story) => story.slug === slug && story.consentForPublication);
 }
