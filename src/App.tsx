@@ -21,9 +21,10 @@ function App() {
 
   return (
     <div className="site-shell">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <SiteHeader />
 
-      <main>
+      <main id="main-content">
         <section className="hero" id="home">
           <div className="hero-accent hero-accent-sky" aria-hidden="true" />
           <div className="hero-accent hero-accent-gold" aria-hidden="true" />
