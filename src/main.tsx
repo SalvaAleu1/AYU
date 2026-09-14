@@ -10,6 +10,7 @@ import "./pages/communications.css";
 import "./pages/membership-media.css";
 import "./pages/portal.css";
 import "./pages/portal-polish.css";
+import "./pages/governance-finance.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
