@@ -5,9 +5,11 @@ const navItems = [
   { href: "/?page=leadership", label: "Leadership" },
   { href: "/?page=work", label: "Our Work" },
   { href: "/?page=news", label: "News" },
-  { href: "/?page=events", label: "Events" },
   { href: "/?page=governance", label: "Governance" },
+  { href: "/?page=elections", label: "Elections" },
+  { href: "/?page=youth-hub", label: "Youth Hub" },
   { href: "/?page=membership", label: "Membership" },
+  { href: "/?page=search", label: "Search" },
 ];
 
 export default function SiteHeader() {
@@ -17,7 +19,6 @@ export default function SiteHeader() {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setMenuOpen(false);
     };
-
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
@@ -34,10 +35,7 @@ export default function SiteHeader() {
       <div className="container nav-wrap">
         <a className="brand" href="/" onClick={closeMenu} aria-label="Apuk Youth Union in Juba home">
           <img className="brand-logo" src="/ayu-logo.webp" alt="" width="52" height="50" />
-          <span className="brand-text">
-            <strong>Apuk Youth Union</strong>
-            <small>Juba, South Sudan</small>
-          </span>
+          <span className="brand-text"><strong>Apuk Youth Union</strong><small>Juba, South Sudan</small></span>
         </a>
 
         <button
@@ -48,22 +46,11 @@ export default function SiteHeader() {
           aria-controls="primary-navigation"
           onClick={() => setMenuOpen((open) => !open)}
         >
-          <span />
-          <span />
-          <span />
+          <span /><span /><span />
         </button>
 
-        <nav
-          id="primary-navigation"
-          className={menuOpen ? "main-nav open" : "main-nav"}
-          aria-label="Primary navigation"
-        >
-          {navItems.map((item) => (
-            <a key={item.href} href={item.href} onClick={closeMenu}>
-              {item.label}
-            </a>
-          ))}
-          <a className="member-login-link" href="/?page=member-login" onClick={closeMenu}>Member Login</a>
+        <nav id="primary-navigation" className={menuOpen ? "main-nav open" : "main-nav"} aria-label="Primary navigation">
+          {navItems.map((item) => <a key={item.href} href={item.href} onClick={closeMenu}>{item.label}</a>)}
         </nav>
       </div>
     </header>
