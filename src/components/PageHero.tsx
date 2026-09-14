@@ -1,8 +1,10 @@
+import type { ReactNode } from "react";
+
 type PageHeroProps = {
   eyebrow: string;
   title: string;
   description: string;
-  aside?: React.ReactNode;
+  aside?: ReactNode;
 };
 
 export default function PageHero({ eyebrow, title, description, aside }: PageHeroProps) {
