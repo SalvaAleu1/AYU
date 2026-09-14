@@ -8,29 +8,31 @@ type State =
   | { status: "signed-out" }
   | { status: "error"; message: string };
 
-const preferenceCopy = [
+type VisibilityKey = "directoryVisible" | "photoVisible" | "bioVisible" | "emailVisible" | "phoneVisible";
+
+const preferenceCopy: Array<{ key: VisibilityKey; title: string; description: string }> = [
   {
-    key: "directoryVisible" as const,
+    key: "directoryVisible",
     title: "Appear in a future public member directory",
     description: "Your member profile remains private unless you explicitly allow directory visibility."
   },
   {
-    key: "photoVisible" as const,
+    key: "photoVisible",
     title: "Show profile photo",
     description: "Applies only when directory visibility is enabled and a profile photo exists."
   },
   {
-    key: "bioVisible" as const,
+    key: "bioVisible",
     title: "Show short bio",
     description: "Allows your short profile biography to appear with a public directory entry."
   },
   {
-    key: "emailVisible" as const,
+    key: "emailVisible",
     title: "Show email address",
     description: "Your email remains private unless you explicitly choose to make it visible."
   },
   {
-    key: "phoneVisible" as const,
+    key: "phoneVisible",
     title: "Show phone number",
     description: "Your phone number remains private unless you explicitly choose to make it visible."
   },
@@ -56,7 +58,7 @@ export default function MemberPrivacyPage() {
   if (state.status === "loading") return <div className="portal-loading"><div className="container">Loading privacy settings…</div></div>;
   if (state.status === "error") return <div className="portal-loading"><div className="container">{state.message}</div></div>;
 
-  const update = (key: keyof PrivacyPreferences, value: boolean) => {
+  const update = (key: VisibilityKey, value: boolean) => {
     setState({ status: "ready", preferences: { ...state.preferences, [key]: value } });
     setMessage("");
   };
@@ -96,7 +98,7 @@ export default function MemberPrivacyPage() {
                 <span className="toggle-control">
                   <input
                     type="checkbox"
-                    checked={Boolean(state.preferences[item.key])}
+                    checked={state.preferences[item.key]}
                     onChange={(event) => update(item.key, event.target.checked)}
                   />
                   <span aria-hidden="true" />
