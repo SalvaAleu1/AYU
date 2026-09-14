@@ -23,6 +23,7 @@ export default function MemberPortalNav({ active }: MemberPortalNavProps) {
         </a>
       ))}
       <a href="/">Public site</a>
+      <a href="/?page=member-logout">Sign out</a>
     </nav>
   );
 }
