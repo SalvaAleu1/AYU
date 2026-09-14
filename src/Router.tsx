@@ -8,6 +8,16 @@ import AdvisoryHistoryPage from "./pages/AdvisoryHistoryPage";
 import ConstitutionReaderPage from "./pages/ConstitutionReaderPage";
 import EventPage from "./pages/EventPage";
 import EventsPage from "./pages/EventsPage";
+import {
+  ContactPage,
+  ElectionAdministrationPage,
+  ElectionsPage,
+  LegalPage,
+  PartnersSupportPage,
+  SearchPage,
+  UtilitiesPage,
+  YouthHubPage,
+} from "./pages/FinalPlatformPages";
 import GovernancePage from "./pages/GovernancePage";
 import IdentityPage from "./pages/IdentityPage";
 import ImpactPage from "./pages/ImpactPage";
@@ -15,16 +25,6 @@ import ImpactStoryPage from "./pages/ImpactStoryPage";
 import LeaderProfilePage from "./pages/LeaderProfilePage";
 import LeadershipPage from "./pages/LeadershipPage";
 import MediaCentrePage from "./pages/MediaCentrePage";
-import MemberActivatePage from "./pages/MemberActivatePage";
-import MemberContributionsPage from "./pages/MemberContributionsPage";
-import MemberLoginPage from "./pages/MemberLoginPage";
-import MemberLogoutPage from "./pages/MemberLogoutPage";
-import MemberPortalPage from "./pages/MemberPortalPage";
-import MemberPrivacyPage from "./pages/MemberPrivacyPage";
-import MemberProfilePage from "./pages/MemberProfilePage";
-import MemberReceiptPage from "./pages/MemberReceiptPage";
-import MemberSecurityPage from "./pages/MemberSecurityPage";
-import MembershipApplicationPage from "./pages/MembershipApplicationPage";
 import MembershipPage from "./pages/MembershipPage";
 import NewsArticlePage from "./pages/NewsArticlePage";
 import NewsPage from "./pages/NewsPage";
@@ -68,18 +68,18 @@ export default function Router() {
   if (page === "success-story") return <PageShell><SuccessStoryPage slug={params.get("slug") ?? ""} /></PageShell>;
   if (page === "media") return <PageShell><MediaCentrePage /></PageShell>;
   if (page === "membership") return <PageShell><MembershipPage /></PageShell>;
-  if (page === "membership-apply") return <PageShell><MembershipApplicationPage /></PageShell>;
   if (page === "governance") return <PageShell><GovernancePage /></PageShell>;
   if (page === "constitution") return <PageShell><ConstitutionReaderPage /></PageShell>;
-  if (page === "member-login") return <PageShell><MemberLoginPage /></PageShell>;
-  if (page === "member-activate") return <PageShell><MemberActivatePage /></PageShell>;
-  if (page === "member-logout") return <MemberLogoutPage />;
-  if (page === "member-portal") return <MemberPortalPage />;
-  if (page === "member-profile") return <MemberProfilePage />;
-  if (page === "member-contributions") return <MemberContributionsPage />;
-  if (page === "member-receipt") return <MemberReceiptPage id={params.get("id") ?? ""} />;
-  if (page === "member-privacy") return <MemberPrivacyPage />;
-  if (page === "member-security") return <MemberSecurityPage />;
+  if (page === "elections") return <PageShell><ElectionsPage /></PageShell>;
+  if (page === "election-administration") return <PageShell><ElectionAdministrationPage /></PageShell>;
+  if (page === "youth-hub") return <PageShell><YouthHubPage /></PageShell>;
+  if (page === "partners") return <PageShell><PartnersSupportPage /></PageShell>;
+  if (page === "contact") return <PageShell><ContactPage /></PageShell>;
+  if (page === "search") return <PageShell><SearchPage /></PageShell>;
+  if (page === "utilities") return <PageShell><UtilitiesPage /></PageShell>;
+  if (page === "privacy") return <PageShell><LegalPage kind="privacy" /></PageShell>;
+  if (page === "terms") return <PageShell><LegalPage kind="terms" /></PageShell>;
+  if (page === "accessibility") return <PageShell><LegalPage kind="accessibility" /></PageShell>;
 
   return <App />;
 }
