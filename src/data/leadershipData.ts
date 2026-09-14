@@ -15,9 +15,23 @@ export type ExecutiveRole = {
   responsibilities: string[];
 };
 
-// Current officeholder records should only be added from verified AYU records.
-// The public leadership page renders this section only when verified records exist.
-export const currentLeadership: LeadershipProfile[] = [];
+export const currentLeadership: LeadershipProfile[] = [
+  {
+    slug: "agany-geng-ayiei",
+    name: "Agany Geng Ayiei",
+    role: "Chairperson",
+    shortBio: "Chairperson of Apuk Youth Union in Juba, leading the Executive Committee and representing AYU-Juba in public affairs.",
+    biography: "Agany Geng Ayiei serves as Chairperson of Apuk Youth Union in Juba. He signed the Amended 2025 Constitution into law following its approval by the General Assembly and has continued to serve publicly as AYU-Juba Chairperson in 2026.",
+    responsibilities: [
+      "Heads the Executive Committee and oversees the proper management of the Union.",
+      "Presides over meetings of the General Assembly and Executive Committee.",
+      "Supervises the work of the Executive Committee.",
+      "Represents AYU-Juba in public meetings and official matters.",
+      "Acts as principal signatory to official documents and Union bank accounts.",
+    ],
+    isCurrent: true,
+  },
+];
 
 export const constitutionSignatory = {
   name: "Agany Geng Ayiei",
