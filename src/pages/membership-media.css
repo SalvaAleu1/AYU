@@ -1,0 +1,478 @@
+.media-toolbar,
+.news-toolbar {
+  margin-bottom: 30px;
+}
+
+.media-toolbar > label {
+  display: grid;
+  gap: 8px;
+  max-width: 520px;
+  margin-bottom: 18px;
+}
+
+.media-toolbar > label > span {
+  color: var(--ayu-green-900);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.media-toolbar input,
+.membership-application-form input,
+.membership-application-form select {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 13px;
+  border: 1px solid var(--ayu-border);
+  border-radius: 12px;
+  color: var(--ayu-ink);
+  background: var(--ayu-white);
+  font: inherit;
+}
+
+.media-toolbar input:focus,
+.membership-application-form input:focus,
+.membership-application-form select:focus {
+  outline: 3px solid rgba(85, 185, 223, 0.28);
+  border-color: var(--ayu-sky-500);
+}
+
+.media-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.media-resource-card {
+  min-height: 230px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-md);
+  background: var(--ayu-white);
+  box-shadow: var(--ayu-shadow-sm);
+}
+
+.media-resource-card > span {
+  color: var(--ayu-green-700);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.media-resource-card h3 {
+  margin: 18px 0 10px;
+  font-family: var(--ayu-font-display);
+  font-size: 1.55rem;
+  line-height: 1.25;
+}
+
+.media-resource-card p {
+  margin: 0 0 22px;
+  color: var(--ayu-muted);
+  line-height: 1.7;
+}
+
+.media-resource-card .text-link {
+  margin-top: auto;
+}
+
+.media-centre-principles,
+.membership-privacy-grid,
+.fee-panel-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.media-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.media-principle-grid > div {
+  padding: 22px;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-md);
+  background: var(--ayu-white);
+}
+
+.media-principle-grid strong {
+  color: var(--ayu-green-900);
+}
+
+.media-principle-grid p {
+  margin: 8px 0 0;
+  color: var(--ayu-muted);
+  line-height: 1.65;
+  font-size: 0.88rem;
+}
+
+.membership-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.membership-category-card {
+  padding: 30px;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-lg);
+  background: var(--ayu-white);
+  box-shadow: var(--ayu-shadow-sm);
+}
+
+.membership-category-card h3 {
+  margin: 0;
+  font-family: var(--ayu-font-display);
+  font-size: 1.85rem;
+}
+
+.membership-category-card > p {
+  color: var(--ayu-muted);
+  line-height: 1.75;
+}
+
+.membership-category-card ul {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.membership-category-card li {
+  position: relative;
+  padding: 12px 0 12px 26px;
+  border-top: 1px solid var(--ayu-border);
+  line-height: 1.55;
+}
+
+.membership-category-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--ayu-green-600);
+  font-weight: 900;
+}
+
+.rights-duties-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.membership-numbered-list {
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: membership-items;
+}
+
+.membership-numbered-list li {
+  min-height: 66px;
+  padding: 16px 0;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  border-top: 1px solid var(--ayu-border);
+  color: var(--ayu-muted);
+  line-height: 1.6;
+  counter-increment: membership-items;
+}
+
+.membership-numbered-list li::before {
+  content: counter(membership-items, decimal-leading-zero);
+  color: var(--ayu-green-600);
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding-top: 3px;
+}
+
+.fee-panel-grid {
+  align-items: center;
+}
+
+.fee-caption {
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+}
+
+.fee-explainer {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--ayu-radius-lg);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.fee-explainer strong {
+  color: var(--ayu-gold-300);
+}
+
+.fee-explainer p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.66);
+  line-height: 1.75;
+}
+
+.privacy-point-list {
+  display: grid;
+  gap: 10px;
+}
+
+.privacy-point-list p {
+  margin: 0;
+  padding: 18px 20px;
+  border: 1px solid var(--ayu-border);
+  border-radius: 12px;
+  color: var(--ayu-muted);
+  background: var(--ayu-white);
+  line-height: 1.65;
+}
+
+.faq-list {
+  overflow: hidden;
+  border: 1px solid rgba(7, 58, 40, 0.13);
+  border-radius: var(--ayu-radius-lg);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.faq-list details {
+  border-bottom: 1px solid rgba(7, 58, 40, 0.1);
+}
+
+.faq-list details:last-child {
+  border-bottom: 0;
+}
+
+.faq-list summary {
+  padding: 20px 22px;
+  color: var(--ayu-green-950);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.faq-list details p {
+  margin: 0;
+  padding: 0 22px 22px;
+  color: var(--ayu-muted);
+  line-height: 1.7;
+}
+
+.application-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 52px;
+  align-items: start;
+}
+
+.membership-application-form {
+  padding: 32px;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-lg);
+  background: var(--ayu-white);
+  box-shadow: var(--ayu-shadow-sm);
+}
+
+.form-section-heading {
+  margin: 8px 0 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.form-section-heading:not(:first-child) {
+  margin-top: 42px;
+  padding-top: 32px;
+  border-top: 1px solid var(--ayu-border);
+}
+
+.form-section-heading > span {
+  padding-top: 5px;
+  color: var(--ayu-gold-500);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.form-section-heading h2 {
+  margin: 0;
+  font-family: var(--ayu-font-display);
+  font-size: 1.7rem;
+}
+
+.form-section-heading p {
+  margin: 7px 0 0;
+  color: var(--ayu-muted);
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field-wide {
+  grid-column: 1 / -1;
+}
+
+.field > span {
+  color: var(--ayu-green-950);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.field small {
+  color: var(--ayu-muted);
+  font-weight: 600;
+}
+
+.field input[type="file"] {
+  padding: 8px;
+}
+
+.consent-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.checkbox-field {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  align-items: start;
+  border: 1px solid var(--ayu-border);
+  border-radius: 12px;
+  color: var(--ayu-muted);
+  line-height: 1.55;
+}
+
+.checkbox-field input {
+  width: 18px;
+  min-height: 18px;
+  margin: 2px 0 0;
+}
+
+.application-trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-submit-row {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.form-submit-row button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.application-status {
+  margin-top: 18px;
+}
+
+.form-error,
+.form-success {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+.form-error {
+  color: #7b1f1f;
+  border: 1px solid rgba(123, 31, 31, 0.18);
+  background: #fff6f6;
+}
+
+.form-success {
+  color: var(--ayu-green-950);
+  border: 1px solid var(--ayu-border);
+  background: var(--ayu-green-50);
+}
+
+.form-success p {
+  margin: 6px 0 0;
+}
+
+.application-aside {
+  position: sticky;
+  top: calc(var(--ayu-header-height) + 24px);
+  padding: 28px;
+  border: 1px solid var(--ayu-border);
+  border-radius: var(--ayu-radius-lg);
+  background: var(--ayu-surface-soft);
+}
+
+.application-aside h2 {
+  margin: 0 0 22px;
+  font-family: var(--ayu-font-display);
+  font-size: 2rem;
+}
+
+.application-aside-note {
+  margin: 22px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--ayu-border);
+  color: var(--ayu-muted);
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 980px) {
+  .media-centre-principles,
+  .membership-privacy-grid,
+  .fee-panel-grid,
+  .application-layout {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .application-aside {
+    position: static;
+  }
+}
+
+@media (max-width: 680px) {
+  .media-resource-grid,
+  .media-principle-grid,
+  .membership-category-grid,
+  .rights-duties-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field-wide {
+    grid-column: auto;
+  }
+
+  .membership-application-form {
+    padding: 22px;
+  }
+
+  .form-submit-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .form-submit-row .button {
+    width: 100%;
+  }
+}
