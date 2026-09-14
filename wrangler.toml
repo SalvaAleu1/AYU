@@ -1,4 +1,9 @@
-name = "ayu-juba"
-pages_build_output_dir = "./dist"
+name = "ayu"
 compatibility_date = "2026-09-14"
+workers_dev = true
 send_metrics = false
+
+[assets]
+directory = "./dist"
+not_found_handling = "404-page"
+html_handling = "auto-trailing-slash"
