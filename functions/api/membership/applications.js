@@ -139,7 +139,3 @@ export async function onRequestPost({ request, env }) {
 
   return json({ reference }, 201);
 }
-
-export function onRequest() {
-  return json({ message: "Method not allowed." }, 405);
-}
