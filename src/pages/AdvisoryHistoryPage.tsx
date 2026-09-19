@@ -3,6 +3,7 @@ import SectionHeading from "../components/SectionHeading";
 import {
   advisoryBoardFunctions,
   advisoryBoardStructure,
+  chairpersonsHistory,
   currentAdvisoryBoard,
   pastLeadershipTerms,
 } from "../data/governanceArchive";
@@ -70,6 +71,27 @@ export default function AdvisoryHistoryPage() {
           </div>
         </section>
       ) : null}
+
+      <section className="section section-white">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Chairpersons of AYU-Juba"
+            title="A record of those who have served as Chairperson."
+            description="This record will be expanded as earlier terms are confirmed from reliable AYU records."
+          />
+          <div className="history-term-list">
+            {chairpersonsHistory.map((chairperson) => (
+              <article className="history-term-card" key={chairperson.id}>
+                <div>
+                  <span>{chairperson.term}</span>
+                  <h3>{chairperson.name}</h3>
+                  <p>Chairperson{chairperson.status ? ` · ${chairperson.status}` : ""}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="section section-dark">
         <div className="container history-principle-grid">
