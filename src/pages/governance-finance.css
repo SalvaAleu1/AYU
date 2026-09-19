@@ -198,3 +198,59 @@
   .constitution-full-chapter { break-before: page; }
   .receipt-page .official-receipt { padding: 0; }
 }
+
+
+/* Responsive governance fixes */
+.governance-intro-grid > *,
+.governance-finance-grid > *,
+.governance-card-grid > *,
+.governance-document-grid > * {
+  min-width: 0;
+}
+
+.governance-power-list > div {
+  display: block;
+  min-width: 0;
+  padding: 18px 0;
+}
+
+.governance-power-list p,
+.governance-card p,
+.governance-document-card p,
+.finance-source-list li {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+@media (max-width: 680px) {
+  .governance-intro-grid,
+  .governance-finance-grid,
+  .governance-cta-grid {
+    gap: 26px;
+  }
+
+  .governance-power-list > div {
+    width: 100%;
+    padding: 16px 0;
+  }
+
+  .governance-power-list p {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .governance-card,
+  .governance-document-card {
+    padding: 22px;
+  }
+
+  .finance-source-list li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .finance-source-list li::before {
+    display: none;
+  }
+}
