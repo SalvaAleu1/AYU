@@ -1,6 +1,6 @@
 import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
-import { constitutionSignatory, currentLeadership, executiveRoles } from "../data/leadershipData";
+import { currentLeadership, executiveRoles } from "../data/leadershipData";
 
 export default function LeadershipPage() {
   const chairperson = currentLeadership.find((leader) => leader.role === "Chairperson");
@@ -22,53 +22,55 @@ export default function LeadershipPage() {
         }
       />
 
-      {currentLeadership.length > 0 ? (
-        <section className="section section-white">
-          <div className="container">
-            <SectionHeading eyebrow="Current Leadership" title="Serving AYU-Juba leadership." />
-
-            {chairperson ? (
-              <article className="leader-feature-card">
-                {chairperson.photo ? <img src={chairperson.photo} alt={chairperson.name} /> : null}
-                <div>
-                  <span>Chairperson</span>
-                  <h2>{chairperson.name}</h2>
-                  {chairperson.shortBio ? <p>{chairperson.shortBio}</p> : null}
-                  <a className="text-link" href={`/?page=leader&slug=${chairperson.slug}`}>View profile →</a>
-                </div>
-              </article>
-            ) : null}
-
-            {deputy ? (
-              <article className="leader-deputy-card">
-                {deputy.photo ? <img src={deputy.photo} alt={deputy.name} /> : null}
-                <div>
-                  <span>Deputy Chairperson</span>
-                  <h3>{deputy.name}</h3>
-                  {deputy.shortBio ? <p>{deputy.shortBio}</p> : null}
-                  <a className="text-link" href={`/?page=leader&slug=${deputy.slug}`}>View profile →</a>
-                </div>
-              </article>
-            ) : null}
-
-            {secretariat.length > 0 ? (
-              <div className="leader-grid">
-                {secretariat.map((leader) => (
-                  <article className="leader-card" key={leader.slug}>
-                    {leader.photo ? <img src={leader.photo} alt={leader.name} /> : null}
-                    <span>{leader.role}</span>
-                    <h3>{leader.name}</h3>
-                    {leader.shortBio ? <p>{leader.shortBio}</p> : null}
-                    <a className="text-link" href={`/?page=leader&slug=${leader.slug}`}>View profile →</a>
-                  </article>
-                ))}
-              </div>
-            ) : null}
-          </div>
-        </section>
-      ) : null}
-
       <section className="section section-white">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Current Executive Committee"
+            title="Serving AYU-Juba leadership."
+            description="The current Executive Committee is presented from the AYU leadership structure for the 2024–2026 period."
+          />
+
+          {chairperson ? (
+            <article className="leader-feature-card">
+              {chairperson.photo ? <img src={chairperson.photo} alt={chairperson.name} /> : null}
+              <div>
+                <span>{chairperson.role}</span>
+                <h2>{chairperson.name}</h2>
+                {chairperson.shortBio ? <p>{chairperson.shortBio}</p> : null}
+                <a className="text-link" href={`/?page=leader&slug=${chairperson.slug}`}>View profile →</a>
+              </div>
+            </article>
+          ) : null}
+
+          {deputy ? (
+            <article className="leader-deputy-card">
+              {deputy.photo ? <img src={deputy.photo} alt={deputy.name} /> : null}
+              <div>
+                <span>{deputy.role}</span>
+                <h3>{deputy.name}</h3>
+                {deputy.shortBio ? <p>{deputy.shortBio}</p> : null}
+                <a className="text-link" href={`/?page=leader&slug=${deputy.slug}`}>View profile →</a>
+              </div>
+            </article>
+          ) : null}
+
+          {secretariat.length > 0 ? (
+            <div className="leader-grid" aria-label="Current AYU Executive Committee">
+              {secretariat.map((leader) => (
+                <article className="leader-card" key={leader.slug}>
+                  {leader.photo ? <img src={leader.photo} alt={leader.name} /> : null}
+                  <span>{leader.role}</span>
+                  <h3>{leader.name}</h3>
+                  {leader.shortBio ? <p>{leader.shortBio}</p> : null}
+                  <a className="text-link" href={`/?page=leader&slug=${leader.slug}`}>View profile →</a>
+                </article>
+              ))}
+            </div>
+          ) : null}
+        </div>
+      </section>
+
+      <section className="section section-soft">
         <div className="container">
           <SectionHeading
             eyebrow="Executive Committee"
@@ -107,23 +109,6 @@ export default function LeadershipPage() {
             <div><strong>Reporting</strong><p>The Executive Committee reports back and accounts to the General Assembly.</p></div>
             <div><strong>Representation</strong><p>Executive offices support administration, finance, communication, legal matters, programmes, health, culture, sports, welfare and external relations.</p></div>
           </div>
-        </div>
-      </section>
-
-      <section className="section section-soft">
-        <div className="container constitutional-record-grid">
-          <div>
-            <p className="eyebrow">Constitutional Record</p>
-            <h2 className="display-title">Amended 2025 Constitution</h2>
-            <p>The General Assembly amended and approved the Constitution. It was then signed into law by the serving Chairperson.</p>
-          </div>
-          <article className="record-card">
-            <span>Signed into law by</span>
-            <h3>{constitutionSignatory.name}</h3>
-            <strong>{constitutionSignatory.role}</strong>
-            <p>{constitutionSignatory.context}</p>
-            <time>{constitutionSignatory.date}</time>
-          </article>
         </div>
       </section>
     </>
