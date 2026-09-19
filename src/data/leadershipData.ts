@@ -15,31 +15,6 @@ export type ExecutiveRole = {
   responsibilities: string[];
 };
 
-export const currentLeadership: LeadershipProfile[] = [
-  {
-    slug: "agany-geng-ayiei",
-    name: "Agany Geng Ayiei",
-    role: "Chairperson",
-    shortBio: "Chairperson of Apuk Youth Union in Juba, serving the Union and representing AYU-Juba in public affairs.",
-    biography: "Agany Geng Ayiei serves as Chairperson of Apuk Youth Union in Juba. The General Assembly amended and approved the Constitution in 2025, and he signed it into law in his role as Chairperson. He has continued to serve publicly as AYU-Juba Chairperson in 2026.",
-    responsibilities: [
-      "Heads the Executive Committee and oversees the proper management of the Union.",
-      "Presides over meetings of the General Assembly and Executive Committee.",
-      "Supervises the work of the Executive Committee.",
-      "Represents AYU-Juba in public meetings and official matters.",
-      "Acts as principal signatory to official documents and Union bank accounts.",
-    ],
-    isCurrent: true,
-  },
-];
-
-export const constitutionSignatory = {
-  name: "Agany Geng Ayiei",
-  role: "Chairperson of Apuk Youth Union in Juba",
-  context: "The General Assembly amended and approved the Constitution in 2025. It was then signed into law by the Chairperson.",
-  date: "14 September 2025",
-};
-
 export const executiveRoles: ExecutiveRole[] = [
   {
     title: "Chairperson",
@@ -168,4 +143,46 @@ export const executiveRoles: ExecutiveRole[] = [
       "Performs related duties assigned by the Chairperson.",
     ],
   },
+];
+
+const roleResponsibilities = (title: string) =>
+  executiveRoles.find((role) => role.title === title)?.responsibilities ?? [];
+
+const makeProfile = (
+  slug: string,
+  name: string,
+  role: string,
+  constitutionalRole: string,
+  photo?: string,
+): LeadershipProfile => ({
+  slug,
+  name,
+  role,
+  photo,
+  shortBio: `${role} of Apuk Youth Union in Juba.`,
+  biography: `${name} serves as ${role} of Apuk Youth Union in Juba.`,
+  responsibilities: roleResponsibilities(constitutionalRole),
+  isCurrent: true,
+});
+
+export const currentLeadership: LeadershipProfile[] = [
+  {
+    slug: "agany-geng-ayiei",
+    name: "Agany Geng Ayiei",
+    role: "Chairperson",
+    shortBio: "Chairperson of Apuk Youth Union in Juba.",
+    biography: "Agany Geng Ayiei serves as Chairperson of Apuk Youth Union in Juba. The General Assembly amended and approved the Constitution in 2025, and he signed it into law in his role as Chairperson.",
+    responsibilities: roleResponsibilities("Chairperson"),
+    isCurrent: true,
+  },
+  makeProfile("lual-agany-ngeth", "Lual Agany Ngeth", "Deputy Chairperson", "Deputy Chairperson"),
+  makeProfile("bol-mariano-akoi", "Bol Mariano Akoi", "Secretary General", "Secretary General"),
+  makeProfile("madut-mou-madut", "Madut Mou Madut", "Secretary for Finance", "Secretary for Finance and Planning"),
+  makeProfile("emmanuella-aluel-adhar", "Emmanuella Aluel Adhar", "Deputy Secretary for Finance", "Deputy Secretary for Finance and Planning"),
+  makeProfile("juach-manut-agoth", "Juach Manut Agoth", "Secretary for Information", "Secretary for Information and Media"),
+  makeProfile("akech-madut-reech", "Akech Madut Reech", "Secretary for Education", "Secretary for Education and Trainings"),
+  makeProfile("abraham-akuei-dut", "Abraham Akuei Dut", "Secretary for External Affairs", "Secretary for External Affairs"),
+  makeProfile("nyakiir-maluoi-kuol", "Nyakiir Maluoi Kuol", "Secretary for Social Welfare", "Secretary for Gender, Social Welfare, Peace and Reconciliation"),
+  makeProfile("marko-madut-ring", "Marko Madut Ring", "Secretary for Legal Affairs", "Secretary for Legal Affairs"),
+  makeProfile("william-malueeth-deng", "William Malueeth Deng", "Secretary for Culture & Sports", "Secretary for Culture and Sports"),
 ];
