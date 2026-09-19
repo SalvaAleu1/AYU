@@ -656,3 +656,47 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Shared responsive safeguards */
+.page-hero-grid > *,
+.story-grid > *,
+.stewardship-grid > *,
+.motto-grid > *,
+.language-grid > *,
+.power-symbol-grid > *,
+.identity-logo-grid > *,
+.identity-usage-grid > *,
+.leadership-principles-grid > *,
+.profile-page-grid > *,
+.role-grid > *,
+.leader-grid > * {
+  min-width: 0;
+}
+
+.page-hero h1,
+.display-title,
+.section-heading h2,
+.role-card h3,
+.leader-card h3 {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+@media (max-width: 760px) {
+  .page-hero-grid {
+    gap: 30px;
+  }
+
+  .page-hero-aside {
+    width: 100%;
+    max-width: none;
+    padding: 22px;
+  }
+
+  .page-fact-list dd,
+  .page-fact-list dt {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
