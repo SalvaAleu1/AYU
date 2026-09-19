@@ -96,3 +96,11 @@ A Cloudflare production build passed before the final wording cleanup. The lates
 - Current Executive Committee updated from the AYU 2024–2026 leadership structure supplied by the user.
 - Governance list layout corrected for small screens so General Assembly duties no longer collapse word-by-word.
 - Added responsive safeguards for leadership, governance and shared public layouts across phone, tablet and desktop.
+
+
+## Navigation and chairperson history
+
+- Added a Home link to the main navigation so visitors can return to the homepage from any public page.
+- Added a Chairpersons of AYU-Juba history section.
+- Added Agany Geng Ayiei with the 2024–2026 term from the supplied AYU leadership structure.
+- The chairperson record is designed to be expanded when earlier chairpersons and their verified terms are provided.
