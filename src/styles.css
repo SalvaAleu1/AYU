@@ -1173,3 +1173,60 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Site-wide responsive safeguards */
+html,
+body,
+#root,
+.site-shell,
+main {
+  max-width: 100%;
+}
+
+main,
+section,
+.container,
+.container > *,
+article,
+aside {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+dt,
+dd,
+a,
+button {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 980px) {
+  .container {
+    width: min(var(--ayu-container), calc(100% - 32px));
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: min(var(--ayu-container), calc(100% - 24px));
+  }
+
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
+  }
+}
