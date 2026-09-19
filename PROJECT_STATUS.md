@@ -88,3 +88,11 @@ This file is the internal build checkpoint for the Apuk Youth Union in Juba (AYU
 ## Launch note
 
 A Cloudflare production build passed before the final wording cleanup. The latest source changes are ready for Cloudflare to rebuild and verify on the next deployment. The deployment configuration matches the Cloudflare Workers Builds project shown in the dashboard. Domain-specific canonical and sitemap URLs should only be generated after the production hostname is known.
+
+
+## September 2026 public-site polish
+
+- Removed the standalone “Amended 2025 Constitution” feature block from the Leadership page.
+- Current Executive Committee updated from the AYU 2024–2026 leadership structure supplied by the user.
+- Governance list layout corrected for small screens so General Assembly duties no longer collapse word-by-word.
+- Added responsive safeguards for leadership, governance and shared public layouts across phone, tablet and desktop.
