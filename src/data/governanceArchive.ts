@@ -17,8 +17,24 @@ export type LeadershipTerm = {
   members?: Array<{ name: string; role: string }>;
 };
 
+export type ChairpersonRecord = {
+  id: string;
+  name: string;
+  term: string;
+  status?: "Current" | "Former";
+};
+
 // Publish names only when supported by verified AYU records.
 export const currentAdvisoryBoard: AdvisoryBoardMember[] = [];
+
+export const chairpersonsHistory: ChairpersonRecord[] = [
+  {
+    id: "agany-geng-ayiei-2024-2026",
+    name: "Agany Geng Ayiei",
+    term: "2024–2026",
+    status: "Current",
+  },
+];
 
 export const pastLeadershipTerms: LeadershipTerm[] = [
   {
