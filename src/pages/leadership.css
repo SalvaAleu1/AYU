@@ -7,3 +7,65 @@
 .leader-feature-card > div:only-child {
   padding: 18px 6px;
 }
+
+
+/* Current leadership responsive layout */
+.leader-feature-card,
+.leader-deputy-card,
+.leader-card,
+.role-card {
+  min-width: 0;
+}
+
+.leader-feature-card h2,
+.leader-deputy-card h3,
+.leader-card h3,
+.role-card h3 {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.leader-card {
+  display: flex;
+  min-height: 230px;
+  flex-direction: column;
+}
+
+.leader-card .text-link {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+@media (max-width: 980px) {
+  .leader-feature-card,
+  .leader-deputy-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .leader-feature-card > div,
+  .leader-deputy-card > div {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .leader-feature-card,
+  .leader-deputy-card {
+    padding: 22px;
+    gap: 20px;
+  }
+
+  .leader-feature-card h2 {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .leader-deputy-card h3,
+  .leader-card h3 {
+    font-size: 1.65rem;
+  }
+
+  .leader-card,
+  .role-card {
+    padding: 22px;
+  }
+}
