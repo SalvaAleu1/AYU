@@ -26,7 +26,7 @@ export default function LeadershipPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Current Executive Committee"
-            title="Serving AYU-Juba leadership."
+            title="Serving Apuk Youth Union in Juba leadership."
             description="The current Executive Committee is presented from the AYU leadership structure for the 2024–2026 period."
           />
 

@@ -88,7 +88,7 @@ function App() {
             <SectionHeading
               eyebrow="About AYU"
               title="The digital home of Apuk youth in Juba."
-              description="AYU-Juba is a community youth body that supports learning, unity, peace, self-reliance and community development."
+              description="Apuk Youth Union in Juba is a community youth body that supports learning, unity, peace, self-reliance and community development."
             />
 
             <div className="three-card-grid">
@@ -137,7 +137,7 @@ function App() {
             <SectionHeading
               light
               eyebrow="Leadership & Governance"
-              title="AYU is guided by its Constitution and accountable to its members."
+              title="Apuk Youth Union in Juba is guided by its Constitution and accountable to its members."
               description="The General Assembly is the highest decision-making body. The Executive Committee manages the Union's work, while the Advisory Board provides advice and guidance."
             />
 
@@ -253,8 +253,8 @@ function App() {
           <div className="container">
             <SectionHeading
               eyebrow="Community Relationships"
-              title="Working with the wider Apuk community."
-              description="AYU operates under the Apuk Community Association in Juba and works with community institutions in their areas of responsibility."
+              title="Working with the Apuk community."
+              description="Apuk Youth Union in Juba operates under the Apuk Community Association in Juba and works with community institutions in their areas of responsibility."
             />
 
             <div className="partner-grid">
@@ -271,7 +271,7 @@ function App() {
           <div className="container constitution-grid">
             <div>
               <p className="eyebrow eyebrow-light">Constitution</p>
-              <h2>Constitution of Apuk Youth Union in Juba — Amended 2025.</h2>
+              <h2>Constitution of Apuk Youth Union in Juba Amended 2025.</h2>
             </div>
 
             <div className="constitution-copy">
