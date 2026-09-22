@@ -26,7 +26,7 @@ export default function IdentityPage() {
     <>
       <PageHero
         eyebrow="AYU Identity"
-        title="An identity rooted in Apuk heritage, unity and community."
+        title="Represent Apuk heritage, unity and community."
         description="The official AYU emblem carries meaning through the hawk, handshake, green background and stars."
         aside={
           <div className="identity-hero-logo">

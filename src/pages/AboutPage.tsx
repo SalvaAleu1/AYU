@@ -40,17 +40,17 @@ export default function AboutPage() {
         <div className="container story-grid">
           <div>
             <p className="eyebrow">Our Story</p>
-            <h2 className="display-title">Rooted in the hopes of Apuk youth.</h2>
+            <h2 className="display-title">How Apuk Youth Union came into existent.</h2>
           </div>
           <div className="prose-stack">
             <p>
-              AYU-Juba was formed as a non-political, non-profit youth body to support and develop members of the Apuk community in Juba. Its work is centred on peace, education, self-reliance, unity and youth participation in community development.
+              Apuk Youth Union in Juba was formed as a non-political, non-profit youth body to support and develop members of the Apuk community in Juba. Its work is centred on peace, education, self-reliance, unity and youth participation in community development.
             </p>
             <p>
-              The Union's Constitution was established in 2015 and amended by the General Assembly in 2025. It sets out the rules for membership, leadership, programmes, elections, accountability and AYU's relationships with the wider Apuk community.
+              The Union was formed in 2007 and adopt its first Constitution in 2015 which was later amended in 2025. It sets out the rules for membership, leadership, programmes, elections, accountability and AYU's relationships with the wider Apuk community.
             </p>
             <p>
-              AYU operates under the Apuk Community Association in Juba and serves as the representative youth wing of the community.
+              Apuk Youth Union in Juba operates under the Apuk Community Association in Juba and serves as the representative youth wing of the community.
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function AboutPage() {
             <h2 className="display-title display-title-light">“{ayuIdentity.motto}”</h2>
           </div>
           <p>
-            The motto reflects AYU's commitment to peace, unity and development in Juba and across the wider Apuk community.
+            The motto reflects AYU's commitment to peace, unity and development in Juba and across the Apuk community.
           </p>
         </div>
       </section>
@@ -102,7 +102,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Our Objectives"
             title="What AYU works to achieve."
-            description="AYU's objectives cover learning, unity, culture, peace, gender equality, health, the environment, sports and community development."
+            description="Apuk Youth Union's objectives cover learning, unity, culture, peace, gender equality, health, the environment, sports and community development."
           />
           <ul className="objective-list">
             {constitutionalObjectives.map((objective) => <li key={objective}>{objective}</li>)}
@@ -114,7 +114,7 @@ export default function AboutPage() {
         <div className="container language-grid">
           <div>
             <p className="eyebrow">Language</p>
-            <h2 className="display-title">Languages used by AYU.</h2>
+            <h2 className="display-title">Languages used by Apuk Yputh Union.</h2>
             <p className="section-body-copy">The Constitution explains which languages may be used in Union affairs.</p>
           </div>
           <div className="language-list">
@@ -135,7 +135,7 @@ export default function AboutPage() {
             <h2 className="display-title">Development with responsibility.</h2>
           </div>
           <div className="prose-stack">
-            <p>AYU is founded on justice, equality, respect for human dignity, human rights and integrity.</p>
+            <p>Apuk Youth Union in Juba is founded on justice, equality, respect for human dignity, human rights and integrity.</p>
             <p>The Constitution also calls for responsible use of natural resources, protection of land, air and water, and stronger awareness of reforestation for present and future generations.</p>
           </div>
         </div>

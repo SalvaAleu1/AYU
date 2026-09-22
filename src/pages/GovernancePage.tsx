@@ -88,7 +88,7 @@ export default function GovernancePage() {
           <SectionHeading
             eyebrow="Public Documents"
             title="AYU governance documents available to the public."
-            description="Only documents approved for public access are shown here. Confidential records remain private."
+            description="Only documents approved for public access are shown here."
           />
           <div className="governance-document-grid">
             {governanceDocuments.map((document) => (
