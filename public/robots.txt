@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://apukyouthunion.org/sitemap.xml
