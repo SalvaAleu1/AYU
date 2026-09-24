@@ -8,7 +8,8 @@ const institutionalFacts = [
   { label: "Institution", value: "Apuk Youth Union in Juba (AYU-Juba)" },
   { label: "Character", value: "Non-political, non-profit youth body" },
   { label: "Registered office", value: "Juba, South Sudan" },
-  { label: "Constitution", value: "Established in 2015 and amended in 2025" },
+  { label: "History", value: "Founded in 2005 · AYU-Juba established in 2010" },
+  { label: "Constitution", value: "Adopted in 2015 · amended in 2025" },
 ];
 
 const languageFramework = [
@@ -44,10 +45,10 @@ export default function AboutPage() {
           </div>
           <div className="prose-stack">
             <p>
-              Apuk Youth Union in Juba was formed as a non-political, non-profit youth body to support and develop members of the Apuk community in Juba. Its work is centred on peace, education, self-reliance, unity and youth participation in community development.
+              Apuk Youth Union was founded in Nairobi in 2005 by Wol Deng Mading. In 2010, he established Apuk Youth Union in Juba and transitioned the leadership to Giir Ngot Riiny.
             </p>
             <p>
-              The Union was formed in 2007 and adopt its first Constitution in 2015 which was later amended in 2025. It sets out the rules for membership, leadership, programmes, elections, accountability and AYU's relationships with the wider Apuk community.
+              AYU-Juba serves as a non-political, non-profit youth body supporting peace, education, self-reliance, unity and youth participation in community development. The Union adopted its Constitution in 2015, and the General Assembly amended and approved it in 2025.
             </p>
             <p>
               Apuk Youth Union in Juba operates under the Apuk Community Association in Juba and serves as the representative youth wing of the community.
