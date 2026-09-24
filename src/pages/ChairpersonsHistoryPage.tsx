@@ -51,7 +51,9 @@ export default function ChairpersonsHistoryPage() {
                     <strong>{chairperson.status}</strong>
                   </div>
                   <h2>{chairperson.name}</h2>
-                  <p className="chairperson-role">Chairperson, Apuk Youth Union</p>
+                  <p className="chairperson-role">
+                    {chairperson.status === "Founder" ? "Founder of Apuk Youth Union" : "Chairperson, Apuk Youth Union in Juba"}
+                  </p>
                   {chairperson.note ? <p className="chairperson-note">{chairperson.note}</p> : null}
                 </div>
               </article>
