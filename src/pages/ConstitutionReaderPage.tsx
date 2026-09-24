@@ -178,8 +178,8 @@ export default function ConstitutionReaderPage() {
             ) : null}
 
             <footer className="constitution-transcription-note">
-              <strong>Official text</strong>
-              <p>This online reader is provided for easier access. If there is any difference between this reader and the signed Constitution, the signed Constitution remains the official version.</p>
+              <strong>Public reader</strong>
+              <p>This page presents the Constitution for public reference. Current membership registration fee details are provided through the official AYU membership form. If there is any difference between this reader and the signed Constitution, the signed Constitution remains the official version.</p>
             </footer>
           </article>
         </div>
