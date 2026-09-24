@@ -113,7 +113,7 @@ export function ElectionAdministrationPage() {
       <PageHero
         eyebrow="Election Administration"
         title="Public information about AYU elections."
-        description="When an AYU election period is active, this section can show official timetables, notices, candidate information, debates and results."
+        description="During an AYU election period, official timetables, notices, candidate information, debates and results are published here as they are issued."
         aside={<dl className="page-fact-list"><div><dt>Guided by</dt><dd>Chapter VI of the Constitution</dd></div><div><dt>Public information</dt><dd>Official IEC notices</dd></div></dl>}
       />
       <section className="section section-white">
@@ -133,7 +133,7 @@ export function ElectionAdministrationPage() {
       </section>
       <section className="section section-soft">
         <div className="container final-two-column">
-          <div><p className="eyebrow">Election Information</p><h2 className="display-title">Official election information appears when it is issued.</h2></div>
+          <div><p className="eyebrow">Election Information</p><h2 className="display-title">Official election information is published as it is issued by the IEC.</h2></div>
           <div className="final-action-stack"><a className="button button-dark" href="/?page=elections">Election overview</a><a className="text-link" href="/?page=constitution&article=41">Read Chapter VI →</a></div>
         </div>
       </section>
