@@ -70,6 +70,17 @@ export default function LeadershipPage() {
         </div>
       </section>
 
+      <section className="section section-sky">
+        <div className="container leadership-history-link">
+          <div>
+            <p className="eyebrow">Leadership History</p>
+            <h2 className="display-title">Chairpersons through the years.</h2>
+            <p className="section-body-copy">See the record of AYU Chairpersons from the Union's founding in 2005 to the current term.</p>
+          </div>
+          <a className="button button-dark" href="/?page=chairpersons-history">View Chairpersons history</a>
+        </div>
+      </section>
+
       <section className="section section-soft">
         <div className="container">
           <SectionHeading
