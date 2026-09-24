@@ -56,7 +56,7 @@ export const workPillars: WorkPillar[] = [
       "Promote unity, self-help, hard work and cooperation.",
       "Support youth development and participation.",
     ],
-    relatedOffices: ["Secretary General", "Secretary for Projects and Logistics"],
+    relatedOffices: ["Secretary General", "Secretary for Agriculture, Logistics, and Projects"],
   },
   {
     slug: "culture-heritage",
@@ -111,7 +111,7 @@ export const workPillars: WorkPillar[] = [
       "Promote sustainable development and environmental care.",
       "Protect natural resources for present and future generations.",
     ],
-    relatedOffices: ["Secretary for Projects and Logistics"],
+    relatedOffices: ["Secretary for Agriculture, Logistics, and Projects"],
   },
   {
     slug: "community-development",
@@ -122,7 +122,7 @@ export const workPillars: WorkPillar[] = [
       "Mobilize resources for AYU programmes.",
       "Carry out practical work that supports AYU's mission and vision.",
     ],
-    relatedOffices: ["Chairperson", "Secretary for Projects and Logistics", "Secretary for Finance and Planning"],
+    relatedOffices: ["Chairperson", "Secretary for Agriculture, Logistics, and Projects", "Secretary for Finance and Planning"],
   },
 ];
 
