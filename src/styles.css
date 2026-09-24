@@ -1230,3 +1230,42 @@ iframe {
     bottom: 14px;
   }
 }
+
+
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-whatsapp {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #25d366;
+}
+
+.footer-whatsapp svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.footer-whatsapp:hover,
+.footer-whatsapp:focus-visible {
+  color: #ffffff;
+  background: #1fae55;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 680px) {
+  .footer-credit {
+    max-width: 100%;
+    line-height: 1.6;
+  }
+}
