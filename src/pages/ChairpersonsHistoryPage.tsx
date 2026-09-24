@@ -8,7 +8,7 @@ export default function ChairpersonsHistoryPage() {
       <PageHero
         eyebrow="AYU Leadership History"
         title="Chairpersons who have led Apuk Youth Union."
-        description="This page records the leadership of Apuk Youth Union from its founding in Nairobi in 2005 and the establishment of AYU-Juba in 2010 to the current term."
+        description="A leadership record from the founding of Apuk Youth Union in Nairobi in 2005 and the establishment of AYU-Juba in 2010 to the current term."
         aside={
           <dl className="page-fact-list">
             <div><dt>Founded</dt><dd>2005, Nairobi</dd></div>
@@ -22,8 +22,7 @@ export default function ChairpersonsHistoryPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Leadership Through the Years"
-            title="A record of service and continuity."
-            description="The list is arranged in the order each Chairperson served. Initials are shown where a portrait is not available."
+            title="Chairpersons of Apuk Youth Union in Juba."
           />
 
           <div className="chairperson-history-grid">
