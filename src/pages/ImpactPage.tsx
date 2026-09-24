@@ -84,10 +84,10 @@ export default function ImpactPage() {
             <h2 className="display-title display-title-light">AYU should clearly show what was done and what came from it.</h2>
           </div>
           <div className="impact-principles">
-            <div><strong>Projects</strong><p>Project records can show the purpose, activities, dates and completion status.</p></div>
-            <div><strong>Results</strong><p>Completed work can show practical results, recommendations and follow-up actions.</p></div>
-            <div><strong>Reports</strong><p>Public reports can explain progress and lessons from completed work.</p></div>
-            <div><strong>Stories</strong><p>Community and youth stories can show the human side of AYU's work where publication is appropriate.</p></div>
+            <div><strong>Projects</strong><p>Project records show the purpose, activities, dates and completion status.</p></div>
+            <div><strong>Results</strong><p>Completed work records practical results, recommendations and follow-up actions.</p></div>
+            <div><strong>Reports</strong><p>Public reports explain progress and lessons from completed work.</p></div>
+            <div><strong>Stories</strong><p>Community and youth stories share the human side of AYU's work where publication is appropriate.</p></div>
           </div>
         </div>
       </section>
