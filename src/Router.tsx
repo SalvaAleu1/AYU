@@ -10,6 +10,7 @@ import { getNewsArticle } from "./data/newsData";
 import { verifiedProjects, workPillars } from "./data/workData";
 import AboutPage from "./pages/AboutPage";
 import AdvisoryHistoryPage from "./pages/AdvisoryHistoryPage";
+import ChairpersonsHistoryPage from "./pages/ChairpersonsHistoryPage";
 import ConstitutionReaderPage from "./pages/ConstitutionReaderPage";
 import EventPage from "./pages/EventPage";
 import EventsPage from "./pages/EventsPage";
@@ -69,6 +70,7 @@ const pageMeta: Record<string, PageMeta> = {
   identity: { title: "Identity & Symbols | AYU-Juba", description: "See the official AYU emblem, motto and meaning of its symbols." },
   leadership: { title: "Leadership | AYU-Juba", description: "See AYU leadership roles and verified leadership records." },
   history: { title: "Advisory Board & History | AYU-Juba", description: "Learn about the Advisory Board and AYU leadership history." },
+  "chairpersons-history": { title: "AYU Chairpersons Through the Years | AYU-Juba", description: "See the Chairpersons who have led Apuk Youth Union from its founding in 2005 to the current term." },
   work: { title: "Our Work | AYU-Juba", description: "Explore AYU programmes, projects and community work." },
   news: { title: "News & Updates | AYU-Juba", description: "Read AYU news, statements and community updates." },
   events: { title: "Events | AYU-Juba", description: "See AYU events and regular meeting information." },
@@ -384,6 +386,7 @@ export default function Router() {
   if (page === "leadership") return <PageShell><LeadershipPage /></PageShell>;
   if (page === "leader") return <PageShell><LeaderProfilePage slug={params.get("slug") ?? ""} /></PageShell>;
   if (page === "history") return <PageShell><AdvisoryHistoryPage /></PageShell>;
+  if (page === "chairpersons-history") return <PageShell><ChairpersonsHistoryPage /></PageShell>;
   if (page === "work") return <PageShell><WorkPage /></PageShell>;
   if (page === "program") return <PageShell><ProgramPage slug={params.get("slug") ?? ""} /></PageShell>;
   if (page === "project") return <PageShell><ProjectPage slug={params.get("slug") ?? ""} /></PageShell>;
