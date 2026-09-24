@@ -61,7 +61,7 @@ const SITE_LOGO = SITE_URL + "/ayu-logo.webp";
 
 const defaultMeta: PageMeta = {
   title: "Apuk Youth Union in Juba | Official AYU-Juba Website",
-  description: "Official website of Apuk Youth Union in Juba, supporting youth through education, unity, peace, culture, leadership and community development.",
+  description: "Apuk Youth Union in Juba is a non-political organization that oversees youth activities ranging from addressing youth challenges to development and peace consolidation in Apuk Community (Gogrial East County), Warrap State.",
   schemaType: "WebPage",
 };
 
