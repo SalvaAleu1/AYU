@@ -1,6 +1,7 @@
 const footerLinks = [
   { href: "/?page=about", label: "About AYU" },
   { href: "/?page=leadership", label: "Leadership" },
+  { href: "/?page=chairpersons-history", label: "Chairpersons History" },
   { href: "/?page=history", label: "Advisory & History" },
   { href: "/?page=work", label: "Our Work" },
   { href: "/?page=news", label: "News & Updates" },
