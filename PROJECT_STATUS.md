@@ -115,3 +115,13 @@ A Cloudflare production build passed before the final wording cleanup. The lates
 - Added Grace Alek Mayom as Secretary for Agriculture, Logistics and Projects.
 - Added Aluel Lual Agany as Secretary for Health.
 - Added the Chairpersons history page and the new executive profiles to public navigation/search/SEO records.
+
+
+## Final public-launch inspection
+
+- Added the footer credit: “Designed in service to Apuk Community by Salva Aleu” with a WhatsApp icon linked to +211 922 507 799.
+- Reviewed public pages and public data for placeholder text, temporary copy, developer notes and repository/deployment instructions.
+- Removed temporary portrait wording from the Chairpersons history page and replaced it with clear public wording about initials where portraits are unavailable.
+- Polished election and impact wording that sounded like implementation notes.
+- Confirmed repository-only files such as README, build policy and deployment notes are not rendered on the public website.
+- Removed the public 30,000 SSP membership fee amount from the online Constitution reader; current fee details remain on the official AYU membership form.
