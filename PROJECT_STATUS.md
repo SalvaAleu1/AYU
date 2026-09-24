@@ -125,3 +125,11 @@ A Cloudflare production build passed before the final wording cleanup. The lates
 - Polished election and impact wording that sounded like implementation notes.
 - Confirmed repository-only files such as README, build policy and deployment notes are not rendered on the public website.
 - Removed the public 30,000 SSP membership fee amount from the online Constitution reader; current fee details remain on the official AYU membership form.
+
+
+## Final visual polish
+
+- Replaced Agany Geng Ayiei's portrait with the latest supplied official portrait.
+- Simplified the Chairpersons history section title to “Chairpersons of Apuk Youth Union in Juba.”
+- Removed explanatory asset notes from the public Chairpersons page.
+- Rechecked the public source for placeholder, temporary and developer-facing wording before launch.
