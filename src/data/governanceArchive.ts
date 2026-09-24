@@ -7,21 +7,14 @@ export type AdvisoryBoardMember = {
   isCurrent: boolean;
 };
 
-export type LeadershipTerm = {
-  id: string;
-  termLabel: string;
-  startDate?: string;
-  endDate?: string;
-  chairperson: string;
-  deputyChairperson?: string;
-  members?: Array<{ name: string; role: string }>;
-};
-
 export type ChairpersonRecord = {
   id: string;
   name: string;
+  initials: string;
   term: string;
-  status?: "Current" | "Former";
+  status: "Founder" | "Former" | "Current";
+  note?: string;
+  photo?: string;
 };
 
 // Publish names only when supported by verified AYU records.
@@ -29,22 +22,55 @@ export const currentAdvisoryBoard: AdvisoryBoardMember[] = [];
 
 export const chairpersonsHistory: ChairpersonRecord[] = [
   {
-    id: "agany-geng-ayiei-2024-2026",
+    id: "wol-deng-mading",
+    name: "Wol Deng Mading",
+    initials: "WDM",
+    term: "2005–2010",
+    status: "Founder",
+    note: "Founded Apuk Youth Union in Nairobi in 2005. In 2010, he established Apuk Youth Union in Juba and transitioned the leadership to Giir Ngot Riiny.",
+  },
+  {
+    id: "giir-ngot-riiny",
+    name: "Giir Ngot Riiny",
+    initials: "GNR",
+    term: "2010–2015",
+    status: "Former",
+  },
+  {
+    id: "bol-deng-akeen",
+    name: "Bol Deng Akeen",
+    initials: "BDA",
+    term: "2015–2017",
+    status: "Former",
+  },
+  {
+    id: "anei-aroup-anei",
+    name: "Anei Aroup Anei",
+    initials: "AAA",
+    term: "2017–2019",
+    status: "Former",
+  },
+  {
+    id: "akucpiir-akot-wol",
+    name: "Akucpiir Akot Wol",
+    initials: "AAW",
+    term: "2019–2022",
+    status: "Former",
+  },
+  {
+    id: "barnaba-mou-ajang",
+    name: "Barnaba Mou Ajang",
+    initials: "BMA",
+    term: "2022–2024",
+    status: "Former",
+  },
+  {
+    id: "agany-geng-ayiei",
     name: "Agany Geng Ayiei",
+    initials: "AGA",
     term: "2024–2026",
     status: "Current",
-  },
-];
-
-export const pastLeadershipTerms: LeadershipTerm[] = [
-  {
-    id: "documented-2016-2017",
-    termLabel: "Documented administration · 2016–2017",
-    chairperson: "Bol Deng Akeen",
-    members: [
-      { name: "Darius Adup Anyuon", role: "Secretary General" },
-      { name: "Lang Madut Aguer", role: "Information Secretary" },
-    ],
+    photo: "/leadership/agany-geng-ayiei.webp",
   },
 ];
 
