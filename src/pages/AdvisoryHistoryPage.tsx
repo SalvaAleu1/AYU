@@ -3,9 +3,7 @@ import SectionHeading from "../components/SectionHeading";
 import {
   advisoryBoardFunctions,
   advisoryBoardStructure,
-  chairpersonsHistory,
   currentAdvisoryBoard,
-  pastLeadershipTerms,
 } from "../data/governanceArchive";
 
 export default function AdvisoryHistoryPage() {
@@ -73,23 +71,13 @@ export default function AdvisoryHistoryPage() {
       ) : null}
 
       <section className="section section-white">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Chairpersons of AYU-Juba"
-            title="A record of those who have served as Chairperson."
-            description="This record will be expanded as earlier terms are confirmed from reliable AYU records."
-          />
-          <div className="history-term-list">
-            {chairpersonsHistory.map((chairperson) => (
-              <article className="history-term-card" key={chairperson.id}>
-                <div>
-                  <span>{chairperson.term}</span>
-                  <h3>{chairperson.name}</h3>
-                  <p>Chairperson{chairperson.status ? ` · ${chairperson.status}` : ""}</p>
-                </div>
-              </article>
-            ))}
+        <div className="container history-chairpersons-cta">
+          <div>
+            <p className="eyebrow">Leadership History</p>
+            <h2 className="display-title">Chairpersons of Apuk Youth Union.</h2>
+            <p className="section-body-copy">Read the leadership record from the founding of Apuk Youth Union in Nairobi in 2005 and the establishment of AYU-Juba in 2010 to the current term.</p>
           </div>
+          <a className="button button-dark" href="/?page=chairpersons-history">View Chairpersons history</a>
         </div>
       </section>
 
@@ -108,23 +96,6 @@ export default function AdvisoryHistoryPage() {
         </div>
       </section>
 
-      {pastLeadershipTerms.length > 0 ? (
-        <section className="section section-white">
-          <div className="container">
-            <SectionHeading eyebrow="Past Leadership" title="Previous AYU-Juba administrations." />
-            <div className="history-term-list">
-              {pastLeadershipTerms.map((term) => (
-                <article className="history-term-card" key={term.id}>
-                  <div>
-                    <span>{term.termLabel}</span>
-                    <h3>{term.chairperson}</h3>
-                    <p>Chairperson</p>
-                  </div>
-                  {term.members?.length ? (
-                    <ul>
-                      {term.members.map((member) => <li key={`${term.id}-${member.name}`}>{member.name} — {member.role}</li>)}
-                    </ul>
-                  ) : null}
                 </article>
               ))}
             </div>
