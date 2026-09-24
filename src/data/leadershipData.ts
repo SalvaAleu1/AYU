@@ -95,8 +95,8 @@ export const executiveRoles: ExecutiveRole[] = [
     ],
   },
   {
-    title: "Secretary for Projects and Logistics",
-    summary: "Supports AYU projects, stakeholder engagement and management of logistical resources.",
+    title: "Secretary for Agriculture, Logistics and Projects",
+    summary: "Supports AYU agriculture, projects, stakeholder engagement and management of logistical resources.",
     responsibilities: [
       "Supports project policy formulation and implementation.",
       "Represents Union interests in development discussions with stakeholders.",
@@ -170,6 +170,7 @@ export const currentLeadership: LeadershipProfile[] = [
     slug: "agany-geng-ayiei",
     name: "Agany Geng Ayiei",
     role: "Chairperson",
+    photo: "/leadership/agany-geng-ayiei.webp",
     shortBio: "Chairperson of Apuk Youth Union in Juba.",
     biography: "Agany Geng Ayiei serves as Chairperson of Apuk Youth Union in Juba. The General Assembly amended and approved the Constitution in 2025, and he signed it into law in his role as Chairperson.",
     responsibilities: roleResponsibilities("Chairperson"),
@@ -180,9 +181,11 @@ export const currentLeadership: LeadershipProfile[] = [
   makeProfile("madut-mou-madut", "Madut Mou Madut", "Secretary for Finance", "Secretary for Finance and Planning"),
   makeProfile("emmanuella-aluel-adhar", "Emmanuella Aluel Adhar", "Deputy Secretary for Finance", "Deputy Secretary for Finance and Planning"),
   makeProfile("juach-manut-agoth", "Juach Manut Agoth", "Secretary for Information", "Secretary for Information and Media"),
-  makeProfile("akech-madut-reech", "Akech Madut Reech", "Secretary for Education", "Secretary for Education and Trainings"),
   makeProfile("abraham-akuei-dut", "Abraham Akuei Dut", "Secretary for External Affairs", "Secretary for External Affairs"),
-  makeProfile("nyakiir-maluoi-kuol", "Nyakiir Maluoi Kuol", "Secretary for Social Welfare", "Secretary for Gender, Social Welfare, Peace and Reconciliation"),
   makeProfile("marko-madut-ring", "Marko Madut Ring", "Secretary for Legal Affairs", "Secretary for Legal Affairs"),
+  makeProfile("akech-madut-reech", "Akech Madut Reech", "Secretary for Education", "Secretary for Education and Trainings"),
+  makeProfile("grace-alek-mayom", "Grace Alek Mayom", "Secretary for Agriculture, Logistics and Projects", "Secretary for Agriculture, Logistics and Projects"),
+  makeProfile("aluel-lual-agany", "Aluel Lual Agany", "Secretary for Health", "Secretary for Health"),
   makeProfile("william-malueeth-deng", "William Malueeth Deng", "Secretary for Culture & Sports", "Secretary for Culture and Sports"),
+  makeProfile("nyakiir-maluoi-kuol", "Nyakiir Maluoi Kuol", "Secretary for Social Welfare", "Secretary for Gender, Social Welfare, Peace and Reconciliation"),
 ];
