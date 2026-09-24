@@ -159,8 +159,8 @@ function App() {
             <div className="executive-structure">
               <div className="executive-intro">
                 <p className="eyebrow eyebrow-light">Executive Committee</p>
-                <h3>Roles set out in the Constitution</h3>
-                <p>The Constitution defines the main Executive Committee offices and requires fair representation of women in leadership.</p>
+                <h3>Executive Committee portfolios</h3>
+                <p>The Executive Committee brings together the leadership portfolios responsible for AYU's daily work and programmes.</p>
               </div>
 
               <ul className="office-list">
