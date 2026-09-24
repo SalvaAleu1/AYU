@@ -104,3 +104,14 @@ A Cloudflare production build passed before the final wording cleanup. The lates
 - Added a Chairpersons of AYU-Juba history section.
 - Added Agany Geng Ayiei with the 2024–2026 term from the supplied AYU leadership structure.
 - The chairperson record is designed to be expanded when earlier chairpersons and their verified terms are provided.
+
+
+## September 2026 leadership history update
+
+- Corrected AYU founding history: Apuk Youth Union was founded in Nairobi in 2005; AYU-Juba was established in 2010.
+- Added a dedicated Chairpersons history page covering Wol Deng Mading, Giir Ngot Riiny, Bol Deng Akeen, Anei Aroup Anei, Akucpiir Akot Wol, Barnaba Mou Ajang and Agany Geng Ayiei with their service periods.
+- Added initials-based profile marks for Chairpersons whose portraits are not yet available.
+- Added the supplied portrait of Agany Geng Ayiei and connected it to his current leadership profile and Chairpersons history record.
+- Added Grace Alek Mayom as Secretary for Agriculture, Logistics and Projects.
+- Added Aluel Lual Agany as Secretary for Health.
+- Added the Chairpersons history page and the new executive profiles to public navigation/search/SEO records.
