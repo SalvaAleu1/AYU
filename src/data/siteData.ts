@@ -80,7 +80,7 @@ export const executiveOffices = [
   "Secretary for External Affairs",
   "Secretary for Legal Affairs",
   "Secretary for Education and Trainings",
-  "Secretary for Projects and Logistics",
+  "Secretary for Agriculture, Logistics, and Projects",
   "Secretary for Health",
   "Secretary for Culture and Sports",
   "Secretary for Gender, Social Welfare, Peace and Reconciliation",
