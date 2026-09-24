@@ -41,7 +41,7 @@ export default function AboutPage() {
         <div className="container story-grid">
           <div>
             <p className="eyebrow">Our Story</p>
-            <h2 className="display-title">How Apuk Youth Union came into existent.</h2>
+            <h2 className="display-title">How Apuk Youth Union began.</h2>
           </div>
           <div className="prose-stack">
             <p>
