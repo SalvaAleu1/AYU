@@ -101,6 +101,7 @@ export type SearchEntry = {
 export const siteSearchIndex: SearchEntry[] = [
   { title: "About AYU", description: "Story, mission, vision, values and objectives.", category: "About", href: "/?page=about", keywords: ["about", "mission", "vision", "values", "objectives"] },
   { title: "Leadership", description: "AYU leadership roles and verified leadership records.", category: "About", href: "/?page=leadership", keywords: ["leadership", "chairperson", "executive", "secretary"] },
+  { title: "Chairpersons History", description: "Chairpersons who have led AYU from its founding in 2005 to the current term.", category: "About", href: "/?page=chairpersons-history", keywords: ["chairpersons", "history", "founder", "Wol Deng Mading", "leadership"] },
   { title: "Advisory Board & History", description: "Advisory Board information and AYU leadership history.", category: "About", href: "/?page=history", keywords: ["advisory", "patron", "history", "past leadership"] },
   { title: "Our Work", description: "AYU areas of work, programmes and projects.", category: "Our Work", href: "/?page=work", keywords: ["programmes", "projects", "education", "peace", "sports", "health"] },
   { title: "News & Updates", description: "AYU news, statements and community updates.", category: "News", href: "/?page=news", keywords: ["news", "statements", "updates", "announcements"] },
