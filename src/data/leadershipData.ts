@@ -95,7 +95,7 @@ export const executiveRoles: ExecutiveRole[] = [
     ],
   },
   {
-    title: "Secretary for Agriculture, Logistics and Projects",
+    title: "Secretary for Agriculture, Logistics, and Projects",
     summary: "Supports AYU agriculture, projects, stakeholder engagement and management of logistical resources.",
     responsibilities: [
       "Supports project policy formulation and implementation.",
@@ -184,7 +184,7 @@ export const currentLeadership: LeadershipProfile[] = [
   makeProfile("abraham-akuei-dut", "Abraham Akuei Dut", "Secretary for External Affairs", "Secretary for External Affairs"),
   makeProfile("marko-madut-ring", "Marko Madut Ring", "Secretary for Legal Affairs", "Secretary for Legal Affairs"),
   makeProfile("akech-madut-reech", "Akech Madut Reech", "Secretary for Education", "Secretary for Education and Trainings"),
-  makeProfile("grace-alek-mayom", "Grace Alek Mayom", "Secretary for Agriculture, Logistics and Projects", "Secretary for Agriculture, Logistics and Projects"),
+  makeProfile("grace-alek-mayom", "Grace Alek Mayom", "Secretary for Agriculture, Logistics, and Projects", "Secretary for Agriculture, Logistics, and Projects"),
   makeProfile("aluel-lual-agany", "Aluel Lual Agany", "Secretary for Health", "Secretary for Health"),
   makeProfile("william-malueeth-deng", "William Malueeth Deng", "Secretary for Culture & Sports", "Secretary for Culture and Sports"),
   makeProfile("nyakiir-maluoi-kuol", "Nyakiir Maluoi Kuol", "Secretary for Social Welfare", "Secretary for Gender, Social Welfare, Peace and Reconciliation"),
