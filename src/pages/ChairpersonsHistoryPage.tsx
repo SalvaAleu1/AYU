@@ -23,7 +23,7 @@ export default function ChairpersonsHistoryPage() {
           <SectionHeading
             eyebrow="Leadership Through the Years"
             title="A record of service and continuity."
-            description="The list is arranged in the order each Chairperson served. Portraits will be added as they become available."
+            description="The list is arranged in the order each Chairperson served. Initials are shown where a portrait is not available."
           />
 
           <div className="chairperson-history-grid">
