@@ -17,7 +17,7 @@ export const chapter6Articles: ConstitutionArticle[] = [
     "number": 43,
     "title": "Members’ Registration and Eligibility as Voters",
     "page": 27,
-    "body": "1) Every member shall be registered during every term of office of the Executive\nCommittee of AYU and towards the elections,\n2) Every member shall pay a registration fee of 30,000 SSP,\n3) All members shall register with the IEC of AYU,\n4) A member shall present his/her valid Nationality Certificate when registering,\n5) Notwithstanding this article, the IEC may make other elections rules not\nspecified in this Constitution.\n\n6) The IEC shall register not more than five hundred (500) voters from each\nsection.\n7) the registration shall commence two months before the end of the term."
+    "body": "1) Every member shall be registered during every term of office of the Executive\nCommittee of AYU and towards the elections,\n2) Registration fee details are provided through the official AYU membership registration form,\n3) All members shall register with the IEC of AYU,\n4) A member shall present his/her valid Nationality Certificate when registering,\n5) Notwithstanding this article, the IEC may make other elections rules not\nspecified in this Constitution.\n\n6) The IEC shall register not more than five hundred (500) voters from each\nsection.\n7) the registration shall commence two months before the end of the term."
   },
   {
     "number": 44,
