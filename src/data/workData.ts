@@ -28,7 +28,7 @@ export const workPillars: WorkPillar[] = [
   {
     slug: "education-training",
     title: "Education & Training",
-    summary: "Helping young people build knowledge and practical skills through learning, training and mentorship.",
+    summary: "Helping young people build knowledge and skills through education, training and mentorship.",
     mandate: "AYU supports learning, training, mentorship and skills development for its members and the wider youth community.",
     relatedObjectives: [
       "Build members' skills and capacity.",
@@ -116,11 +116,11 @@ export const workPillars: WorkPillar[] = [
   {
     slug: "community-development",
     title: "Community Development",
-    summary: "Bringing people, partnerships and resources together for practical community work.",
+    summary: "Bringing people, partnerships and resources together for community development.",
     mandate: "AYU may mobilize resources and form committees to carry out projects and programmes that support its mission and the needs of the community.",
     relatedObjectives: [
       "Mobilize resources for AYU programmes.",
-      "Carry out practical work that supports AYU's mission and vision.",
+      "Carry out programmes and projects that support AYU's mission and vision.",
     ],
     relatedOffices: ["Chairperson", "Secretary for Agriculture, Logistics, and Projects", "Secretary for Finance and Planning"],
   },
