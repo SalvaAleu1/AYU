@@ -15,6 +15,20 @@ import AboutPage from "./pages/AboutPage";
 import IdentityPage from "./pages/IdentityPage";
 import LeaderProfilePage from "./pages/LeaderProfilePage";
 import LeadershipPage from "./pages/LeadershipPage";
+import WorkPage from "./pages/WorkPage";
+import NewsPage from "./pages/NewsPage";
+import NewsArticlePage from "./pages/NewsArticlePage";
+import GovernancePage from "./pages/GovernancePage";
+import MembershipPage from "./pages/MembershipPage";
+import EventsPage from "./pages/EventsPage";
+import EventPage from "./pages/EventPage";
+import ImpactPage from "./pages/ImpactPage";
+import ChairpersonsHistoryPage from "./pages/ChairpersonsHistoryPage";
+import AdvisoryHistoryPage from "./pages/AdvisoryHistoryPage";
+import ConstitutionReaderPage from "./pages/ConstitutionReaderPage";
+import MediaCentrePage from "./pages/MediaCentrePage";
+import ProgramPage from "./pages/ProgramPage";
+import ProjectPage from "./pages/ProjectPage";
 
 function InnerPage({ children }: { children: React.ReactNode }) {
   return (
@@ -36,6 +50,20 @@ function App() {
   if (page === "identity") return <InnerPage><IdentityPage /></InnerPage>;
   if (page === "leadership") return <InnerPage><LeadershipPage /></InnerPage>;
   if (page === "leader") return <InnerPage><LeaderProfilePage slug={params.get("slug") ?? ""} /></InnerPage>;
+  if (page === "work") return <InnerPage><WorkPage /></InnerPage>;
+  if (page === "program") return <InnerPage><ProgramPage slug={params.get("slug") ?? ""} /></InnerPage>;
+  if (page === "project") return <InnerPage><ProjectPage slug={params.get("slug") ?? ""} /></InnerPage>;
+  if (page === "news") return <InnerPage><NewsPage /></InnerPage>;
+  if (page === "news-article") return <InnerPage><NewsArticlePage slug={params.get("slug") ?? ""} /></InnerPage>;
+  if (page === "governance") return <InnerPage><GovernancePage /></InnerPage>;
+  if (page === "membership") return <InnerPage><MembershipPage /></InnerPage>;
+  if (page === "events") return <InnerPage><EventsPage /></InnerPage>;
+  if (page === "event") return <InnerPage><EventPage slug={params.get("slug") ?? ""} /></InnerPage>;
+  if (page === "impact") return <InnerPage><ImpactPage /></InnerPage>;
+  if (page === "chairpersons-history") return <InnerPage><ChairpersonsHistoryPage /></InnerPage>;
+  if (page === "history") return <InnerPage><AdvisoryHistoryPage /></InnerPage>;
+  if (page === "constitution") return <InnerPage><ConstitutionReaderPage /></InnerPage>;
+  if (page === "media") return <InnerPage><MediaCentrePage /></InnerPage>;
 
   const hasUpdates = newsItems.length > 0;
   const hasEvents = eventItems.length > 0;
@@ -87,7 +115,7 @@ function App() {
           <div className="container">
             <SectionHeading
               eyebrow="About AYU"
-              title="The digital home of Apuk youth in Juba."
+              title="About Apuk Youth Union in Juba."
               description="Apuk Youth Union in Juba is a community youth body that supports learning, unity, peace, self-reliance and community development."
             />
 
@@ -117,7 +145,7 @@ function App() {
           <div className="container">
             <SectionHeading
               eyebrow="Our Work"
-              title="Turning AYU's purpose into practical service."
+              title="Our areas of work."
               description="AYU works in areas that support young people, strengthen the community and reflect the aims of the Constitution."
             />
 
@@ -232,7 +260,7 @@ function App() {
           <div className="container membership-grid">
             <div className="membership-copy">
               <p className="eyebrow">Membership</p>
-              <h2>Belonging comes with rights, participation and responsibility.</h2>
+              <h2>Membership rights and responsibilities.</h2>
               <p>
                 The Constitution provides for Absolute Membership and Honorary Membership. Absolute members take part in the work and governance of the Union when they meet the membership requirements.
               </p>
@@ -291,7 +319,7 @@ function App() {
           <div className="container cta-grid">
             <div>
               <p className="eyebrow">AYU-Juba</p>
-              <h2>Building peace, unity and development through young people.</h2>
+              <h2>Together for Peace, Unity and Development.</h2>
             </div>
             <a className="button button-dark" href="#membership">Learn about membership</a>
           </div>
