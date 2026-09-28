@@ -31,8 +31,8 @@ export const newsArticles: NewsArticle[] = [
     title: "AYU IEC announces shortlisted candidates and 2026 election timetable",
     category: "Statement",
     publicationStatus: "published",
-    publishedAt: "2026-09-28",
-    displayDate: "28 September 2026",
+    publishedAt: "2026-09-20",
+    displayDate: "20 September 2026",
     excerpt: "The AYU Independent Electoral Committee has announced two shortlisted candidates for Chairperson and published the timetable for the 2026 General Elections.",
     body: [
       "The AYU Independent Electoral Committee (IEC) has announced two shortlisted candidates for Chairperson in the 2026 General Elections.",
