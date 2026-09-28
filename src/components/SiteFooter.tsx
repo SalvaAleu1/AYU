@@ -19,12 +19,6 @@ const footerLinks = [
   { href: "/?page=utilities", label: "Website Tools" },
 ];
 
-const legalLinks = [
-  { href: "/?page=privacy", label: "Privacy Policy" },
-  { href: "/?page=terms", label: "Terms of Use" },
-  { href: "/?page=accessibility", label: "Accessibility" },
-];
-
 export default function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -48,7 +42,6 @@ export default function SiteFooter() {
       <div className="container footer-bottom footer-bottom-final">
         <span>© 2026 Apuk Youth Union in Juba. All rights reserved.</span>
 
-        <nav aria-label="Legal navigation">{legalLinks.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}</nav>
         <a href="#main-content">Back to top ↑</a>
       </div>
     </footer>
