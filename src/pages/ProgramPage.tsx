@@ -29,7 +29,7 @@ export default function ProgramPage({ slug }: { slug: string }) {
         <div className="container program-mandate-grid">
           <div>
             <p className="eyebrow">Purpose</p>
-            <h2 className="display-title">Why this area matters to AYU.</h2>
+            <h2 className="display-title">Why this matters to AYU.</h2>
           </div>
           <div className="prose-stack">
             <p>{pillar.mandate}</p>
@@ -54,7 +54,7 @@ export default function ProgramPage({ slug }: { slug: string }) {
         <div className="container related-office-grid">
           <div>
             <p className="eyebrow">Related AYU Offices</p>
-            <h2 className="display-title">The relevant AYU offices support this area of work.</h2>
+            <h2 className="display-title">The relevant AYU offices can support this work.</h2>
           </div>
           <div className="related-office-list">
             {pillar.relatedOffices.map((office) => <div key={office}>{office}</div>)}
@@ -88,7 +88,7 @@ export default function ProgramPage({ slug }: { slug: string }) {
             <h2 className="display-title display-title-light">AYU projects should be clear, responsible and well reported.</h2>
           </div>
           <p>
-            Projects are guided by AYU objectives, responsible use of resources, progress updates and final reports to the Executive Committee.
+            Our projects are guided by AYU objectives, responsible use of resources, progress updates and final reports to the Executive Committee.
           </p>
         </div>
       </section>

@@ -7,7 +7,7 @@ export default function WorkPage() {
     <>
       <PageHero
         eyebrow="Our Work"
-        title="AYU serves young people and the community through practical areas of work."
+        title="AYU serves young people and the community across various areas of work."
         description="Our work follows the aims of the AYU Constitution and focuses on learning, peace, culture, health, sports, welfare, the environment and community development."
         aside={
           <dl className="page-fact-list">
@@ -22,7 +22,7 @@ export default function WorkPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Areas of Work"
-            title="AYU's work brings the Constitution into practical service for the community."
+            title="AYU's work brings the Constitution's objectives into service for the community."
             description="Each area explains what AYU aims to do and how it supports young people and the wider community."
           />
 
