@@ -23,8 +23,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About AYU"
-        title="A youth body built around unity, service and community development."
-        description="Apuk Youth Union in Juba exists to educate, train, mentor and support young people while promoting peace, identity, self-reliance and responsible leadership."
+        title="About Apuk Youth Union in Juba."
+        description="Apuk Youth Union in Juba works according to its Constitution to educate, train, mentor, grow and develop the youth for the transformation of the Apuk community."
         aside={
           <dl className="page-fact-list">
             {institutionalFacts.map((fact) => (
@@ -59,7 +59,7 @@ export default function AboutPage() {
 
       <section className="section section-soft">
         <div className="container">
-          <SectionHeading eyebrow="Vision & Mission" title="A clear direction for youth and community development." />
+          <SectionHeading eyebrow="Vision & Mission" title="Vision and mission of Apuk Youth Union in Juba." />
           <div className="two-panel-grid">
             <article className="statement-panel statement-panel-green">
               <span>Vision</span>
@@ -87,7 +87,7 @@ export default function AboutPage() {
 
       <section className="section section-white">
         <div className="container">
-          <SectionHeading eyebrow="Core Values" title="The standards expected of AYU members and leaders." />
+          <SectionHeading eyebrow="Core Values" title="Core values of Apuk Youth Union in Juba." />
           <div className="value-grid">
             {values.map((value) => (
               <div className="value-card" key={value}>
@@ -102,8 +102,8 @@ export default function AboutPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Our Objectives"
-            title="What AYU works to achieve."
-            description="Apuk Youth Union's objectives cover learning, unity, culture, peace, gender equality, health, the environment, sports and community development."
+            title="Objectives of Apuk Youth Union in Juba."
+            description="The objectives below are drawn from the Constitution of Apuk Youth Union in Juba."
           />
           <ul className="objective-list">
             {constitutionalObjectives.map((objective) => <li key={objective}>{objective}</li>)}
@@ -115,7 +115,7 @@ export default function AboutPage() {
         <div className="container language-grid">
           <div>
             <p className="eyebrow">Language</p>
-            <h2 className="display-title">Languages used by Apuk Yputh Union.</h2>
+            <h2 className="display-title">Languages used by Apuk Youth Union.</h2>
             <p className="section-body-copy">The Constitution explains which languages may be used in Union affairs.</p>
           </div>
           <div className="language-list">
@@ -133,7 +133,7 @@ export default function AboutPage() {
         <div className="container stewardship-grid">
           <div>
             <p className="eyebrow">Justice, Dignity & Environment</p>
-            <h2 className="display-title">Development with responsibility.</h2>
+            <h2 className="display-title">Justice, dignity and care for the environment.</h2>
           </div>
           <div className="prose-stack">
             <p>Apuk Youth Union in Juba is founded on justice, equality, respect for human dignity, human rights and integrity.</p>
