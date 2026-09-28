@@ -195,21 +195,46 @@ export function PartnersSupportPage() {
 }
 
 export function ContactPage() {
+  const phoneNumbers = [
+    { display: "+211 928 888 455", href: "tel:+211928888455" },
+    { display: "+211 922 334 966", href: "tel:+211922334966" },
+    { display: "+211 914 526 196", href: "tel:+211914526196" },
+  ];
+
   return (
     <>
       <PageHero
-        eyebrow="Contact AYU"
-        title="Official ways to reach Apuk Youth Union in Juba."
-        description="Use the registered office and website sections for membership, media resources, public updates and other AYU information."
-        aside={<dl className="page-fact-list"><div><dt>Registered office</dt><dd>Juba, South Sudan</dd></div><div><dt>Motto</dt><dd>Together for Peace, Unity and Development</dd></div></dl>}
+        eyebrow="Contact Us"
+        title="Contact Apuk Youth Union in Juba."
+        description="Call AYU using any of the numbers below or follow us on Facebook."
       />
       <section className="section section-white">
         <div className="container">
-          <SectionHeading eyebrow="Official Channels" title="Choose the right way to find what you need." />
-          <div className="contact-channel-grid">{contactChannels.map((item) => <article className="contact-channel-card" key={item.title}><span>{item.title}</span><h3>{item.value}</h3>{item.href ? <a className="text-link" href={item.href}>Open →</a> : null}</article>)}</div>
+          <div className="contact-channel-grid">
+            {phoneNumbers.map((phone) => (
+              <article className="contact-channel-card" key={phone.display}>
+                <span>Phone</span>
+                <h3><a href={phone.href}>{phone.display}</a></h3>
+              </article>
+            ))}
+            <article className="contact-channel-card">
+              <span>Facebook</span>
+              <h3>Follow Us on Facebook</h3>
+              <a
+                href="https://www.facebook.com/share/1DVfeebTUc/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Follow Us on Facebook"
+                title="Follow Us on Facebook"
+                style={{ display: "inline-flex", alignItems: "center", gap: "0.65rem" }}
+              >
+                <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.414c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.974h-1.513c-1.49 0-1.956.931-1.956 1.887v2.259h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+                <strong>Follow Us on Facebook</strong>
+              </a>
+            </article>
+          </div>
         </div>
       </section>
-      <section className="section section-sky"><div className="container cta-grid"><div><p className="eyebrow">Membership Registration</p><h2>Register through the official AYU membership form.</h2></div><a className="button button-dark" href={membershipRegistrationUrl} target="_blank" rel="noreferrer">Open registration form ↗</a></div></section>
     </>
   );
 }
