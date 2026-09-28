@@ -33,6 +33,7 @@ export default function SiteFooter() {
         </nav>
 
         <div className="footer-location">
+          <a href="https://www.facebook.com/share/1DVfeebTUc/" target="_blank" rel="noreferrer" aria-label="Follow Apuk Youth Union in Juba on Facebook">ⓕ Facebook</a>
           <span className="footer-kicker">Registered office</span>
           <strong>Juba, South Sudan</strong>
           <p>Non-political · Non-profit youth union</p>
