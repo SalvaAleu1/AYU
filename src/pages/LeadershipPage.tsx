@@ -11,7 +11,7 @@ export default function LeadershipPage() {
     <>
       <PageHero
         eyebrow="Leadership"
-        title="Leadership guided by service, responsibility and accountability."
+        title="Leadership of Apuk Youth Union in Juba."
         description="AYU-Juba is governed through the General Assembly, Executive Committee and Advisory Board. The Constitution defines the responsibilities of each leadership office and how leaders account to members."
         aside={
           <dl className="page-fact-list">
@@ -26,8 +26,8 @@ export default function LeadershipPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Current Executive Committee"
-            title="Serving Apuk Youth Union in Juba leadership."
-            description="The current Executive Committee is presented from the AYU leadership structure for the 2024–2026 period."
+            title="Current Executive Committee."
+            description="The Executive Committee serving the 2024–2026 term is presented below in the order provided by the AYU Constitution."
           />
 
           {chairperson ? (
