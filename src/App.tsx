@@ -31,6 +31,7 @@ import ConstitutionReaderPage from "./pages/ConstitutionReaderPage";
 import MediaCentrePage from "./pages/MediaCentrePage";
 import ProgramPage from "./pages/ProgramPage";
 import ProjectPage from "./pages/ProjectPage";
+import ContactPage from "./pages/ContactPage";
 
 function InnerPage({ children }: { children: React.ReactNode }) {
   return (
@@ -68,6 +69,7 @@ function App() {
   if (page === "history") return <InnerPage><AdvisoryHistoryPage /></InnerPage>;
   if (page === "constitution") return <InnerPage><ConstitutionReaderPage /></InnerPage>;
   if (page === "media") return <InnerPage><MediaCentrePage /></InnerPage>;
+  if (page === "contact") return <InnerPage><ContactPage /></InnerPage>;
 
   const hasUpdates = newsItems.length > 0;
   const hasEvents = eventItems.length > 0;
