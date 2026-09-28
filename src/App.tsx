@@ -23,6 +23,8 @@ import MembershipPage from "./pages/MembershipPage";
 import EventsPage from "./pages/EventsPage";
 import EventPage from "./pages/EventPage";
 import ImpactPage from "./pages/ImpactPage";
+import ImpactStoryPage from "./pages/ImpactStoryPage";
+import SuccessStoryPage from "./pages/SuccessStoryPage";
 import ChairpersonsHistoryPage from "./pages/ChairpersonsHistoryPage";
 import AdvisoryHistoryPage from "./pages/AdvisoryHistoryPage";
 import ConstitutionReaderPage from "./pages/ConstitutionReaderPage";
@@ -60,6 +62,8 @@ function App() {
   if (page === "events") return <InnerPage><EventsPage /></InnerPage>;
   if (page === "event") return <InnerPage><EventPage slug={params.get("slug") ?? ""} /></InnerPage>;
   if (page === "impact") return <InnerPage><ImpactPage /></InnerPage>;
+  if (page === "impact-story") return <InnerPage><ImpactStoryPage slug={params.get("slug") ?? ""} /></InnerPage>;
+  if (page === "success-story") return <InnerPage><SuccessStoryPage slug={params.get("slug") ?? ""} /></InnerPage>;
   if (page === "chairpersons-history") return <InnerPage><ChairpersonsHistoryPage /></InnerPage>;
   if (page === "history") return <InnerPage><AdvisoryHistoryPage /></InnerPage>;
   if (page === "constitution") return <InnerPage><ConstitutionReaderPage /></InnerPage>;
