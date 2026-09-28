@@ -27,6 +27,28 @@ export const newsCategories: Array<"All" | NewsCategory> = [
 
 export const newsArticles: NewsArticle[] = [
   {
+    slug: "iec-announces-shortlisted-chairperson-candidates-2026",
+    title: "AYU IEC announces shortlisted candidates and 2026 election timetable",
+    category: "Statement",
+    publicationStatus: "published",
+    publishedAt: "2026-09-28",
+    displayDate: "28 September 2026",
+    excerpt: "The AYU Independent Electoral Committee has announced two shortlisted candidates for Chairperson and published the timetable for the 2026 General Elections.",
+    body: [
+      "The AYU Independent Electoral Committee (IEC) has announced two shortlisted candidates for Chairperson in the 2026 General Elections.",
+      "Marko Mawien Manyuon — Apuk Youth Forward.",
+      "Ajok Wol Dau — Independence.",
+      "Election timetable:",
+      "22–23 September: Verification of Voters List — Savanah & Mia Saba, 10:00 AM–5:00 PM.",
+      "24–26 September: Issuing of Voter ID Cards — Savanah & Mia Saba, 10:00 AM–5:00 PM.",
+      "3 October: Open Air Campaign Day — Medan Rainbow, 10:30 AM–5:00 PM.",
+      "4 October: Election Day — Medan Rainbow, 8:30 AM–6:30 PM.",
+      "10 October: Swearing-in Ceremony.",
+    ],
+    sourceLabel: "AYU Independent Electoral Committee (IEC)",
+    featured: true,
+  },
+  {
     slug: "ayu-welcomes-gogrial-reconciliation-2026",
     title: "AYU-Juba welcomes reconciliation among Gogrial leaders",
     category: "Community",
