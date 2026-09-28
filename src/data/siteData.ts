@@ -35,7 +35,7 @@ export const constitutionalObjectives = [
 export const workPillars = [
   {
     title: "Education & Training",
-    description: "Building knowledge, skills and practical capacity among young people through learning, training and mentorship.",
+    description: "Building knowledge and skills among young people through education, training and mentorship.",
   },
   {
     title: "Peace & Reconciliation",
@@ -67,7 +67,7 @@ export const workPillars = [
   },
   {
     title: "Community Development",
-    description: "Mobilizing people, partnerships and resources for practical initiatives that improve community life.",
+    description: "Mobilizing people, partnerships and resources for community development initiatives.",
   },
 ];
 
