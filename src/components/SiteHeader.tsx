@@ -7,10 +7,7 @@ const navItems = [
   { href: "/?page=work", label: "Our Work" },
   { href: "/?page=news", label: "News" },
   { href: "/?page=governance", label: "Governance" },
-  { href: "/?page=elections", label: "Elections" },
-  { href: "/?page=youth-hub", label: "Youth Hub" },
   { href: "/?page=membership", label: "Membership" },
-  { href: "/?page=search", label: "Search" },
 ];
 
 export default function SiteHeader() {
