@@ -8,6 +8,7 @@ const navItems = [
   { href: "/?page=news", label: "News" },
   { href: "/?page=governance", label: "Governance" },
   { href: "/?page=membership", label: "Membership" },
+  { href: "/?page=contact", label: "Contact Us" },
 ];
 
 export default function SiteHeader() {
