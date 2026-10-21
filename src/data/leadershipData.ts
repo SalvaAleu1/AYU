@@ -185,7 +185,7 @@ export const currentLeadership: LeadershipProfile[] = [
   makeProfile("akech-madut-reech", "Akech Madut Reech", "Secretary for Education and Trainings", "Secretary for Education and Trainings", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0019.jpg"),
   makeProfile("grace-alek-mayom", "Grace Alek Mayom", "Secretary for Agriculture, Logistics, and Projects", "Secretary for Agriculture, Logistics, and Projects", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0023.jpg"),
   makeProfile("diana-aluel-lual-agany", "Diana Aluel Lual Agany", "Secretary for Health", "Secretary for Health", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0022.jpg"),
-  makeProfile("william-malueeth-deng", "William Malueeth Deng", "Secretary for Culture and Sports", "Secretary for Culture and Sports"),
+  makeProfile("william-malueeth-deng", "William Malueeth Deng", "Secretary for Culture and Sports", "Secretary for Culture and Sports", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261021-WA0001.jpg"),
   makeProfile("nyakiir-maluoi-kuol", "Nyakiir Maluoi Kuol", "Secretary for Gender, Social Welfare, Peace and Reconciliation", "Secretary for Gender, Social Welfare, Peace and Reconciliation", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0018.jpg"),
   makeProfile("emmanuella-aluel-adhar", "Emmanuella Aluel Adhar", "Deputy Secretary for Finance and Planning", "Deputy Secretary for Finance and Planning"),
 ];
