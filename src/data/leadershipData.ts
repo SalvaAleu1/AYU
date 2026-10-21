@@ -181,11 +181,11 @@ export const currentLeadership: LeadershipProfile[] = [
   makeProfile("madut-mou-madut", "Madut Mou Madut", "Secretary for Finance and Planning", "Secretary for Finance and Planning", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0005.jpg"),
   makeProfile("juach-manut-agoth", "Juach Manut Agoth", "Secretary for Information and Media", "Secretary for Information and Media", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0021.jpg"),
   makeProfile("abraham-akuei-dut", "Abraham Akuei Dut", "Secretary for External Affairs", "Secretary for External Affairs", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261018-WA0003.jpg"),
-  makeProfile("marko-madut-ring", "Marko Madut Ring", "Secretary for Legal Affairs", "Secretary for Legal Affairs"),
+  makeProfile("marko-madut-ring", "Marko Madut Ring", "Secretary for Legal Affairs", "Secretary for Legal Affairs", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261021-WA0002.jpg"),
   makeProfile("akech-madut-reech", "Akech Madut Reech", "Secretary for Education and Trainings", "Secretary for Education and Trainings", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0019.jpg"),
   makeProfile("grace-alek-mayom", "Grace Alek Mayom", "Secretary for Agriculture, Logistics, and Projects", "Secretary for Agriculture, Logistics, and Projects", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0023.jpg"),
   makeProfile("diana-aluel-lual-agany", "Diana Aluel Lual Agany", "Secretary for Health", "Secretary for Health", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0022.jpg"),
   makeProfile("william-malueeth-deng", "William Malueeth Deng", "Secretary for Culture and Sports", "Secretary for Culture and Sports", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261021-WA0001.jpg"),
   makeProfile("nyakiir-maluoi-kuol", "Nyakiir Maluoi Kuol", "Secretary for Gender, Social Welfare, Peace and Reconciliation", "Secretary for Gender, Social Welfare, Peace and Reconciliation", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0018.jpg"),
-  makeProfile("emmanuella-aluel-adhar", "Emmanuella Aluel Adhar", "Deputy Secretary for Finance and Planning", "Deputy Secretary for Finance and Planning"),
+  makeProfile("emmanuella-aluel-adhar", "Emmanuella Aluel Adhar", "Deputy Secretary for Finance and Planning", "Deputy Secretary for Finance and Planning", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261021-WA0003.jpg"),
 ];
