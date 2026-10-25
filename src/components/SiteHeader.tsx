@@ -4,7 +4,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/?page=about", label: "About" },
   { href: "/?page=leadership", label: "Current Leadership" },
-  { href: "/?page=former-executive-committee", label: "Past Leadership" },
+  { href: "/?page=chairpersons-history", label: "Past Leadership" },
   { href: "/?page=work", label: "Our Work" },
   { href: "/?page=news", label: "News" },
   { href: "/?page=governance", label: "Governance" },
