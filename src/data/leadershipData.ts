@@ -197,7 +197,7 @@ export const currentLeadership: LeadershipProfile[] = [
     role: "Chairperson",
     photo: "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/1792891350481.jpg",
     shortBio: "Chairperson of Apuk Youth Union in Juba for the 2026–2028 term.",
-    biography: "Ajok Wol Dau is the elected Chairperson of Apuk Youth Union in Juba for the 2026–2028 term, following the official formation order dated 15 October 2026.",
+    biography: "Ajok Wol Dau serves as Chairperson of Apuk Youth Union in Juba for the 2026–2028 term, providing leadership and guiding the Union’s work in support of its members and community.",
     responsibilities: roleResponsibilities("Chairperson"),
     isCurrent: true,
   },
