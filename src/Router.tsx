@@ -30,6 +30,8 @@ import ImpactPage from "./pages/ImpactPage";
 import ImpactStoryPage from "./pages/ImpactStoryPage";
 import LeaderProfilePage from "./pages/LeaderProfilePage";
 import LeadershipPage from "./pages/LeadershipPage";
+import FormerExecutiveCommitteePage from "./pages/FormerExecutiveCommitteePage";
+import LeadershipAchievementsPage from "./pages/LeadershipAchievementsPage";
 import MediaCentrePage from "./pages/MediaCentrePage";
 import MembershipPage from "./pages/MembershipPage";
 import NewsArticlePage from "./pages/NewsArticlePage";
@@ -68,7 +70,9 @@ const defaultMeta: PageMeta = {
 const pageMeta: Record<string, PageMeta> = {
   about: { title: "About AYU | AYU-Juba", description: "Learn about AYU's mission, vision, values and objectives." },
   identity: { title: "Identity & Symbols | AYU-Juba", description: "See the official AYU emblem, motto and meaning of its symbols." },
-  leadership: { title: "Leadership | AYU-Juba", description: "See AYU leadership roles and verified leadership records." },
+  leadership: { title: "Current Leadership | AYU-Juba", description: "See the current Executive Committee and individual leadership profiles." },
+  "former-executive-committee": { title: "Past Leadership | AYU-Juba", description: "View former Executive Committee members and their leadership records." },
+  "leader-achievements": { title: "Leadership Achievements | AYU-Juba", description: "Read achievements and administrative records from former AYU leadership." },
   history: { title: "Advisory Board & History | AYU-Juba", description: "Learn about the Advisory Board and AYU leadership history." },
   "chairpersons-history": { title: "AYU Chairpersons Through the Years | AYU-Juba", description: "See the Chairpersons who have led Apuk Youth Union from its founding in 2005 to the current term." },
   work: { title: "Our Work | AYU-Juba", description: "Explore AYU programmes, projects and community work." },
@@ -115,7 +119,7 @@ function resolveSeo(page: string | null, params: URLSearchParams): ResolvedSeo {
 
   const slug = params.get("slug")?.trim() ?? "";
 
-  if (page === "leader") {
+  if (page === "leader-achievements") {\n    return { meta: { title: "Leadership Achievements | AYU-Juba", description: "Achievements and administrative report for the former AYU leadership.", schemaType: "WebPage" }, canonical: buildRouteUrl(page, slug) };\n  }\n\n  if (page === "leader") {
     const leader = currentLeadership.find((profile) => profile.slug === slug);
     if (!leader) return invalidSeo();
     return {
@@ -383,7 +387,7 @@ export default function Router() {
 
   if (page === "about") return <PageShell><AboutPage /></PageShell>;
   if (page === "identity") return <PageShell><IdentityPage /></PageShell>;
-  if (page === "leadership") return <PageShell><LeadershipPage /></PageShell>;
+  if (page === "leadership") return <PageShell><LeadershipPage /></PageShell>;\n  if (page === "former-executive-committee") return <PageShell><FormerExecutiveCommitteePage /></PageShell>;\n  if (page === "leader-achievements") return <PageShell><LeadershipAchievementsPage slug={params.get("slug") ?? ""} /></PageShell>;
   if (page === "leader") return <PageShell><LeaderProfilePage slug={params.get("slug") ?? ""} /></PageShell>;
   if (page === "history") return <PageShell><AdvisoryHistoryPage /></PageShell>;
   if (page === "chairpersons-history") return <PageShell><ChairpersonsHistoryPage /></PageShell>;
