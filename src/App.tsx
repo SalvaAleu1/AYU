@@ -15,6 +15,7 @@ import AboutPage from "./pages/AboutPage";
 import IdentityPage from "./pages/IdentityPage";
 import LeaderProfilePage from "./pages/LeaderProfilePage";
 import LeadershipPage from "./pages/LeadershipPage";
+import FormerExecutiveCommitteePage from "./pages/FormerExecutiveCommitteePage";
 import WorkPage from "./pages/WorkPage";
 import NewsPage from "./pages/NewsPage";
 import NewsArticlePage from "./pages/NewsArticlePage";
@@ -52,6 +53,7 @@ function App() {
   if (page === "about") return <InnerPage><AboutPage /></InnerPage>;
   if (page === "identity") return <InnerPage><IdentityPage /></InnerPage>;
   if (page === "leadership") return <InnerPage><LeadershipPage /></InnerPage>;
+  if (page === "former-executive-committee") return <InnerPage><FormerExecutiveCommitteePage /></InnerPage>;
   if (page === "leader") return <InnerPage><LeaderProfilePage slug={params.get("slug") ?? ""} /></InnerPage>;
   if (page === "work") return <InnerPage><WorkPage /></InnerPage>;
   if (page === "program") return <InnerPage><ProgramPage slug={params.get("slug") ?? ""} /></InnerPage>;
