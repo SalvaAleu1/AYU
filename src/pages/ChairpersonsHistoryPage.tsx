@@ -55,7 +55,10 @@ export default function ChairpersonsHistoryPage() {
                   </p>
                   {chairperson.note ? <p className="chairperson-note">{chairperson.note}</p> : null}
                   {chairperson.id === "agany-geng-ayiei" ? (
-                    <p><a className="text-link" href="/?page=former-executive-committee">View his former executive committee →</a></p>
+                    <div className="chairperson-history-links">
+                      <p><a className="text-link" href="/?page=former-executive-committee">View his former executive committee →</a></p>
+                      <p><a className="text-link" href="/?page=leader-achievements&amp;slug=agany-geng-ayiei">View achievements and administrative report →</a></p>
+                    </div>
                   ) : null}
                 </div>
               </article>
