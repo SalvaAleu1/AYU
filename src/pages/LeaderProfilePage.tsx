@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import PageHero from "../components/PageHero";
-import { currentLeadership } from "../data/leadershipData";
+import { currentLeadership, formerLeadership } from "../data/leadershipData";
 import LeadershipPage from "./LeadershipPage";
 
 function setMeta(name: string, content: string, property = false) {
@@ -26,7 +26,7 @@ function setCanonical(url: string) {
 }
 
 export default function LeaderProfilePage({ slug }: { slug: string }) {
-  const leader = currentLeadership.find((profile) => profile.slug === slug);
+  const leader = [...currentLeadership, ...formerLeadership].find((profile) => profile.slug === slug);
   const pageUrl = `https://apukyouthunion.org/?page=leader&slug=${encodeURIComponent(slug)}`;
 
   useEffect(() => {
