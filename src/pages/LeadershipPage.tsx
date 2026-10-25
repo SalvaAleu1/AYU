@@ -77,7 +77,7 @@ export default function LeadershipPage() {
             <h2 className="display-title">Chairpersons through the years.</h2>
             <p className="section-body-copy">See the record of AYU Chairpersons from the Union's founding in 2005 to the current term.</p>
           </div>
-          <a className="button button-dark" href="/?page=chairpersons-history">View Chairpersons history</a>
+          <a className="button button-dark" href="/?page=former-executive-committee">View past leadership</a>
         </div>
       </section>
 
