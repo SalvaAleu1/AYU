@@ -1,6 +1,6 @@
 import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
-import { currentLeadership, executiveRoles } from "../data/leadershipData";
+import { currentLeadership, formerLeadership, executiveRoles } from "../data/leadershipData";
 
 export default function LeadershipPage() {
   const chairperson = currentLeadership.find((leader) => leader.role === "Chairperson");
@@ -27,7 +27,7 @@ export default function LeadershipPage() {
           <SectionHeading
             eyebrow="Current Executive Committee"
             title="Current Executive Committee."
-            description="The Executive Committee serving the 2024–2026 term is presented below in the order provided by the AYU Constitution."
+            description="The Executive Committee serving the 2026–2028 term, formed by the Chairperson’s order dated 15 October 2026, is presented below."
           />
 
           {chairperson ? (
@@ -67,6 +67,27 @@ export default function LeadershipPage() {
               ))}
             </div>
           ) : null}
+        </div>
+      </section>
+
+      <section className="section section-soft" id="former-executive">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Former Executive Committee · 2024–2026"
+            title="Agany Geng Ayiei and his former executive team."
+            description="These leaders served during the previous term. Their profiles remain available as historical records and are no longer presented as current officeholders."
+          />
+          <div className="leader-grid" aria-label="Former AYU Executive Committee 2024–2026">
+            {formerLeadership.map((leader) => (
+              <article className="leader-card" key={leader.slug}>
+                {leader.photo ? <img src={leader.photo} alt={leader.name} loading="lazy" /> : null}
+                <span>Former {leader.role}</span>
+                <h3>{leader.name}</h3>
+                {leader.shortBio ? <p>{leader.shortBio}</p> : null}
+                <a className="text-link" href={"/?page=leader&slug=" + leader.slug}>View former profile →</a>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
