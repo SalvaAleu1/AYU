@@ -79,7 +79,7 @@ export const chairpersonsHistory: ChairpersonRecord[] = [
     term: "2026–2028",
     status: "Current",
     photo: "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/1792891350481.jpg",
-    note: "Elected Chairperson of Apuk Youth Union in Juba. Her Executive Committee was formally announced by Chairperson Order No. 001 dated 15 October 2026.",
+    note: "Chairperson of Apuk Youth Union in Juba.",
   },
 ];
 
