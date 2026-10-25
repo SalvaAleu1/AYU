@@ -165,16 +165,16 @@ const makeProfile = (
   isCurrent: true,
 });
 
-export const currentLeadership: LeadershipProfile[] = [
+export const formerLeadership: LeadershipProfile[] = [
   {
     slug: "agany-geng-ayiei",
     name: "Agany Geng Ayiei",
     role: "Chairperson",
     photo: "/leadership/agany-geng-ayiei.webp",
-    shortBio: "Chairperson of Apuk Youth Union in Juba.",
-    biography: "Agany Geng Ayiei serves as Chairperson of Apuk Youth Union in Juba. The General Assembly amended and approved the Constitution in 2025, and he signed it into law in his role as Chairperson.",
+    shortBio: "Former Chairperson of Apuk Youth Union in Juba (2024–2026).",
+    biography: "Agany Geng Ayiei served as Chairperson of Apuk Youth Union in Juba during the 2024–2026 term. The General Assembly amended and approved the Constitution in 2025, and he signed it into law in his role as Chairperson.",
     responsibilities: roleResponsibilities("Chairperson"),
-    isCurrent: true,
+    isCurrent: false,
   },
   makeProfile("lual-agany-ngeth", "Lual Agany Ngeth", "Deputy Chairperson", "Deputy Chairperson", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0006.jpg"),
   makeProfile("bol-mariano-akoi", "Bol Mariano Akoi", "Secretary General", "Secretary General", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0020.jpg"),
@@ -188,4 +188,29 @@ export const currentLeadership: LeadershipProfile[] = [
   makeProfile("william-malueeth-deng", "William Malueeth Deng", "Secretary for Culture and Sports", "Secretary for Culture and Sports", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261021-WA0001.jpg"),
   makeProfile("nyakiir-maluoi-kuol", "Nyakiir Maluoi Kuol", "Secretary for Gender, Social Welfare, Peace and Reconciliation", "Secretary for Gender, Social Welfare, Peace and Reconciliation", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0018.jpg"),
   makeProfile("emmanuella-aluel-adhar", "Emmanuella Aluel Adhar", "Deputy Secretary for Finance and Planning", "Deputy Secretary for Finance and Planning", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261021-WA0003.jpg"),
+].map((profile) => ({ ...profile, isCurrent: false }));
+
+export const currentLeadership: LeadershipProfile[] = [
+  {
+    slug: "ajok-wol-dau",
+    name: "Ajok Wol Dau",
+    role: "Chairperson",
+    photo: "/leadership/ajok-wol-dau.jpg",
+    shortBio: "Chairperson of Apuk Youth Union in Juba for the 2026–2028 term.",
+    biography: "Ajok Wol Dau is the elected Chairperson of Apuk Youth Union in Juba for the 2026–2028 term, following the official formation order dated 15 October 2026.",
+    responsibilities: roleResponsibilities("Chairperson"),
+    isCurrent: true,
+  },
+  makeProfile("malueth-madut-anei", "Malueth Madut Anei", "Deputy Chairperson", "Deputy Chairperson"),
+  makeProfile("majiok-mangeth-akeen", "Majiok Mangeth Akeen", "Secretary General", "Secretary General"),
+  makeProfile("akuol-bol-riiny", "Akuol Bol Riiny", "Secretary for Finance and Planning", "Secretary for Finance and Planning"),
+  makeProfile("brainy-gor-ater", "Brainy Gor Ater", "Secretary for Information and Media", "Secretary for Information and Media"),
+  makeProfile("albino-adolo-atem", "Albino Adolo Atem", "Secretary for External Affairs", "Secretary for External Affairs"),
+  makeProfile("akuel-kur-wol", "Ak uel Kur Wol".replace(" ", ""), "Secretary for Legal Affairs", "Secretary for Legal Affairs"),
+  makeProfile("deng-amos-ayom", "Deng Amos Ayom", "Secretary for Education and Trainings", "Secretary for Education and Trainings"),
+  makeProfile("ajang-ajang-bang", "Ajang Ajang Bang", "Secretary for Agriculture, Project and Logistic", "Secretary for Agriculture, Logistics, and Projects"),
+  makeProfile("anei-akot-makuac", "Anei Akot Makuac", "Secretary for Health", "Secretary for Health"),
+  makeProfile("apiu-deng-juach", "Apiu Deng Juach", "Secretary for Culture and Sports", "Secretary for Culture and Sports"),
+  makeProfile("madut-jok-kuony", "Madut Jok Kuony", "Secretary for Gender, Social Welfare, Peace and Reconciliation", "Secretary for Gender, Social Welfare, Peace and Reconciliation"),
+  makeProfile("madut-madut-abot", "Madut Madut Abot", "Deputy Secretary for Finance and Planning", "Deputy Secretary for Finance and Planning"),
 ];
