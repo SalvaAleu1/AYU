@@ -23,7 +23,8 @@ export default function FormerExecutiveCommitteePage() {
               <span>Former Chairperson · 2024–2026</span>
               <h2>Agany Geng Ayiei</h2>
               <p>Former Chairperson of Apuk Youth Union in Juba.</p>
-              <a className="text-link" href="/?page=chairpersons-history">Back to Chairpersons history →</a>
+              <a className="text-link" href="/?page=leader-achievements&slug=agany-geng-ayiei">View achievements and administrative report →</a>
+              <p><a className="text-link" href="/?page=chairpersons-history">Chairpersons history →</a></p>
             </div>
           </div>
           <div className="leader-grid" aria-label="Former AYU Executive Committee 2024–2026">
@@ -34,6 +35,7 @@ export default function FormerExecutiveCommitteePage() {
                 <h3>{leader.name}</h3>
                 {leader.shortBio ? <p>{leader.shortBio}</p> : null}
                 <a className="text-link" href={"/?page=leader&slug=" + leader.slug}>View former profile →</a>
+                <p><a className="text-link" href={"/?page=leader-achievements&slug=" + leader.slug}>View achievements →</a></p>
               </article>
             ))}
           </div>
