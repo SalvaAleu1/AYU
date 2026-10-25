@@ -15,7 +15,7 @@ export default function FormerExecutiveCommitteePage() {
           <SectionHeading
             eyebrow="Historical leadership"
             title="Executive Committee led by Agany Geng Ayiei."
-            description="These are former officeholders. Their profiles are retained for historical reference and are not presented as current executive positions."
+            description="Meet the team that worked alongside Agany Geng Ayiei during his term as Chairperson."
           />
           <div className="leader-feature-card">
             <img src="/leadership/agany-geng-ayiei.webp" alt="Agany Geng Ayiei, former Chairperson" />
