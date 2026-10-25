@@ -35,7 +35,7 @@ export default function FormerExecutiveCommitteePage() {
                 <h3>{leader.name}</h3>
                 {leader.shortBio ? <p>{leader.shortBio}</p> : null}
                 <a className="text-link" href={"/?page=leader&slug=" + leader.slug}>View former profile →</a>
-                <p><a className="text-link" href={"/?page=leader-achievements&slug=" + leader.slug}>View achievements →</a></p>
+
               </article>
             ))}
           </div>
