@@ -188,14 +188,14 @@ export const formerLeadership: LeadershipProfile[] = [
   makeProfile("william-malueeth-deng", "William Malueeth Deng", "Secretary for Culture and Sports", "Secretary for Culture and Sports", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261021-WA0001.jpg"),
   makeProfile("nyakiir-maluoi-kuol", "Nyakiir Maluoi Kuol", "Secretary for Gender, Social Welfare, Peace and Reconciliation", "Secretary for Gender, Social Welfare, Peace and Reconciliation", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261019-WA0018.jpg"),
   makeProfile("emmanuella-aluel-adhar", "Emmanuella Aluel Adhar", "Deputy Secretary for Finance and Planning", "Deputy Secretary for Finance and Planning", "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/IMG-20261021-WA0003.jpg"),
-].map((profile) => ({ ...profile, isCurrent: false }));
+].map((profile) => ({ ...profile, isCurrent: false, shortBio: `Former ${profile.role} of Apuk Youth Union in Juba (2024–2026).`, biography: `${profile.name} served as ${profile.role} of Apuk Youth Union in Juba during the 2024–2026 term.` }));
 
 export const currentLeadership: LeadershipProfile[] = [
   {
     slug: "ajok-wol-dau",
     name: "Ajok Wol Dau",
     role: "Chairperson",
-    photo: "/leadership/ajok-wol-dau.jpg",
+    photo: "https://raw.githubusercontent.com/SalvaAleu1/AYU/main/1792891350481.jpg",
     shortBio: "Chairperson of Apuk Youth Union in Juba for the 2026–2028 term.",
     biography: "Ajok Wol Dau is the elected Chairperson of Apuk Youth Union in Juba for the 2026–2028 term, following the official formation order dated 15 October 2026.",
     responsibilities: roleResponsibilities("Chairperson"),
@@ -206,7 +206,7 @@ export const currentLeadership: LeadershipProfile[] = [
   makeProfile("akuol-bol-riiny", "Akuol Bol Riiny", "Secretary for Finance and Planning", "Secretary for Finance and Planning"),
   makeProfile("brainy-gor-ater", "Brainy Gor Ater", "Secretary for Information and Media", "Secretary for Information and Media"),
   makeProfile("albino-adolo-atem", "Albino Adolo Atem", "Secretary for External Affairs", "Secretary for External Affairs"),
-  makeProfile("akuel-kur-wol", "Ak uel Kur Wol".replace(" ", ""), "Secretary for Legal Affairs", "Secretary for Legal Affairs"),
+  makeProfile("akuel-kur-wol", "Akuel Kur Wol", "Secretary for Legal Affairs", "Secretary for Legal Affairs"),
   makeProfile("deng-amos-ayom", "Deng Amos Ayom", "Secretary for Education and Trainings", "Secretary for Education and Trainings"),
   makeProfile("ajang-ajang-bang", "Ajang Ajang Bang", "Secretary for Agriculture, Project and Logistic", "Secretary for Agriculture, Logistics, and Projects"),
   makeProfile("anei-akot-makuac", "Anei Akot Makuac", "Secretary for Health", "Secretary for Health"),
