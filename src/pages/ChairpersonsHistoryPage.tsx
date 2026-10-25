@@ -13,7 +13,7 @@ export default function ChairpersonsHistoryPage() {
           <dl className="page-fact-list">
             <div><dt>Founded</dt><dd>2005, Nairobi</dd></div>
             <div><dt>AYU-Juba established</dt><dd>2010, Juba</dd></div>
-            <div><dt>Current term</dt><dd>2024–2026</dd></div>
+            <div><dt>Current term</dt><dd>2026–2028</dd></div>
           </dl>
         }
       />
@@ -54,6 +54,9 @@ export default function ChairpersonsHistoryPage() {
                     {chairperson.status === "Founder" ? "Founder of Apuk Youth Union" : "Chairperson, Apuk Youth Union in Juba"}
                   </p>
                   {chairperson.note ? <p className="chairperson-note">{chairperson.note}</p> : null}
+                  {chairperson.id === "agany-geng-ayiei" ? (
+                    <p><a className="text-link" href="/?page=leadership#former-executive">See his former executive team →</a></p>
+                  ) : null}
                 </div>
               </article>
             ))}
