@@ -179,7 +179,7 @@ export default function ConstitutionReaderPage() {
 
             <footer className="constitution-transcription-note">
               <strong>Public reader</strong>
-              <p>This page presents the Constitution for public reference. Current membership registration fee details are provided through the official AYU membership form. If there is any difference between this reader and the signed Constitution, the signed Constitution remains the official version.</p>
+              <p>This page presents the Constitution for public reference. If there is any difference between this reader and the signed Constitution, the signed Constitution remains the official version.</p>
             </footer>
           </article>
         </div>
