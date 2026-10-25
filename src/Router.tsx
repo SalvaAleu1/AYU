@@ -119,7 +119,11 @@ function resolveSeo(page: string | null, params: URLSearchParams): ResolvedSeo {
 
   const slug = params.get("slug")?.trim() ?? "";
 
-  if (page === "leader-achievements") {\n    return { meta: { title: "Leadership Achievements | AYU-Juba", description: "Achievements and administrative report for the former AYU leadership.", schemaType: "WebPage" }, canonical: buildRouteUrl(page, slug) };\n  }\n\n  if (page === "leader") {
+  if (page === "leader-achievements") {
+    return { meta: { title: "Leadership Achievements | AYU-Juba", description: "Achievements and administrative report for the former AYU leadership.", schemaType: "WebPage" }, canonical: buildRouteUrl(page, slug) };
+  }
+
+  if (page === "leader") {
     const leader = currentLeadership.find((profile) => profile.slug === slug);
     if (!leader) return invalidSeo();
     return {
@@ -387,7 +391,9 @@ export default function Router() {
 
   if (page === "about") return <PageShell><AboutPage /></PageShell>;
   if (page === "identity") return <PageShell><IdentityPage /></PageShell>;
-  if (page === "leadership") return <PageShell><LeadershipPage /></PageShell>;\n  if (page === "former-executive-committee") return <PageShell><FormerExecutiveCommitteePage /></PageShell>;\n  if (page === "leader-achievements") return <PageShell><LeadershipAchievementsPage slug={params.get("slug") ?? ""} /></PageShell>;
+  if (page === "leadership") return <PageShell><LeadershipPage /></PageShell>;
+  if (page === "former-executive-committee") return <PageShell><FormerExecutiveCommitteePage /></PageShell>;
+  if (page === "leader-achievements") return <PageShell><LeadershipAchievementsPage slug={params.get("slug") ?? ""} /></PageShell>;
   if (page === "leader") return <PageShell><LeaderProfilePage slug={params.get("slug") ?? ""} /></PageShell>;
   if (page === "history") return <PageShell><AdvisoryHistoryPage /></PageShell>;
   if (page === "chairpersons-history") return <PageShell><ChairpersonsHistoryPage /></PageShell>;
