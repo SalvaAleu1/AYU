@@ -73,7 +73,7 @@ const pageMeta: Record<string, PageMeta> = {
   leadership: { title: "Current Leadership | AYU-Juba", description: "See the current Executive Committee and individual leadership profiles." },
   "former-executive-committee": { title: "Past Leadership | AYU-Juba", description: "View former Executive Committee members and their leadership records." },
   "leader-achievements": { title: "Leadership Achievements | AYU-Juba", description: "Read achievements and administrative records from former AYU leadership." },
-  history: { title: "Advisory Board & History | AYU-Juba", description: "Learn about the Advisory Board and AYU leadership history." },
+  history: { title: "Patron & Leadership History | AYU-Juba", description: "See the current Patron and AYU leadership history." },
   "chairpersons-history": { title: "AYU Chairpersons Through the Years | AYU-Juba", description: "See the Chairpersons who have led Apuk Youth Union from its founding in 2005 to the current term." },
   work: { title: "Our Work | AYU-Juba", description: "Explore AYU programmes, projects and community work." },
   news: { title: "News & Updates | AYU-Juba", description: "Read AYU news, statements and community updates." },
