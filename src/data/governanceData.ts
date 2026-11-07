@@ -5,7 +5,7 @@ export const generalAssemblyPowers = [
   "Receives and considers audited accounts.",
   "Passes by-laws.",
   "Considers and passes annual Executive Committee reports and budgets.",
-  "Appoints members of the Advisory Board.",
+  "Recognises the constitutional position of the Patron.",
   "Appoints auditors or approves an auditing firm.",
   "Nominates members of the Independent Electoral Committee.",
 ];
