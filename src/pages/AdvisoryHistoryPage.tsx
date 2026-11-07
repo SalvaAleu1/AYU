@@ -1,23 +1,17 @@
 import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
-import {
-  advisoryBoardFunctions,
-  advisoryBoardStructure,
-  currentAdvisoryBoard,
-} from "../data/governanceArchive";
 
 export default function AdvisoryHistoryPage() {
   return (
     <>
       <PageHero
-        eyebrow="Advisory Board & History"
-        title="Guidance for today and a record of AYU's journey."
-        description="The Advisory Board gives advice to AYU, while the history section preserves the Union's leadership record."
+        eyebrow="Patron & Leadership History"
+        title="The Patron and the Union’s leadership history."
+        description="The Patron is the constitutional position recognised by AYU. This page also preserves the Union’s leadership record."
         aside={
           <dl className="page-fact-list">
-            <div><dt>Headed by</dt><dd>{advisoryBoardStructure.head}</dd></div>
-            <div><dt>Appointed by</dt><dd>{advisoryBoardStructure.appointedBy}</dd></div>
-            <div><dt>Role</dt><dd>Advice and guidance</dd></div>
+            <div><dt>Position</dt><dd>Patron</dd></div>
+            <div><dt>Current Patron</dt><dd>Prof. Kuel Maluil Jok</dd></div>
           </dl>
         }
       />
@@ -25,52 +19,18 @@ export default function AdvisoryHistoryPage() {
       <section className="section section-white">
         <div className="container advisory-intro-grid">
           <div>
-            <p className="eyebrow">Advisory Board</p>
-            <h2 className="display-title">A constitutional body that gives advice and guidance.</h2>
+            <p className="eyebrow">Patron</p>
+            <h2 className="display-title">Prof. Kuel Maluil Jok is the Patron of Apuk Youth Union in Juba.</h2>
           </div>
           <div className="prose-stack">
             <p>
-              The Advisory Board is appointed and relieved by the General Assembly through a simple majority vote and is headed by the Patron.
-            </p>
-            <p>
-              Its role is to advise the Union on unity, conflict resolution, projects, social development, community heritage and cultural values.
+              The Advisory Board has been discontinued. The Constitution provides for a Patron, and Prof. Kuel Maluil Jok is the Union’s current Patron.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section section-soft">
-        <div className="container">
-          <SectionHeading eyebrow="Responsibilities" title="What the Advisory Board is asked to do." />
-          <div className="advisory-function-grid">
-            {advisoryBoardFunctions.map((item) => (
-              <article className="advisory-function-card" key={item}>
-                <p>{item}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {currentAdvisoryBoard.length > 0 ? (
-        <section className="section section-white">
-          <div className="container">
-            <SectionHeading eyebrow="Current Advisory Board" title="Serving Advisory Board members." />
-            <div className="leader-grid">
-              {currentAdvisoryBoard.map((member) => (
-                <article className="leader-card" key={member.slug}>
-                  {member.photo ? <img src={member.photo} alt={member.name} /> : null}
-                  <span>{member.role}</span>
-                  <h3>{member.name}</h3>
-                  {member.biography ? <p>{member.biography}</p> : null}
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      ) : null}
-
-      <section className="section section-white">
+            <section className="section section-white">
         <div className="container history-chairpersons-cta">
           <div>
             <p className="eyebrow">Leadership History</p>
